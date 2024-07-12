@@ -30,12 +30,12 @@ const Header = ({ supplierData, setSupplierData, menuData }) => {
 						</Link>
 					</Col>
 					<Col className="right d-none d-lg-flex">
-						{supplierData ? (
+						{true ? (
 							<Navbar className="user-menu">
 								<Navbar.Toggle />
 								<Navbar.Collapse>
 									<Nav>
-										<NavDropdown title={supplierData.BUSINESS_NAME} align="end">
+										<NavDropdown title={''} align="end">
 											{menuData.map(menuItem => (
 												<React.Fragment key={menuItem.title}>
 													{menuItem.target === "/login" ? (
@@ -48,7 +48,7 @@ const Header = ({ supplierData, setSupplierData, menuData }) => {
 																? () => {
 																		sessionStorage.removeItem("supplierData");
 																		setSupplierData(null);
-																  }
+																	}
 																: null
 														}
 													>
@@ -78,7 +78,7 @@ const Header = ({ supplierData, setSupplierData, menuData }) => {
 			</Container>
 			<Nav className={`mobile-menu ${showMobileMenu ? "d-flex" : "d-none"}`}>
 				<i className="fa-solid fa-xmark close" onClick={() => setShowMobileMenu(false)} />
-				{supplierData ? (
+				{true ? (
 					<ul>
 						{menuData.map(menuItem =>
 							menuItem.target === "/login" ? (
