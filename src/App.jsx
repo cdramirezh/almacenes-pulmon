@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HabeasDataNotification from "./components/HabeasDataNotification";
-import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import ProfilePage from "./pages/ProfilePage";
 import { menuData } from "./menu.data";
@@ -27,16 +27,7 @@ const App = () => {
 			<main className="main">
 				<Container fluid>
 					<Routes>
-						<Route
-							path="/"
-							element={
-								<HomePage
-									supplierData={supplierData}
-									setSupplierData={setSupplierData}
-									menuData={menuData}
-								/>
-							}
-						>
+						<Route path="/login" element={<LoginPage />}>
 							<Route path="profile" element={<ProfilePage supplierData={supplierData} />} />
 						</Route>
 						<Route

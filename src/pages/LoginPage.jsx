@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
@@ -10,11 +10,10 @@ import Message from "../components/Message";
 import MyButton from "../components/MyButton";
 import { forgotPasswordSendEmail, login } from "../actions/userActions";
 import Swal from "sweetalert2";
-import SEO from "../components/SEO";
 
 import "./styles/LoginPage.scss";
 
-const LoginPage = ({ supplierData, setSupplierData }) => {
+const LoginPage = ({ setSupplierData }) => {
 	const navigate = useNavigate();
 
 	const [loading, setLoading] = useState(false);
@@ -26,11 +25,7 @@ const LoginPage = ({ supplierData, setSupplierData }) => {
 
 	const $form = useRef(null);
 
-	useEffect(() => {
-		if (supplierData) {
-			navigate("/profile");
-		}
-	});
+	useEffect(() => {});
 
 	const isOk = () => {
 		let ok = true;
@@ -113,16 +108,12 @@ const LoginPage = ({ supplierData, setSupplierData }) => {
 
 	return (
 		<Row className="login-page">
-			<SEO
-				title="Decorceramica - Portal de colaboradores | Iniciar sesión"
-				description="Inicia sesión y autogestiona tus necesidades"
-			/>
 			<Col>
 				{loading ? (
 					<Loader />
 				) : (
 					<FormCenterContainer>
-						<h1 className="text-center mb-5">Portal de Proveedores</h1>
+						<h1 className="text-center mb-5">Iniciar sesión</h1>
 						{message && <Message variant="danger">{message}</Message>}
 						<Form onSubmit={e => handleSubmit(e)} ref={$form}>
 							<Form.Group>
@@ -172,9 +163,9 @@ const LoginPage = ({ supplierData, setSupplierData }) => {
 						</Form>
 						<Row className="my-3">
 							<Col>
-								<span>
+								{/* <span>
 									¿Aún no tiene una cuenta? <Link to="/register">Registrarse</Link>
-								</span>
+								</span> */}
 								<span>
 									<a href="/forgotPassword" onClick={e => handleForgotPassword(e)}>
 										¿Ha olvidado su contraseña?
