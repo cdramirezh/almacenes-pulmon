@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Container from 'react-bootstrap/Container';
 import Header from './components/Header';
@@ -11,6 +11,8 @@ import ProfilePage from './pages/ProfilePage';
 import PendingInvoicesPage from './pages/PendingInvoicesPage';
 import PaymentsPage from './pages/PaymentsPage';
 import CertificatesPage from './pages/CertificatesPage';
+import ConfigurationPage from './pages/ConfigurationPage';
+import ConfigurationProfilesPage from './pages/ConfigurationProfilesPage';
 // import EquivalentDocumentPage from './pages/EquivalentDocumentPage';
 import ForgotPasswordPage from './pages/ForgotPasswordPage'
 import NotFoundPage from './pages/NotFoundPage';
@@ -21,6 +23,11 @@ import './App.scss'
 const App = () => {
 
   const [supplierData, setSupplierData] = useState(sessionStorage.getItem('supplierData') ? JSON.parse(sessionStorage.getItem('supplierData')) : null)
+  useEffect(() => {
+    setSupplierData({ACCOUNTING_TAXES: []});
+  }, []);
+  
+  
   const menuData = [
     {
       title: "Mis datos",
@@ -41,6 +48,11 @@ const App = () => {
       title: "Certificados",
       target: "/certificates",
       icon: "fa-solid fa-file"
+    },
+    {
+      title: "Configuración",
+      target: "/configuration",
+      icon: "fa-solid fa-gear"
     },
     // {
     //   title: "Documento equivalente",
@@ -67,6 +79,8 @@ const App = () => {
                 <Route path='pending-invoices' element={<PendingInvoicesPage supplierData={supplierData} />} />
                 <Route path='payments' element={<PaymentsPage supplierData={supplierData} />} />
                 <Route path='certificates' element={<CertificatesPage supplierData={supplierData} />} />
+                <Route path='configuration' element={<ConfigurationPage supplierData={supplierData} />} />
+                <Route path='configurationProfiles' element={<ConfigurationProfilesPage />} />
                 {/* <Route path='equivalent-document' element={<EquivalentDocumentPage supplierData={supplierData} />} /> */}
               </Route>
               <Route path='/register' element={<RegisterPage supplierData={supplierData} setSupplierData={setSupplierData} />} />
