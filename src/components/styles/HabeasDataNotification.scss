@@ -1,0 +1,25 @@
+.habeas-data {
+
+    position: fixed;
+    bottom: 0;
+    z-index: 3;
+    width: 100%;
+    color: white;
+
+    .wrapper {
+
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(112, 95, 95, .92);
+    
+        p {
+            margin: 0;
+
+            a {
+                color: inherit
+            }
+        }
+    }
+}

@@ -1,0 +1,111 @@
+@import '../../colors';
+
+.home-page {
+    min-height: 60vh;
+    position: relative;
+    padding-left: 320px;
+    transition: .5s;
+
+    &:has(.menu.hidden){
+        padding-left: 80px;
+    }
+
+    @media screen and (max-width: 992px) {
+        padding: 0;
+    }
+
+    .menu {
+        width: 300px;
+        background: $menu-background;
+        height: 100%;
+        padding: 2rem 0;
+        color: $menu-text;
+        position: absolute;
+        left: 0;
+        transition: .5s;
+        
+        nav {
+            ul {
+                list-style: none;
+    
+                li {
+                    padding: .8rem 0;
+
+                    &:last-child {
+                        display: flex;
+                        justify-content: center;
+
+                        .circle {
+                            width: 30px;
+                            height: 30px;
+                            border: 1px solid currentColor;
+                            border-radius: 50%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            cursor: pointer;
+                        }
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: currentColor;
+                        font-weight: 600;
+                        display: block;
+                        width: 100%;
+
+                        &:hover span {
+                            border-bottom: 2px solid currentColor;
+                        }
+
+                        span.active {
+                            border-bottom: 2px solid currentColor;
+                        }
+
+                        i {
+                            display: inline-block;
+                            margin-right: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.hidden {
+            width: 60px;
+
+            ul {
+                padding: 0;
+
+                li {
+                    display: flex;
+                    justify-content: center;
+
+                    a {
+                        text-align: center;
+
+                        i {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+
+            span {
+                display: none;
+            }
+        }
+    }
+
+    div[class$="-page"] {
+        padding: 2rem;
+
+        h2 {
+            margin-bottom: 1rem;
+        }
+
+        .loader {
+            min-height: 60vh;
+        }
+    }
+}

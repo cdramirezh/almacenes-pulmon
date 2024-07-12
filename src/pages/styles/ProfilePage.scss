@@ -1,0 +1,19 @@
+.profile-page {
+
+    .row:nth-child(2) {
+        padding: 1rem 0;
+
+        .form-floating {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .row:nth-child(3) {
+
+        .table, .alert {
+            margin-top: 1.5rem;
+        }
+    }
+
+    @import './message';
+}

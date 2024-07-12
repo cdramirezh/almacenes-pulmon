@@ -1,0 +1,149 @@
+@import '../../colors';
+
+.footer {
+    background: $background-color;
+
+    .up {
+        .container-fluid {
+            color: $text-color;
+            font-family: "Sora",sans-serif;
+            font-size: .75rem;
+            font-weight: 200;
+    
+            & > .row:first-child {
+                display: block;
+                margin: 0 auto;
+                text-align: center;
+                padding: 1rem 0;
+
+                img {
+                    max-width: 15rem;
+                    max-height: 5rem;
+                }
+            }
+    
+            & > .row:nth-child(2) {
+                max-width: 98%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+    
+                & > img {
+                    width: 236px;
+                }
+    
+                & > .col {
+                    max-width: 280px;
+    
+                    span {
+                        padding: 8px 0;
+                    }
+    
+                    ul {
+                        li {
+                            a {
+                                &:hover {
+                                    color: $hover-color;
+                                    padding-left: 3px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .icons {
+                text-align: center;
+                max-width: 300px;
+                padding-bottom: 2rem;
+    
+                img {
+                    padding-top: 2rem;
+                }
+    
+                p {
+                    margin: 1rem 0;
+                }
+    
+                ul {
+                    display: flex;
+                    justify-content: space-around;
+        
+                    li {
+        
+                        a {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 50%;
+                            background-color: white;
+                            color: $background-color;
+        
+                            i {
+                                font-size: 1.4rem;
+                            }
+                        }
+                    }
+                }
+            }
+    
+    
+            ul {
+                list-style: none;
+                padding-left: 20px;
+    
+                li {
+                    #pse {
+                        width: 32px;
+                    }
+    
+                    a {
+                        color: $text-color;
+                        text-decoration: none;
+                        display: block;
+                        padding: 6px 0;
+                    }
+                }
+    
+            }
+    
+            .mobile {
+                ul {
+                    details {
+                        padding: .5rem 0;
+                        transition: 1s;
+    
+                        summary {
+                            list-style: none;
+    
+                            span {
+                                font-weight: 600;
+    
+                                i {
+                                    margin-right: 10px;
+                                }
+                            }
+                        }
+    
+                        ul {
+                            padding-bottom: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom {
+        text-align: center;
+        padding: 1rem 0;
+        color: $text-muted;
+
+				a {
+					text-decoration: none;
+					color: inherit;
+				}
+    }
+}

@@ -1,0 +1,24 @@
+.login-page {
+    min-height: 700px;
+    height: 100%;
+    padding: 3rem 0;
+
+    .loader {
+        display: flex;
+        height: 100%;
+    }
+
+    .row {
+        span {
+            display: block;
+
+            a {
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
