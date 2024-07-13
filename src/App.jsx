@@ -13,6 +13,9 @@ import PaymentsPage from './pages/PaymentsPage';
 import CertificatesPage from './pages/CertificatesPage';
 import ConfigurationPage from './pages/ConfigurationPage';
 import ConfigurationProfilesPage from './pages/ConfigurationProfilesPage';
+import ConfigurationSyncPage from './pages/ConfigurationSyncPage';
+import MonitorPage from './pages/MonitorPage';
+import ReportMaintenancePage from './pages/ReportMaintenancePage';
 // import EquivalentDocumentPage from './pages/EquivalentDocumentPage';
 import ForgotPasswordPage from './pages/ForgotPasswordPage'
 import NotFoundPage from './pages/NotFoundPage';
@@ -50,6 +53,11 @@ const App = () => {
       icon: "fa-solid fa-file"
     },
     {
+      title: "Reportes y Monitor",
+      target: "/monitor",
+      icon: "fa-solid fa-chart-line"
+    },
+    {
       title: "Configuración",
       target: "/configuration",
       icon: "fa-solid fa-gear"
@@ -79,8 +87,11 @@ const App = () => {
                 <Route path='pending-invoices' element={<PendingInvoicesPage supplierData={supplierData} />} />
                 <Route path='payments' element={<PaymentsPage supplierData={supplierData} />} />
                 <Route path='certificates' element={<CertificatesPage supplierData={supplierData} />} />
+                <Route path='monitor' element={<MonitorPage />} />
+                <Route path='reportMaintenance' element={<ReportMaintenancePage />} />
                 <Route path='configuration' element={<ConfigurationPage supplierData={supplierData} />} />
                 <Route path='configurationProfiles' element={<ConfigurationProfilesPage />} />
+                <Route path='configurationSync' element={<ConfigurationSyncPage />} />
                 {/* <Route path='equivalent-document' element={<EquivalentDocumentPage supplierData={supplierData} />} /> */}
               </Route>
               <Route path='/register' element={<RegisterPage supplierData={supplierData} setSupplierData={setSupplierData} />} />

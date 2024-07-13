@@ -50,11 +50,11 @@ const ConfigurationProfilesPage = () => {
                             <Table responsive>
                                 <thead>
                                     <tr>
-                                        {rolHeaders.map(header => (<th>{header}</th>))}
+                                        {rolHeaders.map((header,hIndex) => (<th key={hIndex}>{header}</th>))}
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {rolBody.map(row => (<tr>{row.map(element => (<td>{element}</td>))}<td><Button variant="primary"><span className="fa-solid fa-edit"></span></Button></td></tr>))}
+                                    {rolBody.map((row, rowIndex) => (<tr key={rowIndex}>{row.map((element, elIndex) => (<td key={elIndex}>{element}</td>))}<td><Button variant="primary"><span className="fa-solid fa-edit"></span></Button></td></tr>))}
                                     
                                 </tbody>
                             </Table>
@@ -64,11 +64,11 @@ const ConfigurationProfilesPage = () => {
                         <Table responsive>
                             <thead>
                                 <tr>
-                                    {userHeaders.map(header => (<th>{header}</th>))}
+                                    {userHeaders.map((header,hIndex) => (<th key={hIndex} >{header}</th>))}
                                 </tr>
                             </thead>
                             <tbody>
-                                {userBody.map(row => (<tr>{row.map(element => (<td>{element}</td>))}<td><Button variant="primary"><span className="fa-solid fa-edit"></span></Button></td></tr>))}
+                                {userBody.map((row, rowIndex) => (<tr  key={rowIndex}>{row.map((element, elIndex) => (<td key={elIndex}>{element}</td>))}<td><Button variant="primary"><span className="fa-solid fa-edit"></span></Button></td></tr>))}
                                 
                             </tbody>
                         </Table>

@@ -40,7 +40,7 @@ const ConfigurationPage = ({ supplierData }) => {
                     <Link className="configurationLink" to="/configurationSync">
                         <Card className="configurationBox">
                             <Card.Body>
-                                <span className="configurationBoxIcon fa-solid fa-cloud"/>
+                                <span className="configurationBoxIcon fa-solid fa-history"/>
                             </Card.Body>
                             <Card.Body>
                                 <Card.Title>Sincronización</Card.Title>
