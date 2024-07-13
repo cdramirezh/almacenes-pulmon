@@ -16,6 +16,8 @@ import ConfigurationProfilesPage from './pages/ConfigurationProfilesPage';
 import ConfigurationSyncPage from './pages/ConfigurationSyncPage';
 import MonitorPage from './pages/MonitorPage';
 import ReportMaintenancePage from './pages/ReportMaintenancePage';
+import MaterialManagementPage from './pages/MaterialManagementPage';
+import MaterialManagementDetailPage from './pages/MaterialManagementDetailPage';
 // import EquivalentDocumentPage from './pages/EquivalentDocumentPage';
 import ForgotPasswordPage from './pages/ForgotPasswordPage'
 import NotFoundPage from './pages/NotFoundPage';
@@ -51,6 +53,11 @@ const App = () => {
       title: "Certificados",
       target: "/certificates",
       icon: "fa-solid fa-file"
+    },
+    {
+      title: "Maestro de materiales",
+      target: "/MasterMaterials",
+      icon: "fa-solid fa-truck"
     },
     {
       title: "Reportes y Monitor",
@@ -89,6 +96,8 @@ const App = () => {
                 <Route path='certificates' element={<CertificatesPage supplierData={supplierData} />} />
                 <Route path='monitor' element={<MonitorPage />} />
                 <Route path='reportMaintenance' element={<ReportMaintenancePage />} />
+                <Route path='MasterMaterials' element={<MaterialManagementPage />} />
+                <Route path='MasterMaterialDetails' element={<MaterialManagementDetailPage />} />
                 <Route path='configuration' element={<ConfigurationPage supplierData={supplierData} />} />
                 <Route path='configurationProfiles' element={<ConfigurationProfilesPage />} />
                 <Route path='configurationSync' element={<ConfigurationSyncPage />} />
