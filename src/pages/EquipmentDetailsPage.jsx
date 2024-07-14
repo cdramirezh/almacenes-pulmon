@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import Form from "react-bootstrap/Form"
@@ -8,7 +8,7 @@ import Message from "../components/Message"
 import { Accordion, Button, Card, FloatingLabel, Table } from "react-bootstrap"
 import './styles/EquipmentDetailsPage.scss'
 
-const EquipmentDetailsPage = ({ equipments }) => {
+const EquipmentDetailsPage = ({ equipments, maintenanceActivities }) => {
     const params = useParams()
     const [pageLoading, setPageLoading] = useState(true)
     const [data, setData] = useState([])
@@ -304,6 +304,43 @@ const EquipmentDetailsPage = ({ equipments }) => {
                                 </Accordion.Body>
                             </Accordion.Item>
                             <Accordion.Item eventKey="9">
+                                <Accordion.Header><b>Actividades de mantenimiento</b></Accordion.Header>
+                                <Accordion.Body>
+                                    <Table responsive>
+                                        <thead>
+                                            <tr className="text-center">
+                                                <th>Id</th>
+                                                <th>Actividad</th>
+                                                <th>Estado</th>
+                                                <th>Fecha de inicio</th>
+                                                <th>Fecha de fin</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody className="text-center">
+                                            {maintenanceActivities.sort((a, b) => {
+                                                if(a.startDate > b.startDate) {
+                                                    return -1
+                                                }  else if (a.startDate < b.startDate) {
+                                                    return 1
+                                                } else {
+                                                    return 0
+                                                }
+                                            }).map((activity, idx) => (
+                                            <tr key={idx}>
+                                                <td>
+                                                    <Link to={`/maintenance-activities/${activity.id}`}>{activity.id}</Link>
+                                                </td>
+                                                <td>{activity.name}</td>
+                                                <td>{activity.status}</td>
+                                                <td>{activity.startDate}</td>
+                                                <td>{activity.endDate}</td>
+                                            </tr>    
+                                            ))}
+                                        </tbody>
+                                    </Table> 
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            <Accordion.Item eventKey="10">
                                 <Accordion.Header><b>Enlaces</b></Accordion.Header>
                                 <Accordion.Body>
                                     <ul>

@@ -929,6 +929,79 @@ const App = () => {
         }
     ]
 
+    const maintenanceActivities = [
+        {
+            id: 44507608,
+            name: "Cambio de Aceite",
+            status: "Completado",
+            startDate: "2024-05-18",
+            endDate: "2024-06-14"
+        },
+        {
+            id: 48695095,
+            name: "Revisión de Frenos",
+            status: "En proceso",
+            startDate: "2024-06-30",
+            endDate: "2024-09-12"
+        },
+        {
+            id: 49736750,
+            name: "Inspección de Cinturones",
+            status: "Completado",
+            startDate: "2024-05-23",
+            endDate: "2024-06-07"
+        },
+        {
+            id: 45120462,
+            name: "Limpieza de Filtros",
+            status: "Completado",
+            startDate: "2024-02-21",
+            endDate: "2024-05-03"
+        },
+        {
+            id: 46873078,
+            name: "Reemplazo de Neumáticos",
+            status: "Completado",
+            startDate: "2024-04-30",
+            endDate: "2024-06-10"
+        },
+        {
+            id: 47270233,
+            name: "Ajuste de Motor",
+            status: "Completado",
+            startDate: "2024-04-03",
+            endDate: "2024-04-04"
+        },
+        {
+            id: 49287763,
+            name: "Verificación de Luces",
+            status: "Completado",
+            startDate: "2024-06-03",
+            endDate: "2024-06-06"
+        },
+        {
+            id: 47476031,
+            name: "Prueba de Batería",
+            status: "Completado",
+            startDate: "2024-06-15",
+            endDate: "2024-06-28"
+        },
+        {
+            id: 44648879,
+            name: "Alineación de Ruedas",
+            status: "Completado",
+            startDate: "2024-04-12",
+            endDate: "2024-05-18"
+        },
+        {
+            id: 48887564,
+            name: "Chequeo de Suspensión",
+            status: "Completado",
+            startDate: "2024-05-31",
+            endDate: "2024-06-11"
+        }
+    ]
+
   return (
     <BrowserRouter>
       <HabeasDataNotification />
@@ -943,7 +1016,7 @@ const App = () => {
                 <Route path='payments' element={<PaymentsPage supplierData={supplierData} />} />
                 <Route path='certificates' element={<CertificatesPage supplierData={supplierData} />} />
                 <Route path='equipments' element={<EquipmentsPage equipments={equipments} />} />
-                <Route path='equipments/:id' element={<EquipmentDetailsPage equipments={equipments} />} />
+                <Route path='equipments/:id' element={<EquipmentDetailsPage equipments={equipments} maintenanceActivities={maintenanceActivities} />} />
                 <Route path='fields' element={<FieldsPage fields={fields} />} />
                 <Route path='fields/:id' element={<FieldDetailsPage fields={fields} />} />
                 {/* <Route path='equivalent-document' element={<EquivalentDocumentPage supplierData={supplierData} />} /> */}

@@ -45,6 +45,12 @@
         .accordion__link {
             margin-bottom: 10px;
         }
+
+        .table {
+            th, td {
+                vertical-align: middle;
+            }
+        }
     }
 
 
