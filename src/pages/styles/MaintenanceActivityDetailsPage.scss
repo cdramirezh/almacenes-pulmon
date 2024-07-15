@@ -45,6 +45,8 @@
             }
 
             .actions {
+                min-width: 88px;
+
                 .icon {
                     display: inline-block;
                     margin: 0 10px;
@@ -76,5 +78,13 @@
 
     .fa-camera, .fa-file {
         font-size: 7rem;
+    }
+}
+
+.table-responsive {
+    tbody {
+        tr {
+            vertical-align: middle;
+        }
     }
 }

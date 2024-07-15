@@ -42,7 +42,7 @@ const MaintenanceActivitiesPage = ({ maintenanceActivities }) => {
                 </Row>
                 <Row>
                     <Row className="my-2">
-                        <Col sm={2} className="text-end">
+                        <Col sm={2} className="text">
                             <Form.Label className="mb-0 align-middle"><b>Código:</b></Form.Label>
                         </Col>
                         <Col>
@@ -52,7 +52,7 @@ const MaintenanceActivitiesPage = ({ maintenanceActivities }) => {
                 </Row>
                 <Row>
                     <Row className="my-2">
-                        <Col sm={2} className="text-end">
+                        <Col sm={2} className="text">
                             <Form.Label className="mb-0 align-middle"><b>Nombre:</b></Form.Label>
                         </Col>
                         <Col>
@@ -62,7 +62,7 @@ const MaintenanceActivitiesPage = ({ maintenanceActivities }) => {
                 </Row>
                 <Row>
                     <Row className="my-2">
-                        <Col sm={2} className="text-end">
+                        <Col sm={2} className="text">
                             <Form.Label className="mb-0 align-middle"><b>Estado:</b></Form.Label>
                         </Col>
                         <Col>
@@ -78,7 +78,7 @@ const MaintenanceActivitiesPage = ({ maintenanceActivities }) => {
                 </Row>
                 <Row>
                     <Row className="my-2">
-                        <Col sm={2} className="text-end">
+                        <Col sm={2} className="text">
                             <Form.Label className="mb-0 align-middle"><b>Fecha de inicio:</b></Form.Label>
                         </Col>
                         <Col>
@@ -88,7 +88,7 @@ const MaintenanceActivitiesPage = ({ maintenanceActivities }) => {
                 </Row>
                 <Row>
                     <Row className="my-2">
-                        <Col sm={2} className="text-end">
+                        <Col sm={2} className="text">
                             <Form.Label className="mb-0 align-middle"><b>Fecha de fin:</b></Form.Label>
                         </Col>
                         <Col>
@@ -141,7 +141,7 @@ const MaintenanceActivitiesPage = ({ maintenanceActivities }) => {
             <CustomModal show={modalNewActivity} onHide={() => setModalNewActivity(false)} onAction={() => Swal.fire('Actividad creada', 'Se ha creado la actividad y ha sido enviada a aprobación con éxito', 'success').then(() => navigate(`/maintenance-activities/48695095`))} actionText="Crear" title="Nueva actividad de manetenimiento">
                 <Row>
                     <Row className="my-2">
-                        <Col sm={2} className="text-end">
+                        <Col sm={2} className="text">
                             <Form.Label className="mb-0 align-middle"><b>Código:</b></Form.Label>
                         </Col>
                         <Col>
@@ -151,7 +151,7 @@ const MaintenanceActivitiesPage = ({ maintenanceActivities }) => {
                 </Row>
                 <Row>
                     <Row className="my-2">
-                        <Col sm={2} className="text-end">
+                        <Col sm={2} className="text">
                             <Form.Label className="mb-0 align-middle"><b>Nombre:</b></Form.Label>
                         </Col>
                         <Col>
@@ -161,7 +161,7 @@ const MaintenanceActivitiesPage = ({ maintenanceActivities }) => {
                 </Row>
                 <Row>
                     <Row className="my-2">
-                        <Col sm={2} className="text-end">
+                        <Col sm={2} className="text">
                             <Form.Label className="mb-0 align-middle"><b>Fecha de inicio:</b></Form.Label>
                         </Col>
                         <Col>
@@ -171,7 +171,7 @@ const MaintenanceActivitiesPage = ({ maintenanceActivities }) => {
                 </Row>
                 <Row>
                     <Row className="my-2">
-                        <Col sm={2} className="text-end">
+                        <Col sm={2} className="text">
                             <Form.Label className="mb-0 align-middle"><b>Fecha de fin:</b></Form.Label>
                         </Col>
                         <Col>
