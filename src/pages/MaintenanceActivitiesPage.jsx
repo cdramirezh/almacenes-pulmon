@@ -58,9 +58,10 @@ const MaintenanceActivitiesPage = ({ maintenanceActivities }) => {
                         <Col>
                             <Form.Select>
                                 <option value="">Seleccione una opción</option>
-                                <option value="01">En preparación</option>
-                                <option value="02">En proceso</option>
-                                <option value="03">Completado</option>
+                                <option value="01">En Preparación</option>
+                                <option value="02">En Aprobacón</option>
+                                <option value="03">En Proceso</option>
+                                <option value="04">Completado</option>
                             </Form.Select>
                         </Col>
                     </Row>

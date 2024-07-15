@@ -17,6 +17,7 @@ import FieldsPage from './pages/FieldsPage';
 import FieldDetailsPage from './pages/FieldDetailsPage';
 import MaintenanceActivitiesPage from './pages/MaintenanceActivitiesPage';
 import MaintenanceActivityDetailsPage from './pages/MaintenanceActivityDetailsPage';
+import ActivitiesApproval from './pages/ActivitiesApproval';
 // import EquivalentDocumentPage from './pages/EquivalentDocumentPage';
 import ForgotPasswordPage from './pages/ForgotPasswordPage'
 import NotFoundPage from './pages/NotFoundPage';
@@ -1001,6 +1002,34 @@ const App = () => {
             status: "Completado",
             startDate: "2024-05-31",
             endDate: "2024-06-11"
+        },
+        {
+            id: 45384567,
+            name: "Ajuste de Motor",
+            status: "En aprobación",
+            startDate: "2024-11-18",
+            endDate: "2024-12-13"
+        },
+        {
+            id: 49174856,
+            name: "Verificación de Luces",
+            status: "En aprobación",
+            startDate: "2024-09-09",
+            endDate: "2024-09-15"
+        },
+        {
+            id: 44739567,
+            name: "Alineación de Ruedas",
+            status: "En aprobación",
+            startDate: "2024-09-10",
+            endDate: "2024-09-12"
+        },
+        {
+            id: 48887564,
+            name: "Chequeo de Suspensión",
+            status: "En aprobación",
+            startDate: "2024-09-12",
+            endDate: "2024-09-24"
         }
     ]
 
@@ -1023,6 +1052,7 @@ const App = () => {
                 <Route path='fields/:id' element={<FieldDetailsPage fields={fields} />} />
                 <Route path='maintenance-activities' element={<MaintenanceActivitiesPage maintenanceActivities={maintenanceActivities} />} />
                 <Route path='maintenance-activities/:id' element={<MaintenanceActivityDetailsPage maintenanceActivities={maintenanceActivities} equipments={equipments} />} />
+                <Route path='activities-approval' element={<ActivitiesApproval maintenanceActivities={maintenanceActivities} equipments={equipments} />} />
                 {/* <Route path='equivalent-document' element={<EquivalentDocumentPage supplierData={supplierData} />} /> */}
               </Route>
               <Route path='/register' element={<RegisterPage supplierData={supplierData} setSupplierData={setSupplierData} />} />

@@ -317,7 +317,7 @@ const EquipmentDetailsPage = ({ equipments, maintenanceActivities }) => {
                                             </tr>
                                         </thead>
                                         <tbody className="text-center">
-                                            {maintenanceActivities.sort((a, b) => {
+                                            {maintenanceActivities.filter(activity => activity.status === "Completado" || activity.status === "En proceso").sort((a, b) => {
                                                 if(a.startDate > b.startDate) {
                                                     return -1
                                                 }  else if (a.startDate < b.startDate) {
