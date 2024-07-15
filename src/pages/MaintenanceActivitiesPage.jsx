@@ -138,7 +138,7 @@ const MaintenanceActivitiesPage = ({ maintenanceActivities }) => {
                     </Row>
                 ) : <Message>No hay datos para mostrar</Message>}
             </>}
-            <CustomModal show={modalNewActivity} onHide={() => setModalNewActivity(false)} onAction={() => Swal.fire('Actividad creada', 'Se ha creado la actividad con éxito', 'success').then(() => navigate(`/maintenance-activities/48695095`))} actionText="Crear" title="Nueva actividad de manetenimiento">
+            <CustomModal show={modalNewActivity} onHide={() => setModalNewActivity(false)} onAction={() => Swal.fire('Actividad creada', 'Se ha creado la actividad y ha sido enviada a aprobación con éxito', 'success').then(() => navigate(`/maintenance-activities/48695095`))} actionText="Crear" title="Nueva actividad de manetenimiento">
                 <Row>
                     <Row className="my-2">
                         <Col sm={2} className="text-end">
