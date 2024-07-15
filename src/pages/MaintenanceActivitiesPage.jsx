@@ -20,7 +20,7 @@ const MaintenanceActivitiesPage = ({ maintenanceActivities }) => {
     const loadData = () => {
         setPageLoading(true)
         setTimeout(() => {
-            setData(maintenanceActivities)
+            setData(maintenanceActivities.filter(activity => activity.status === "Completado" || activity.status === "En proceso"))
             setPageLoading(false)
         }, 1000)
     }
