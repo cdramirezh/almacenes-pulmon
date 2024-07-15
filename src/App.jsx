@@ -11,6 +11,7 @@ import { menuData } from "./menu.data";
 import { Menu } from "./components/Menu";
 
 import "./App.scss";
+import { RioHeader } from "./components/RioHeader";
 
 const App = () => {
 	const [supplierData, setSupplierData] = useState(
@@ -22,7 +23,7 @@ const App = () => {
 	return (
 		<BrowserRouter>
 			<HabeasDataNotification />
-			<Header supplierData={supplierData} setSupplierData={setSupplierData} menuData={menuData} />
+			<RioHeader supplierData={supplierData} setSupplierData={setSupplierData} menuData={menuData} />
 			<Menu menuItems={menuData}></Menu>
 			<main className="main">
 				<Container fluid>
