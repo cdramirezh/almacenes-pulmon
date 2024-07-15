@@ -5,7 +5,6 @@ import Col from "react-bootstrap/Col"
 import Table from "react-bootstrap/Table"
 //import Button from "react-bootstrap/Button"
 import CanvasJSReact from '@canvasjs/react-charts';
-import FloatingLabel from "react-bootstrap/FloatingLabel"
 import SEO from "../components/SEO"
 
 import './styles/ConfigurationProfilesPage.scss'
@@ -16,6 +15,58 @@ const CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 
 const MonitorPage = () => {
+
+    const pieOptions = {
+        exportEnabled: true,
+        animationEnabled: true,
+        title: {
+            text: "Website Traffic Sources"
+        },
+        data: [{
+            type: "pie",
+            startAngle: 75,
+            toolTipContent: "<b>{label}</b>: {y}%",
+            showInLegend: "true",
+            legendText: "{label}",
+            indexLabelFontSize: 16,
+            indexLabel: "{label} - {y}%",
+            dataPoints: [
+                { y: 18, label: "Direct" },
+                { y: 49, label: "Organic Search" },
+                { y: 9, label: "Paid Search" },
+                { y: 5, label: "Referral" },
+                { y: 19, label: "Social" }
+            ]
+        }]
+    }
+
+    const barOptions = {
+        animationEnabled: true,
+        theme: "light2",
+        title:{
+            text: "Most Popular Social Networking Sites"
+        },
+        axisX: {
+            title: "Social Network",
+            reversed: true,
+        },
+        axisY: {
+            title: "Monthly Active Users",
+            includeZero: true
+        },
+        data: [{
+            type: "bar",
+            dataPoints: [
+                { y:  2200000000, label: "Facebook" },
+                { y:  1800000000, label: "YouTube" },
+                { y:  800000000, label: "Instagram" },
+                { y:  563000000, label: "Qzone" },
+                { y:  376000000, label: "Weibo" },
+                { y:  336000000, label: "Twitter" },
+                { y:  330000000, label: "Reddit" }
+            ]
+        }]
+    }
 
     const [options, setOptions] = useState({
         animationEnabled: true,
@@ -93,7 +144,15 @@ const MonitorPage = () => {
                 <CanvasJSChart options = {options}/>
             </Row>
             <Row>
-                <FloatingLabel>Reportes</FloatingLabel>
+                <Col ClassName="col-12 col-md-6">
+                    <CanvasJSChart options = {pieOptions}/>
+                </Col>
+                <Col ClassName="col-12 col-md-6">
+                    <CanvasJSChart options = {barOptions}/>
+                </Col>
+            </Row>
+            <Row className="mt-4">
+                <h4>Reportes</h4>
                 <Table responsive>
                     <thead>
                         <tr>
