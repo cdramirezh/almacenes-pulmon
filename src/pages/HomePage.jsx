@@ -21,7 +21,8 @@ const HomePage = ({ supplierData, setSupplierData, menuData }) => {
         if(!supplierData) {
             navigate('/login')
         }
-    })
+        else navigate('/fields')
+    }, [navigate,supplierData])
 
     return (
         <div className="home-page">

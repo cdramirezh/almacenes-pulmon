@@ -41,25 +41,25 @@ const App = () => {
 
   const menuData = [
     {
-      title: "Mis datos",
-      target: "/profile",
-      icon: "fa-solid fa-user"
+      title: "Suertes",
+      target: "/fields",
+      icon: "fa-solid fa-cow"
     },
     {
-      title: "Estado de cuenta",
-      target: "/pending-invoices",
-      icon: "fa-solid fa-receipt"
+      title: "Actividades de mantenimiento",
+      target: "/maintenance-activities",
+      icon: "fa-solid fa-paint-roller"
     },
     {
-      title: "Pagos",
-      target: "/payments",
-      icon: "fa-solid fa-money-bill"
+      title: "Aprobaciones",
+      target: "/activities-approval",
+      icon: "fa-solid fa-check"
     },
-    {
-      title: "Certificados",
-      target: "/certificates",
-      icon: "fa-solid fa-file"
-    },
+    // {
+    //   title: "Certificados",
+    //   target: "/certificates",
+    //   icon: "fa-solid fa-paint-roller"
+    // },
     {
       title: "Maestro de materiales",
       target: "/MasterMaterials",
