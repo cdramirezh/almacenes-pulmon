@@ -1,0 +1,90 @@
+.maintenance-activity-details-page {
+
+    .activity__info {
+
+        .activity__card {
+            padding: 1rem;
+
+            .card__characteistic {
+                margin-bottom: .7rem;
+
+                h5 {
+                    margin: 0;
+                }
+            }
+        }
+
+    }
+
+    .activity__accordion {
+
+        .accordion {
+            margin-top: 1rem;
+
+            .materials__new {
+                align-items: center;
+            }
+    
+            .materials__table {
+                margin-top: 2rem;
+            }
+    
+            .available-materials__table {
+
+                margin-top: 1rem;
+    
+                .actions__use {
+                    display: flex;
+                    justify-content: center;
+    
+                    .form-control {
+                        width: 60px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+            .actions {
+                min-width: 88px;
+
+                .icon {
+                    display: inline-block;
+                    margin: 0 10px;
+                    cursor: pointer;
+                }
+        
+                .fa-pen-to-square {
+                    color: #1e1abd;
+                }
+        
+                .fa-trash {
+                    color: red;
+                }
+            }
+
+        }
+    }
+
+}
+.modal__camera, .modal__file {
+    width: 200px;
+    height: 200px;
+    border: 1px solid currentColor;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    .fa-camera, .fa-file {
+        font-size: 7rem;
+    }
+}
+
+.table-responsive {
+    tbody {
+        tr {
+            vertical-align: middle;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.field-details-page {
+
+    .basic-details {
+
+        padding: 1.5rem;
+
+        .left {
+            text-align: center;
+        }
+
+        &__img {
+            width: 100%;
+            min-height: 300px;
+            max-width: 500px;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        &__basic-info {
+            padding: 1rem;
+            padding-bottom: 0;
+
+            @media (max-width: 768px) {
+                margin-top: 2rem;
+            }
+    
+            .field-characteistic {
+                margin-bottom: .7rem;
+    
+                h5 {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .field__map {
+        margin-top: 2rem;
+
+        iframe {
+            width: 100%;
+            aspect-ratio: 4/3;
+        }
+    }
+
+}
