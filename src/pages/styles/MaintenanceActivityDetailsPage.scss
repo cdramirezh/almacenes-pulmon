@@ -64,3 +64,17 @@
     }
 
 }
+.modal__camera, .modal__file {
+    width: 200px;
+    height: 200px;
+    border: 1px solid currentColor;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    .fa-camera, .fa-file {
+        font-size: 7rem;
+    }
+}

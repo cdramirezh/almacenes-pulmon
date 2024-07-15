@@ -137,7 +137,7 @@ const MaintenanceActivitiesPage = ({ maintenanceActivities }) => {
                     </Row>
                 ) : <Message>No hay datos para mostrar</Message>}
             </>}
-            <CustomModal show={modalNewActivity} onHide={() => setModalNewActivity(false)} onAction={() => navigate(`/maintenance-activities/${maintenanceActivities[0].id}`)} actionText="Crear" title="Nueva actividad de manetenimiento">
+            <CustomModal show={modalNewActivity} onHide={() => setModalNewActivity(false)} onAction={() => navigate(`/maintenance-activities/48695095`)} actionText="Crear" title="Nueva actividad de manetenimiento">
                 <Row>
                     <Row className="my-2">
                         <Col sm={2} className="text-end">

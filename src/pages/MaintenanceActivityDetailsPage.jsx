@@ -1,19 +1,23 @@
 import { useEffect, useState } from "react"
-import { Link, useParams } from "react-router-dom"
+import { Link, useNavigate, useParams } from "react-router-dom"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import Form from "react-bootstrap/Form"
 import Loader from '../components/Loader'
 import Message from "../components/Message"
+import CustomModal from "../components/CustomModal"
 import { Accordion, Button, Card, FloatingLabel, Table } from "react-bootstrap"
 import './styles/MaintenanceActivityDetailsPage.scss'
 
 const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities }) => {
+    const navigate = useNavigate()
     const params = useParams()
     const [pageLoading, setPageLoading] = useState(true)
     const [data, setData] = useState([])
     const [equipment, setEquipment] = useState(null)
     const [error, setError] = useState('')
+    const [modalCloseActivity, setModalCloseActivity] = useState(false)
+    const [modalEvidence, setModalEvidence] = useState(false)
 
     useEffect(() => {
         const maintenanceActivityId = Number(params.id)
@@ -24,6 +28,10 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities }) =
         
         setTimeout(() => setPageLoading(false), 1000)
     }, [maintenanceActivities, params, equipments])
+
+    const loadEvidenceHandler = () => {
+        setModalEvidence(true)
+    }
 
     return (
         <div className="maintenance-activity-details-page">
@@ -40,6 +48,11 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities }) =
                     <Col>
                         <h2>{data.name}</h2>
                     </Col>
+                    {data.status === "En proceso" &&
+                    <Col className="text-end">
+                        <Button variant="secondary" onClick={() => setModalCloseActivity(true)}>Completar</Button>
+                    </Col>
+                    }
                 </Row>
                 <Row>
                     <Col>
@@ -50,6 +63,10 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities }) =
                                         <div className="card__characteistic">
                                             <h5>ID</h5>
                                             <span>{data.id}</span>
+                                        </div>
+                                        <div className="card__characteistic">
+                                            <h5>Estado</h5>
+                                            <span>{data.status}</span>
                                         </div>
                                         <div className="card__characteistic">
                                             <h5>Equipo</h5>
@@ -320,6 +337,60 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities }) =
                     </Col>
                 </Row>
             </>}
+            <CustomModal show={modalCloseActivity} onHide={() => setModalCloseActivity(false)} onAction={() => navigate('/')} actionText="Completar" title="Mateiales sobrantes">
+                <p className="my-0">La siguiente lista de materiales no ha sido usada en el mantenimiento.</p>
+                <p>Seleccione los materiales que desea retornar al almacén y cargue las evidencias:</p>
+                <Row>
+                    <Col>
+                        <Table responsive>
+                            <thead>
+                                <tr className="text-center">
+                                    <th>Id</th>
+                                    <th>Material</th>
+                                    <th>Cantidad</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody className="text-center">
+                                <tr>
+                                    <td>10047009</td>
+                                    <td>Cuchilla de Corte</td>
+                                    <td>3</td>
+                                    <td><Button size="sm" onClick={() => loadEvidenceHandler()}>Cargar evidencia</Button></td>
+                                </tr>
+                                <tr>
+                                    <td>10072783</td>
+                                    <td>Rodamiento de Rodillos</td>
+                                    <td>6</td>
+                                    <td><Button size="sm">Cargar evidencia</Button></td>
+                                </tr>
+                                <tr>
+                                    <td>10088059</td>
+                                    <td>Correa de Transmisión</td>
+                                    <td>2</td>
+                                    <td><Button size="sm">Cargar evidencia</Button></td>
+                                </tr>
+                            </tbody>
+                        </Table> 
+                    </Col>
+                </Row>
+            </CustomModal>
+            <CustomModal show={modalEvidence} onHide={() => setModalEvidence(false)} title="Cargar evidencia">
+                <Row className="p-5">
+                    <Col className="text-center">
+                        <p><b>Cámara</b></p>
+                        <div className="modal__camera" onClick={() => setModalEvidence(false)}>
+                            <i class="fa-solid fa-camera"></i>
+                        </div>
+                    </Col>
+                    <Col className="text-center">
+                        <p><b>Archivo</b></p>
+                        <div className="modal__file" onClick={() => setModalEvidence(false)}>
+                            <i class="fa-solid fa-file"></i>
+                        </div>
+                    </Col>
+                </Row>
+            </CustomModal>
         </div>
     )
 }
