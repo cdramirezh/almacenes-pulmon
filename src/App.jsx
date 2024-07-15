@@ -33,6 +33,7 @@ import { menuData } from './data/menu.data';
 import { equipments } from './data/equipments.data';
 import { fields } from './data/fields.data';
 import { maintenanceActivities } from './data/maintenance.data';
+import { RioHeader } from './components/RioHeader';
 
 import './App.scss'
 
@@ -46,7 +47,8 @@ const App = () => {
   return (
     <BrowserRouter>
       <HabeasDataNotification />
-      <Header supplierData={supplierData} setSupplierData={setSupplierData} menuData={menuData} />
+			
+      <RioHeader supplierData={supplierData} setSupplierData={setSupplierData} menuData={menuData} />
       <main className="main">
         <Container fluid>
           <HelmetProvider>
