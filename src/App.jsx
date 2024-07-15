@@ -15,6 +15,8 @@ import EquipmentsPage from './pages/EquipmentsPage';
 import EquipmentDetailsPage from './pages/EquipmentDetailsPage';
 import FieldsPage from './pages/FieldsPage';
 import FieldDetailsPage from './pages/FieldDetailsPage';
+import MaintenanceActivitiesPage from './pages/MaintenanceActivitiesPage';
+import MaintenanceActivityDetailsPage from './pages/MaintenanceActivityDetailsPage';
 // import EquivalentDocumentPage from './pages/EquivalentDocumentPage';
 import ForgotPasswordPage from './pages/ForgotPasswordPage'
 import NotFoundPage from './pages/NotFoundPage';
@@ -1019,6 +1021,8 @@ const App = () => {
                 <Route path='equipments/:id' element={<EquipmentDetailsPage equipments={equipments} maintenanceActivities={maintenanceActivities} />} />
                 <Route path='fields' element={<FieldsPage fields={fields} />} />
                 <Route path='fields/:id' element={<FieldDetailsPage fields={fields} />} />
+                <Route path='maintenance-activities' element={<MaintenanceActivitiesPage maintenanceActivities={maintenanceActivities} />} />
+                <Route path='maintenance-activities/:id' element={<MaintenanceActivityDetailsPage maintenanceActivities={maintenanceActivities} equipments={equipments} />} />
                 {/* <Route path='equivalent-document' element={<EquivalentDocumentPage supplierData={supplierData} />} /> */}
               </Route>
               <Route path='/register' element={<RegisterPage supplierData={supplierData} setSupplierData={setSupplierData} />} />
