@@ -27,9 +27,8 @@ const App = () => {
 			<main className="main">
 				<Container fluid>
 					<Routes>
-						<Route path="/login" element={<LoginPage />}>
-							<Route path="profile" element={<ProfilePage supplierData={supplierData} />} />
-						</Route>
+						<Route path="/login" element={<LoginPage />} />
+						<Route path="/profile" element={<ProfilePage />} />
 						<Route
 							path="/register"
 							element={

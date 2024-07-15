@@ -1,5 +1,10 @@
 export const menuData = [
 	{
+		title: "Perfil",
+		target: "profile",
+		icon: "",
+	},
+	{
 		title: "Gestión de mantenimiento",
 		target: "/maintenance-management",
 		icon: "fa-solid fa-user",
