@@ -380,13 +380,13 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities }) =
                 <Row className="p-5">
                     <Col className="text-center">
                         <p><b>Cámara</b></p>
-                        <div className="modal__camera" onClick={() => setModalEvidence(false)}>
+                        <div className="modal__camera" onClick={() => Swal.fire('Fotografía guardada', 'Su fotografía ha sido guardado con éxito', 'success').then(() => setModalEvidence(false))}>
                             <i class="fa-solid fa-camera"></i>
                         </div>
                     </Col>
                     <Col className="text-center">
                         <p><b>Archivo</b></p>
-                        <div className="modal__file" onClick={() => setModalEvidence(false)}>
+                        <div className="modal__file" onClick={() => Swal.fire('Archivo cargado', 'Su archivo ha sido cargado con éxito', 'success').then(() => setModalEvidence(false))}>
                             <i class="fa-solid fa-file"></i>
                         </div>
                     </Col>
