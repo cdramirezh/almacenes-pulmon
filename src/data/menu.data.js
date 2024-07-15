@@ -270,6 +270,23 @@ export const menuData2 = [
 
 export const menuData = [
 	{
+		title: "Test",
+		icon: "fa-solid fa-star",
+		target: "/",
+		subitems: [
+			{
+				title: "Suertes",
+				target: "/fields",
+				icon: "fa-solid fa-cow",
+			},
+			{
+				title: "Actividades de mantenimiento",
+				target: "/maintenance-activities",
+				icon: "fa-solid fa-paint-roller",
+			},
+		],
+	},
+	{
 		title: "Suertes",
 		target: "/fields",
 		icon: "fa-solid fa-cow",
