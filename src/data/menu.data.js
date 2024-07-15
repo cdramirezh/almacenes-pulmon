@@ -1,4 +1,4 @@
-export const menuData = [
+export const menuData2 = [
 	{
 		title: "Perfil",
 		target: "profile",
@@ -261,6 +261,54 @@ export const menuData = [
 		],
 	},
 
+	{
+		title: "Cerrar sesión",
+		target: "/login",
+		icon: "fa-solid fa-right-from-bracket",
+	},
+];
+
+export const menuData = [
+	{
+		title: "Suertes",
+		target: "/fields",
+		icon: "fa-solid fa-cow",
+	},
+	{
+		title: "Actividades de mantenimiento",
+		target: "/maintenance-activities",
+		icon: "fa-solid fa-paint-roller",
+	},
+	{
+		title: "Aprobaciones",
+		target: "/activities-approval",
+		icon: "fa-solid fa-check",
+	},
+	// {
+	//   title: "Certificados",
+	//   target: "/certificates",
+	//   icon: "fa-solid fa-paint-roller"
+	// },
+	{
+		title: "Maestro de materiales",
+		target: "/MasterMaterials",
+		icon: "fa-solid fa-truck",
+	},
+	{
+		title: "Reportes y Monitor",
+		target: "/monitor",
+		icon: "fa-solid fa-chart-line",
+	},
+	{
+		title: "Configuración",
+		target: "/configuration",
+		icon: "fa-solid fa-gear",
+	},
+	// {
+	//   title: "Documento equivalente",
+	//   target: "/equivalent-document",
+	//   icon: "fa-sharp fa-solid fa-file-invoice"
+	// },
 	{
 		title: "Cerrar sesión",
 		target: "/login",
