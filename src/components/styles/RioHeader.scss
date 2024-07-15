@@ -1,0 +1,36 @@
+header {
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+
+	height: fit-content;
+	padding: 8px;
+	border-bottom: 1px solid #E8E8E8;
+
+	background-color: #FDFDFD;
+
+	div {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: flex-end;
+
+		&:nth-child(2) {
+			padding-right: 16px;
+			border-right: 1px solid #E3E3E3;
+		}
+	}
+
+	i {
+		margin-left: 1rem;
+		color: #BD202F;
+		font-size: 1.4rem;
+	}
+
+	img {
+		position: relative;
+		left: 20px;
+
+		height: 60px;
+		margin: -8px;
+	}
+}
