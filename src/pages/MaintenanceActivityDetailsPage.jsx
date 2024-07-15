@@ -8,6 +8,7 @@ import Message from "../components/Message"
 import CustomModal from "../components/CustomModal"
 import { Accordion, Button, Card, FloatingLabel, Table } from "react-bootstrap"
 import './styles/MaintenanceActivityDetailsPage.scss'
+import Swal from "sweetalert2"
 
 const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities }) => {
     const navigate = useNavigate()
@@ -337,7 +338,7 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities }) =
                     </Col>
                 </Row>
             </>}
-            <CustomModal show={modalCloseActivity} onHide={() => setModalCloseActivity(false)} onAction={() => navigate('/')} actionText="Completar" title="Mateiales sobrantes">
+            <CustomModal show={modalCloseActivity} onHide={() => setModalCloseActivity(false)} onAction={() => Swal.fire('Actividad completada', 'Se ha completado la actividad con éxito', 'success').then(() => navigate('/'))} actionText="Completar" title="Mateiales sobrantes">
                 <p className="my-0">La siguiente lista de materiales no ha sido usada en el mantenimiento.</p>
                 <p>Seleccione los materiales que desea retornar al almacén y cargue las evidencias:</p>
                 <Row>
