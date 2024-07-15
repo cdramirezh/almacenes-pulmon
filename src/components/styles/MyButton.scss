@@ -4,15 +4,15 @@
     transition: 150ms;
 }
 
-.my-btn.btn-primary {
-    background: $menu-background;
-    border-color: $menu-background;
+// .my-btn.btn-primary {
+//     background: $menu-background;
+//     border-color: $menu-background;
 
-    &:hover, &:active, &:focus-visible {
-        background: $my-btn-hover !important;
-        border-color: $my-btn-hover !important;
-    }
-}
+//     &:hover, &:active, &:focus-visible {
+//         background: $my-btn-hover !important;
+//         border-color: $my-btn-hover !important;
+//     }
+// }
 
 .my-btn:active {
     transform: scale(.9);

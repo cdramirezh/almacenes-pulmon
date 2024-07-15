@@ -15,6 +15,13 @@ html, body, #root {
         
         .container-fluid {
             padding-left: 0;
+
+            div[class$="-page"] {
+                .loader {
+                    display: flex;
+                    height: 100%;
+                }
+            }
         }
     }
 }

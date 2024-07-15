@@ -6,6 +6,8 @@ import './styles/HomePage.scss'
 
 const HomePage = ({ supplierData, setSupplierData, menuData }) => {
 
+    const [hasLoaded, setHasLoaded] = useState(false)
+
     const navigate = useNavigate()
     const location = useLocation()
 
@@ -18,10 +20,16 @@ const HomePage = ({ supplierData, setSupplierData, menuData }) => {
     }
 
     useEffect(() => {
-        if(!supplierData) {
-            navigate('/login')
+        if (!hasLoaded) {
+            setHasLoaded(true)
+            navigate('/fields')
         }
-    })
+        // if(!supplierData) {
+            // navigate('/login')
+        // }
+        // else 
+        
+    }, [hasLoaded, navigate])
 
     return (
         <div className="home-page">

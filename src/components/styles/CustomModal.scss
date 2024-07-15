@@ -1,0 +1,22 @@
+.custom-modal {
+	.modal-body {
+		.table {
+			tbody {
+				display: block;
+				max-height: 400px;
+				overflow-y: auto;
+
+				&.min-height-400px {
+					min-height: 400px;
+				}
+			}
+
+			thead,
+			tr {
+				display: table;
+				width: 100%;
+				table-layout: fixed;
+			}
+		}
+	}
+}
