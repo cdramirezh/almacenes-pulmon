@@ -119,7 +119,7 @@ const EquipmentDetailsPage = ({ equipments, maintenanceActivities }) => {
                                             </FloatingLabel>
                                         </Col>
                                         <Col xs="auto">
-                                            <Button>Agregar</Button>
+                                            <Button size="lg">Agregar</Button>
                                         </Col>
                                     </Row>
                                     <Table responsive className="mt-4">
