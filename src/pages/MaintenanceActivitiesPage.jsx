@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import Table from "react-bootstrap/Table"
@@ -7,11 +7,15 @@ import Button from "react-bootstrap/Button"
 import Form from "react-bootstrap/Form"
 import Loader from '../components/Loader'
 import Message from "../components/Message"
+import CustomModal from "../components/CustomModal"
 
 const MaintenanceActivitiesPage = ({ maintenanceActivities }) => {
 
+    const navigate = useNavigate()
+
     const [pageLoading, setPageLoading] = useState(false)
     const [data, setData] = useState([])
+    const [modalNewActivity, setModalNewActivity] = useState(false)
 
     const loadData = () => {
         setPageLoading(true)
@@ -28,6 +32,11 @@ const MaintenanceActivitiesPage = ({ maintenanceActivities }) => {
                 <Row>
                     <Col>
                         <h2>Actividades de mantenimiento</h2>
+                    </Col>
+                    <Col className="text-end">
+                        <Button variant="secondary" onClick={() => setModalNewActivity(true)}>
+                            <b>Crear nueva</b>
+                        </Button>
                     </Col>
                 </Row>
                 <Row>
@@ -128,6 +137,56 @@ const MaintenanceActivitiesPage = ({ maintenanceActivities }) => {
                     </Row>
                 ) : <Message>No hay datos para mostrar</Message>}
             </>}
+            <CustomModal show={modalNewActivity} onHide={() => setModalNewActivity(false)} onAction={() => navigate(`/maintenance-activities/${maintenanceActivities[0].id}`)} actionText="Crear" title="Nueva actividad de manetenimiento">
+                <Row>
+                    <Row className="my-2">
+                        <Col sm={2} className="text-end">
+                            <Form.Label className="mb-0 align-middle"><b>Código:</b></Form.Label>
+                        </Col>
+                        <Col>
+                            <Form.Control type="number" />
+                        </Col>
+                    </Row>
+                </Row>
+                <Row>
+                    <Row className="my-2">
+                        <Col sm={2} className="text-end">
+                            <Form.Label className="mb-0 align-middle"><b>Nombre:</b></Form.Label>
+                        </Col>
+                        <Col>
+                            <Form.Control type="text" />
+                        </Col>
+                    </Row>
+                </Row>
+                <Row>
+                    <Row className="my-2">
+                        <Col sm={2} className="text-end">
+                            <Form.Label className="mb-0 align-middle"><b>Fecha de inicio:</b></Form.Label>
+                        </Col>
+                        <Col>
+                            <Form.Control type="date" defaultValue={new Date().toISOString().substring(0, 10)} />
+                        </Col>
+                    </Row>
+                </Row>
+                <Row>
+                    <Row className="my-2">
+                        <Col sm={2} className="text-end">
+                            <Form.Label className="mb-0 align-middle"><b>Fecha de fin:</b></Form.Label>
+                        </Col>
+                        <Col>
+                            <Form.Control type="date" />
+                        </Col>
+                    </Row>
+                </Row>
+                <Row>
+                    <Row className="my-2">
+                        <Col>
+                            <Form.Label><b>Justificación:</b></Form.Label>
+                            <Form.Control as="textarea" style={{ height: '100px' }} />
+                        </Col>
+                    </Row>
+                </Row>
+            </CustomModal>
         </div>
     )
 }
