@@ -1,0 +1,23 @@
+.selectionModal {
+    tbody {
+        tr {
+            cursor: pointer;
+        }
+    }
+}
+
+.actions {
+    .icon {
+        display: inline-block;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+
+    .fa-pen-to-square {
+        color: #1e1abd;
+    }
+
+    .fa-trash {
+        color: red;
+    }
+}

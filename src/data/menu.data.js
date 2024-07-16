@@ -331,4 +331,9 @@ export const menuData = [
 		target: "/login",
 		icon: "fa-solid fa-right-from-bracket",
 	},
+	{
+		title: "Traslado de materiales",
+		target: "/transfer-postings",
+		icon: "fa-solid fa-dolly"
+	}
 ];
