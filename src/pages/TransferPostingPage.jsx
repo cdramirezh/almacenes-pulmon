@@ -131,6 +131,21 @@ const TransferPostingPage = ({ plants, storageLocations, materials, transferPost
                         </Col>
                     </Row>
                 </Row>
+                <Row>
+                    <Row className="my-2">
+                        <Col sm={2} className="text">
+                            <Form.Label className="mb-0 align-middle"><b>Estado:</b></Form.Label>
+                        </Col>
+                        <Col>
+                            <Form.Select>
+                                <option>Seleccione una opción</option>
+                                <option>Abierto</option>
+                                <option>Salida de materiales</option>
+                                <option>Pendiente de confirmación</option>
+                            </Form.Select>
+                        </Col>
+                    </Row>
+                </Row>
                 <Row className="text-center mb-4 mt-2">
                     <Col>
                         <Button onClick={() => loadData()}>Buscar traslado</Button>
@@ -143,6 +158,7 @@ const TransferPostingPage = ({ plants, storageLocations, materials, transferPost
                                 <thead>
                                     <tr className="text-center">
                                         <th>Código</th>
+                                        <th>Estado</th>
                                         <th>Centro Emisor</th>
                                         <th>Almacen Emisor</th>
                                         <th>Centro Destino</th>
@@ -154,6 +170,7 @@ const TransferPostingPage = ({ plants, storageLocations, materials, transferPost
                                     {data.map((transfer, idx) => (
                                     <tr key={idx}>
                                         <td><Link to={`/transfer-postings/${transfer.id}`}>{transfer.id}</Link></td>
+                                        <td>{transfer.status}</td>
                                         <td>{transfer.sourcePlant}</td>
                                         <td>{transfer.sourceStorageLocation}</td>
                                         <td>{transfer.targetPlant}</td>

@@ -7,6 +7,7 @@ import Form from "react-bootstrap/Form"
 import Card from "react-bootstrap/Card"
 import Loader from '../components/Loader'
 import './styles/TransferPostingDetailsPage.scss'
+import { Button } from "react-bootstrap"
 
 const TransferPostingDetailsPage = ({ plants, storageLocations, materials, transferPostings }) => {
 
@@ -39,9 +40,15 @@ const TransferPostingDetailsPage = ({ plants, storageLocations, materials, trans
                         <Col>
                             <div className="card__info">
                                 <Form.Label>
-                                    <b>Fecha:</b>
+                                    <b>Fecha de creación:</b>
                                 </Form.Label>
                                 <Form.Control defaultValue={data.date} disabled />
+                            </div>
+                            <div className="card__info">
+                                <Form.Label>
+                                    <b>Estado:</b>
+                                </Form.Label>
+                                <Form.Control defaultValue={data.status} disabled />
                             </div>
                             <Row>
                                 <Col>
@@ -62,18 +69,25 @@ const TransferPostingDetailsPage = ({ plants, storageLocations, materials, trans
                                             </Form.Label>
                                             <Form.Control defaultValue={data.sourceStorageLocation} disabled />
                                         </div>
-                                        <div className="card__info">
-                                            <Form.Label>
-                                                <b>Fecha de salida:</b>
-                                            </Form.Label>
-                                            <Form.Control defaultValue={data.outputDate} disabled />
-                                        </div>
-                                        <div className="card__info">
-                                            <Form.Label>
-                                                <b>Hora de salida:</b>
-                                            </Form.Label>
-                                            <Form.Control defaultValue={data.outputTime} disabled />
-                                        </div>
+                                        {data.outputDate ? <>
+                                            <div className="card__info">
+                                                <Form.Label>
+                                                    <b>Fecha de salida:</b>
+                                                </Form.Label>
+                                                <Form.Control defaultValue={data.outputDate} disabled />
+                                            </div>
+                                            <div className="card__info">
+                                                <Form.Label>
+                                                    <b>Hora de salida:</b>
+                                                </Form.Label>
+                                                <Form.Control defaultValue={data.outputTime} disabled />
+                                            </div>
+                                        </> :
+                                        <Row className="text-center">
+                                            <Col>
+                                                <Button>Confirmar salida de material</Button>
+                                            </Col>
+                                        </Row>}
                                     </Card>
                                 </Col>
                                 <Col>
@@ -94,18 +108,25 @@ const TransferPostingDetailsPage = ({ plants, storageLocations, materials, trans
                                             </Form.Label>
                                             <Form.Control defaultValue={data.targetStorageLocation} disabled />
                                         </div>
-                                        <div className="card__info">
-                                            <Form.Label>
-                                                <b>Fecha de entrada:</b>
-                                            </Form.Label>
-                                            <Form.Control defaultValue={data.inputDate} disabled />
-                                        </div>
-                                        <div className="card__info">
-                                            <Form.Label>
-                                                <b>Hora de entrada:</b>
-                                            </Form.Label>
-                                            <Form.Control defaultValue={data.inputTime} disabled />
-                                        </div>
+                                        {data.inputDate ? <>
+                                            <div className="card__info">
+                                                <Form.Label>
+                                                    <b>Fecha de entrada:</b>
+                                                </Form.Label>
+                                                <Form.Control defaultValue={data.inputDate} disabled />
+                                            </div>
+                                            <div className="card__info">
+                                                <Form.Label>
+                                                    <b>Hora de entrada:</b>
+                                                </Form.Label>
+                                                <Form.Control defaultValue={data.inputTime} disabled />
+                                            </div>
+                                        </> :
+                                        <Row className="text-center">
+                                            <Col>
+                                                <Button>Confirmar entrada de material</Button>
+                                            </Col>
+                                        </Row>}
                                     </Card>
                                 </Col>
                             </Row>

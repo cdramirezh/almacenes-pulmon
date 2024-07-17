@@ -10,6 +10,7 @@ export const transferPostings = [
         outputTime: "08:43",
         inputDate: "2024-02-06",
         inputTime: "09:02",
+        status: "Cerrado",
         materials: [
             {
                 id: 10097472,
@@ -39,6 +40,7 @@ export const transferPostings = [
         outputTime: "12:27",
         inputDate: "2024-02-07",
         inputTime: "14:35",
+        status: "Cerrado",
         materials: [
             {
                 id: 10097472,
@@ -68,6 +70,7 @@ export const transferPostings = [
         outputTime: "14:20",
         inputDate: "2024-04-25",
         inputTime: "14:57",
+        status: "Cerrado",
         materials: [
             {
                 id: 10097472,
@@ -97,6 +100,7 @@ export const transferPostings = [
         outputTime: "15:30",
         inputDate: "2024-02-27",
         inputTime: "16:14",
+        status: "Cerrado",
         materials: [
             {
                 id: 10097472,
@@ -126,6 +130,7 @@ export const transferPostings = [
         outputTime: "07:37",
         inputDate: "2024-04-28",
         inputTime: "07:43",
+        status: "Cerrado",
         materials: [
             {
                 id: 10097472,
@@ -155,6 +160,7 @@ export const transferPostings = [
         outputTime: "09:03",
         inputDate: "2024-05-15",
         inputTime: "09:30",
+        status: "Cerrado",
         materials: [
             {
                 id: 10097472,
@@ -184,6 +190,7 @@ export const transferPostings = [
         outputTime: "12:27",
         inputDate: "2024-05-29",
         inputTime: "14:35",
+        status: "Cerrado",
         materials: [
             {
                 id: 10097472,
@@ -213,6 +220,7 @@ export const transferPostings = [
         outputTime: "08:25",
         inputDate: "2024-06-04",
         inputTime: "08:55",
+        status: "Cerrado",
         materials: [
             {
                 id: 10097472,
@@ -230,5 +238,95 @@ export const transferPostings = [
                 quantity: 2
             }
         ]
-    }
+    },
+    {
+        id: 23556428,
+        sourcePlant: "CDIS0005",
+        sourceStorageLocation: "ALMC1005",
+        targetPlant: "CDIS0007",
+        targetStorageLocation: "ALMC1007",
+        date: "2024-07-17",
+        outputDate: "2024-07-17",
+        outputTime: "08:17",
+        inputDate: "2024-07-17",
+        inputTime: "08:53",
+        status: "Pendiente de confirmación",
+        materials: [
+            {
+                id: 10097472,
+                name: "Filtro de Aire",
+                quantity: 5
+            },
+            {
+                id: 10080427,
+                name: "Filtro de Combustible",
+                quantity: 3
+            },
+            {
+                id: 10047009,
+                name: "Cuchilla de Corte",
+                quantity: 2
+            }
+        ]
+    },
+    {
+        id: 23556429,
+        sourcePlant: "CDIS0001",
+        sourceStorageLocation: "ALMC1001",
+        targetPlant: "CDIS0003",
+        targetStorageLocation: "ALMC1003",
+        date: "2024-07-18",
+        outputDate: "2024-07-18",
+        outputTime: "12:27",
+        inputDate: "",
+        inputTime: "",
+        status: "Salida de materiales",
+        materials: [
+            {
+                id: 10097472,
+                name: "Filtro de Aire",
+                quantity: 5
+            },
+            {
+                id: 10080427,
+                name: "Filtro de Combustible",
+                quantity: 3
+            },
+            {
+                id: 10047009,
+                name: "Cuchilla de Corte",
+                quantity: 2
+            }
+        ]
+    },
+    {
+        id: 23556430,
+        sourcePlant: "CDIS0008",
+        sourceStorageLocation: "ALMC1008",
+        targetPlant: "CDIS0010",
+        targetStorageLocation: "ALMC1010",
+        date: "2024-07-19",
+        outputDate: "",
+        outputTime: "",
+        inputDate: "",
+        inputTime: "",
+        status: "Abierto",
+        materials: [
+            {
+                id: 10097472,
+                name: "Filtro de Aire",
+                quantity: 5
+            },
+            {
+                id: 10080427,
+                name: "Filtro de Combustible",
+                quantity: 3
+            },
+            {
+                id: 10047009,
+                name: "Cuchilla de Corte",
+                quantity: 2
+            }
+        ]
+    },
 ]
