@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import Table from "react-bootstrap/Table"
@@ -8,13 +8,19 @@ import Card from "react-bootstrap/Card"
 import Loader from '../components/Loader'
 import './styles/TransferPostingDetailsPage.scss'
 import { Button } from "react-bootstrap"
+import CustomModal from "../components/CustomModal"
+import Firm from '../components/Firm'
+import Swal from "sweetalert2"
 
-const TransferPostingDetailsPage = ({ plants, storageLocations, materials, transferPostings }) => {
+const TransferPostingDetailsPage = ({ storageLocations, transferPostings }) => {
 
     const params = useParams()
+    const navigate = useNavigate()
 
     const [pageLoading, setPageLoading] = useState(true)
     const [data, setData] = useState(null)
+    const [modalEvidence, setModalEvidence] = useState(false)
+    const [modalSign, setModalSign] = useState(false)
     
     useEffect(() => {
         const transferPostingId = params.id
@@ -34,6 +40,10 @@ const TransferPostingDetailsPage = ({ plants, storageLocations, materials, trans
                     <Col>
                         <h2>Traslado de materiales: {data.id}</h2>
                     </Col>
+                    {data.status === "Pendiente de confirmación" &&
+                    <Col className="text-end">
+                        <Button onClick={() => {window.scroll(0, 0); setModalEvidence(true)}}>Completar traslado</Button>
+                    </Col>}
                 </Row>
                 <Card>
                     <Row className="basic-info">
@@ -157,6 +167,36 @@ const TransferPostingDetailsPage = ({ plants, storageLocations, materials, trans
                     </Row>
                 </Card>
             </>}
+            <CustomModal show={modalEvidence} onHide={() => setModalEvidence(false)} title="Cargar evidencias">
+                <Row className="p-5">
+                    <Col className="text-center">
+                        <p><b>Cámara</b></p>
+                        <div className="modal__camera" onClick={() => Swal.fire('Fotografía guardada', 'Su fotografía ha sido guardado con éxito', 'success').then(() => setModalEvidence(false)).then(() => setModalSign(true))}>
+                            <i className="fa-solid fa-camera"></i>
+                        </div>
+                    </Col>
+                    <Col className="text-center">
+                        <p><b>Archivo</b></p>
+                        <div className="modal__file" onClick={() => Swal.fire('Archivo cargado', 'Su archivo ha sido cargado con éxito', 'success').then(() => setModalEvidence(false)).then(() => setModalSign(true))}>
+                            <i className="fa-solid fa-file"></i>
+                        </div>
+                    </Col>
+                </Row>
+            </CustomModal>
+
+            <CustomModal show={modalSign} onHide={() => setModalSign(false)} title="Firmar" actionText="Guardar" onAction={() => Swal.fire('Firma guardada', 'Su firma ha sido guardada con éxito', 'success')
+                .then(() => {
+                    setModalSign(false)
+                    setPageLoading(true)
+                }).then(() => setTimeout(() => navigate("/transfer-postings"), 1000))}>
+                <Row className="modal__sign">
+                    <Col>
+                        <div>
+                            <Firm />
+                        </div>
+                    </Col>
+                </Row>
+            </CustomModal>
         </div>
     )
 }
