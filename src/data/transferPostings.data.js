@@ -5,7 +5,24 @@ export const transferPostings = [
         sourceStorageLocation: "ALMC1005",
         targetPlant: "CDIS0007",
         targetStorageLocation: "ALMC1007",
-        date: "2024-02-06"
+        date: "2024-02-06",
+        materials: [
+            {
+                id: 10097472,
+                name: "Filtro de Aire",
+                quantity: 5
+            },
+            {
+                id: 10080427,
+                name: "Filtro de Combustible",
+                quantity: 3
+            },
+            {
+                id: 10047009,
+                name: "Cuchilla de Corte",
+                quantity: 2
+            }
+        ]
     },
     {
         id: 22166983,
@@ -13,7 +30,24 @@ export const transferPostings = [
         sourceStorageLocation: "ALMC1001",
         targetPlant: "CDIS0003",
         targetStorageLocation: "ALMC1003",
-        date: "2024-04-07"
+        date: "2024-04-07",
+        materials: [
+            {
+                id: 10097472,
+                name: "Filtro de Aire",
+                quantity: 5
+            },
+            {
+                id: 10080427,
+                name: "Filtro de Combustible",
+                quantity: 3
+            },
+            {
+                id: 10047009,
+                name: "Cuchilla de Corte",
+                quantity: 2
+            }
+        ]
     },
     {
         id: 22184519,
@@ -21,7 +55,24 @@ export const transferPostings = [
         sourceStorageLocation: "ALMC1008",
         targetPlant: "CDIS0010",
         targetStorageLocation: "ALMC1010",
-        date: "2024-04-25"
+        date: "2024-04-25",
+        materials: [
+            {
+                id: 10097472,
+                name: "Filtro de Aire",
+                quantity: 5
+            },
+            {
+                id: 10080427,
+                name: "Filtro de Combustible",
+                quantity: 3
+            },
+            {
+                id: 10047009,
+                name: "Cuchilla de Corte",
+                quantity: 2
+            }
+        ]
     },
     {
         id: 22912553,
@@ -29,7 +80,24 @@ export const transferPostings = [
         sourceStorageLocation: "ALMC1006",
         targetPlant: "CDIS0008",
         targetStorageLocation: "ALMC1008",
-        date: "2024-04-27"
+        date: "2024-04-27",
+        materials: [
+            {
+                id: 10097472,
+                name: "Filtro de Aire",
+                quantity: 5
+            },
+            {
+                id: 10080427,
+                name: "Filtro de Combustible",
+                quantity: 3
+            },
+            {
+                id: 10047009,
+                name: "Cuchilla de Corte",
+                quantity: 2
+            }
+        ]
     },
     {
         id: 22731961,
@@ -37,7 +105,24 @@ export const transferPostings = [
         sourceStorageLocation: "ALMC1004",
         targetPlant: "CDIS0006",
         targetStorageLocation: "ALMC1006",
-        date: "2024-04-28"
+        date: "2024-04-28",
+        materials: [
+            {
+                id: 10097472,
+                name: "Filtro de Aire",
+                quantity: 5
+            },
+            {
+                id: 10080427,
+                name: "Filtro de Combustible",
+                quantity: 3
+            },
+            {
+                id: 10047009,
+                name: "Cuchilla de Corte",
+                quantity: 2
+            }
+        ]
     },
     {
         id: 22241998,
@@ -45,7 +130,24 @@ export const transferPostings = [
         sourceStorageLocation: "ALMC1007",
         targetPlant: "CDIS0009",
         targetStorageLocation: "ALMC1009",
-        date: "2024-05-15"
+        date: "2024-05-15",
+        materials: [
+            {
+                id: 10097472,
+                name: "Filtro de Aire",
+                quantity: 5
+            },
+            {
+                id: 10080427,
+                name: "Filtro de Combustible",
+                quantity: 3
+            },
+            {
+                id: 10047009,
+                name: "Cuchilla de Corte",
+                quantity: 2
+            }
+        ]
     },
     {
         id: 22039649,
@@ -53,7 +155,24 @@ export const transferPostings = [
         sourceStorageLocation: "ALMC1002",
         targetPlant: "CDIS0004",
         targetStorageLocation: "ALMC1004",
-        date: "2024-05-29"
+        date: "2024-05-29",
+        materials: [
+            {
+                id: 10097472,
+                name: "Filtro de Aire",
+                quantity: 5
+            },
+            {
+                id: 10080427,
+                name: "Filtro de Combustible",
+                quantity: 3
+            },
+            {
+                id: 10047009,
+                name: "Cuchilla de Corte",
+                quantity: 2
+            }
+        ]
     },
     {
         id: 22675369,
@@ -61,6 +180,23 @@ export const transferPostings = [
         sourceStorageLocation: "ALMC1003",
         targetPlant: "CDIS0005",
         targetStorageLocation: "ALMC1005",
-        date: "2024-06-04"
+        date: "2024-06-04",
+        materials: [
+            {
+                id: 10097472,
+                name: "Filtro de Aire",
+                quantity: 5
+            },
+            {
+                id: 10080427,
+                name: "Filtro de Combustible",
+                quantity: 3
+            },
+            {
+                id: 10047009,
+                name: "Cuchilla de Corte",
+                quantity: 2
+            }
+        ]
     }
 ]

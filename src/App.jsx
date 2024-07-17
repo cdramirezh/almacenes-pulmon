@@ -38,6 +38,7 @@ import { storageLocations } from './data/storageLocations.data'
 import { transferPostings } from './data/transferPostings.data'
 import { materials } from './data/materials.data'
 import TransferPostingPage from './pages/TransferPostingPage';
+import TransferPostingDetailsPage from './pages/TransferPostingDetailsPage';
 
 import './App.scss'
 
@@ -76,6 +77,7 @@ const App = () => {
                 <Route path='maintenance-activities/:id' element={<MaintenanceActivityDetailsPage maintenanceActivities={maintenanceActivities} equipments={equipments} />} />
                 <Route path='activities-approval' element={<ActivitiesApproval maintenanceActivities={maintenanceActivities} equipments={equipments} />} />
                 <Route path='transfer-postings' element={<TransferPostingPage plants={plants} storageLocations={storageLocations} transferPostings={transferPostings} materials={materials} />} />
+                <Route path='transfer-postings/:id' element={<TransferPostingDetailsPage plants={plants} storageLocations={storageLocations} transferPostings={transferPostings} materials={materials} />} />
                 {/* <Route path='equivalent-document' element={<EquivalentDocumentPage supplierData={supplierData} />} /> */}
               </Route>
               <Route path='/register' element={<RegisterPage supplierData={supplierData} setSupplierData={setSupplierData} />} />
