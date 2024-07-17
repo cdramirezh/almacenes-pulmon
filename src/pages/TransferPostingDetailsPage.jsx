@@ -62,6 +62,18 @@ const TransferPostingDetailsPage = ({ plants, storageLocations, materials, trans
                                             </Form.Label>
                                             <Form.Control defaultValue={data.sourceStorageLocation} disabled />
                                         </div>
+                                        <div className="card__info">
+                                            <Form.Label>
+                                                <b>Fecha de salida:</b>
+                                            </Form.Label>
+                                            <Form.Control defaultValue={data.outputDate} disabled />
+                                        </div>
+                                        <div className="card__info">
+                                            <Form.Label>
+                                                <b>Hora de salida:</b>
+                                            </Form.Label>
+                                            <Form.Control defaultValue={data.outputTime} disabled />
+                                        </div>
                                     </Card>
                                 </Col>
                                 <Col>
@@ -81,6 +93,18 @@ const TransferPostingDetailsPage = ({ plants, storageLocations, materials, trans
                                                 <b>Almacén:</b>
                                             </Form.Label>
                                             <Form.Control defaultValue={data.targetStorageLocation} disabled />
+                                        </div>
+                                        <div className="card__info">
+                                            <Form.Label>
+                                                <b>Fecha de entrada:</b>
+                                            </Form.Label>
+                                            <Form.Control defaultValue={data.inputDate} disabled />
+                                        </div>
+                                        <div className="card__info">
+                                            <Form.Label>
+                                                <b>Hora de entrada:</b>
+                                            </Form.Label>
+                                            <Form.Control defaultValue={data.inputTime} disabled />
                                         </div>
                                     </Card>
                                 </Col>

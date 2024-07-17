@@ -147,7 +147,7 @@ const TransferPostingPage = ({ plants, storageLocations, materials, transferPost
                                         <th>Almacen Emisor</th>
                                         <th>Centro Destino</th>
                                         <th>Almacen Destino</th>
-                                        <th>Fecha del movimiento</th>
+                                        <th>Fecha de creación</th>
                                     </tr>
                                 </thead>
                                 <tbody className="text-center">
