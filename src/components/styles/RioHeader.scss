@@ -3,10 +3,13 @@ header {
 	grid-template-columns: auto 1fr auto;
 
 	height: fit-content;
+	min-height: 72px;
 	padding: 8px;
 	border-bottom: 1px solid #E8E8E8;
 
 	background-color: #FDFDFD;
+
+	overflow: hidden;
 
 	div {
 		display: flex;
