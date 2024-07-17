@@ -1,10 +1,13 @@
+import { Link } from "react-router-dom";
 import { OffcanvasMenu } from "./Menu";
 import "./styles/RioHeader.scss";
 
 export const RioHeader = () => (
 	<header>
 		<div>
-			<i className="fa fa-bell"></i>
+			<Link to="/notifications">
+				<i className="fa fa-bell"></i>
+			</Link>
 			{/* <i className="fa fa-arrow-left"></i> */}
 		</div>
 		<div>

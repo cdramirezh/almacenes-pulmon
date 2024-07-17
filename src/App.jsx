@@ -33,6 +33,7 @@ import { equipments } from './data/equipments.data';
 import { fields } from './data/fields.data';
 import { maintenanceActivities } from './data/maintenance.data';
 import { RioHeader } from './components/RioHeader';
+import { NotificationsPage } from './NotificationsPage';
 
 import './App.scss'
 
@@ -73,6 +74,7 @@ const App = () => {
                 <Route path='activities-approval' element={<ActivitiesApproval maintenanceActivities={maintenanceActivities} equipments={equipments} />} />
                 {/* <Route path='equivalent-document' element={<EquivalentDocumentPage supplierData={supplierData} />} /> */}
               </Route>
+							<Route path='/notifications' element={<NotificationsPage/>} />
               <Route path='/register' element={<RegisterPage supplierData={supplierData} setSupplierData={setSupplierData} />} />
               <Route path='/login' element={<LoginPage supplierData={supplierData} setSupplierData={setSupplierData} />} />
               <Route path='/recover_session' element={<ForgotPasswordPage />} />
