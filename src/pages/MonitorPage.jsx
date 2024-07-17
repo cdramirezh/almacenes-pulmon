@@ -6,6 +6,7 @@ import Table from "react-bootstrap/Table"
 //import Button from "react-bootstrap/Button"
 import CanvasJSReact from '@canvasjs/react-charts';
 import SEO from "../components/SEO"
+import Firm from "../components/Firm"
 
 import './styles/ConfigurationProfilesPage.scss'
 
@@ -136,6 +137,9 @@ const MonitorPage = () => {
         <div className="configurationProfiles-page">
             <SEO title="Decorceramica - Portal de colaboradores | Mis datos" description="Valida tus datos y comprueba que la información de la que la empresa dispone sea correcta" />
             <Row>
+                <Firm/>
+            </Row>
+            <Row>
                 <Col>
                     <h2>Reportes y monitoreo</h2>
                 </Col>
@@ -144,10 +148,10 @@ const MonitorPage = () => {
                 <CanvasJSChart options = {options}/>
             </Row>
             <Row>
-                <Col ClassName="col-12 col-md-6">
+                <Col className="col-12 col-md-6">
                     <CanvasJSChart options = {pieOptions}/>
                 </Col>
-                <Col ClassName="col-12 col-md-6">
+                <Col className="col-12 col-md-6">
                     <CanvasJSChart options = {barOptions}/>
                 </Col>
             </Row>

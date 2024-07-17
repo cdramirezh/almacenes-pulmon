@@ -12,14 +12,14 @@ const MenuItem = ({ menuItem }) => {
 	return (
 		<>
 			<Link to="/" onClick={(e) => {e.preventDefault(); toggleMenu();}}>
-                <i className={menuItem.icon} /><span className={location.pathname === menuItem.target ? 'active' : ''}>{isOpen ? <span className="fa-solid fa-angle-up"></span> : <span className="fa-solid fa-angle-down"></span>} {menuItem.title} </span>
+                <i className={menuItem.icon} /><span className={location.pathname === menuItem.target ? 'active subMenuHolder' : 'subMenuHolder'}><span>{menuItem.title}</span>{isOpen ? <span className="fa-solid fa-angle-up"></span> : <span className="fa-solid fa-angle-down"></span>}</span>
             </Link>
             {
-                isOpen ? menuItem.subitems.map((submenuItem,subMenuIndex) => 
-                    <Link key={"subMenu"+subMenuIndex} to={submenuItem.target}>
+                menuItem.subitems.map((submenuItem,subMenuIndex) => 
+                    <Link className={isOpen ? "subMenuItem fadeIn" : "subMenuItem fadeOut"} key={"subMenu"+subMenuIndex} to={submenuItem.target}>
                         <i className={submenuItem.icon} /><span className={location.pathname === submenuItem.target ? 'active' : ''}>{submenuItem.title}</span>
                     </Link>
-                ) : <></>
+                )
             }
 		</>
 	);
