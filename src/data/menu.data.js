@@ -273,7 +273,7 @@ export const menuData = [
 		title: "Test",
 		icon: "fa-solid fa-star",
 		target: "/",
-		subitems: [
+		subItems: [
 			{
 				title: "Suertes",
 				target: "/fields",

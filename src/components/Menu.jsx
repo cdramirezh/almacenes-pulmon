@@ -1,32 +1,65 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
-import Nav from "react-bootstrap/Nav";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import Accordion from "react-bootstrap/Accordion";
+import Navbar from "react-bootstrap/Navbar";
+import Offcanvas from "react-bootstrap/Offcanvas";
+import { menuData2 } from "../data/menu.data";
 import "./styles/Menu.scss";
 
 const MenuItem = ({ item }) => {
-	const [isOpen, setIsOpen] = useState(false);
-	const toggleMenu = () => setIsOpen(prev => !prev);
 	const hasSubItems = !!item.subItems;
 
-	return (
-		<NavDropdown.Item as="div">
-			<div>
-				{!!hasSubItems && <span onClick={toggleMenu}>{isOpen ? "⬆️" : "🔽"}</span>}
+	return hasSubItems ? (
+		<>
+			<Accordion.Header>
 				<i className={item.icon} />
 				<Link to={item.target}>{item.title}</Link>
-			</div>
-			{!!hasSubItems && !!isOpen && <Menu menuItems={item.subItems} />}
-		</NavDropdown.Item>
+			</Accordion.Header>
+			{!!hasSubItems && (
+				<Accordion.Body>
+					<Menu menuItems={item.subItems} />
+				</Accordion.Body>
+			)}
+		</>
+	) : (
+		<div className="accordion-leaf">
+			<i className={item.icon} />
+			<Link to={item.target}>{item.title}</Link>
+		</div>
 	);
 };
 
 export const Menu = ({ menuItems }) => {
 	return (
-		<NavDropdown>
-			{menuItems.map(item => {
-				return <MenuItem key={Math.random()} item={item} />;
+		<Accordion defaultActiveKey="0">
+			{menuItems.map((item, i) => {
+				return (
+					<Accordion.Item eventKey={i} key={i}>
+						<MenuItem item={item}></MenuItem>
+					</Accordion.Item>
+				);
 			})}
-		</NavDropdown>
+		</Accordion>
+	);
+};
+
+export const OffcanvasMenu = () => {
+	return (
+		<>
+			<Navbar expand={false} className="">
+				<Navbar.Toggle aria-controls={`offcanvasNavbar-expand-false`} />
+				<Navbar.Offcanvas
+					id={`offcanvasNavbar-expand-false`}
+					aria-labelledby={`offcanvasNavbarLabel-expand-false`}
+					placement="end"
+				>
+					<Offcanvas.Header closeButton>
+						<Offcanvas.Title id={`offcanvasNavbarLabel-expand-false`}>Menu</Offcanvas.Title>
+					</Offcanvas.Header>
+					<Offcanvas.Body>
+						<Menu menuItems={menuData2} />
+					</Offcanvas.Body>
+				</Navbar.Offcanvas>
+			</Navbar>
+		</>
 	);
 };
