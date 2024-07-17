@@ -1,20 +1,12 @@
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
-import Table from "react-bootstrap/Table";
-import Alert from "react-bootstrap/Alert";
-import Card from "react-bootstrap/Card";
 import { Image } from "react-bootstrap";
-import SEO from "../components/SEO";
 
 import "./styles/ProfilePage.scss";
 
 const ProfilePage = () => {
-	const navigate = useNavigate();
-
 	const supplierData = {
 		DOC_TYPE: "13",
 		DOC_NUMBER: "123",
@@ -30,7 +22,6 @@ const ProfilePage = () => {
 		TAX_CLASS_DESC: "",
 		BANK_ACCOUNT: "",
 		PAYMENT_CONDITION_DESC: "",
-		ACCOUNTING_TAXES: "",
 		ACCOUNTING_TAXES: "",
 	};
 
