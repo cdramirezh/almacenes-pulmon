@@ -10,7 +10,7 @@ import { Accordion, Button, Card, Table } from "react-bootstrap"
 import './styles/MaintenanceActivityDetailsPage.scss'
 import Swal from "sweetalert2"
 
-const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities }) => {
+const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities, fields }) => {
     const navigate = useNavigate()
     const params = useParams()
     const [pageLoading, setPageLoading] = useState(true)
@@ -72,6 +72,10 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities }) =
                                         <div className="card__characteistic">
                                             <h5>Equipo</h5>
                                             <Link to={`/equipments/${equipment.id}`}>{`${equipment.id} - ${equipment.brand} ${equipment.model}`}</Link>
+                                        </div>
+                                        <div className="card__characteistic">
+                                            <h5>Suerte</h5>
+                                            <Link to={`/fields/${data.field}`}>{fields.find(field => field.id === data.field).name}</Link>
                                         </div>
                                         <Row>
                                             <Col>
@@ -353,19 +357,19 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities }) =
                                     <td>10047009</td>
                                     <td>Cuchilla de Corte</td>
                                     <td>3</td>
-                                    <td><Button onClick={() => loadEvidenceHandler()} title="Cargar evidencia"><i class="fa-solid fa-upload"></i></Button></td>
+                                    <td><Button onClick={() => loadEvidenceHandler()} title="Cargar evidencia"><i className="fa-solid fa-upload"></i></Button></td>
                                 </tr>
                                 <tr>
                                     <td>10072783</td>
                                     <td>Rodamiento de Rodillos</td>
                                     <td>6</td>
-                                    <td><Button onClick={() => loadEvidenceHandler()} title="Cargar evidencia"><i class="fa-solid fa-upload"></i></Button></td>
+                                    <td><Button onClick={() => loadEvidenceHandler()} title="Cargar evidencia"><i className="fa-solid fa-upload"></i></Button></td>
                                 </tr>
                                 <tr>
                                     <td>10088059</td>
                                     <td>Correa de Transmisión</td>
                                     <td>2</td>
-                                    <td><Button onClick={() => loadEvidenceHandler()} title="Cargar evidencia"><i class="fa-solid fa-upload"></i></Button></td>
+                                    <td><Button onClick={() => loadEvidenceHandler()} title="Cargar evidencia"><i className="fa-solid fa-upload"></i></Button></td>
                                 </tr>
                             </tbody>
                         </Table> 

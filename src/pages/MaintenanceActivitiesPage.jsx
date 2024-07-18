@@ -11,7 +11,7 @@ import CustomModal from "../components/CustomModal"
 import Swal from "sweetalert2"
 import './styles/MaintenanceActivitiesPage.scss'
 
-const MaintenanceActivitiesPage = ({ maintenanceActivities }) => {
+const MaintenanceActivitiesPage = ({ maintenanceActivities, fields }) => {
 
     const navigate = useNavigate()
 
@@ -68,6 +68,25 @@ const MaintenanceActivitiesPage = ({ maintenanceActivities }) => {
                                             <option value="02">En Aprobacón</option>
                                             <option value="03">En Proceso</option>
                                             <option value="04">Completado</option>
+                                        </Form.Select>
+                                    </Form.Group>
+                                </Col>
+                                <Col>
+                                    <Form.Group className="form-group">
+                                        <Form.Label><b>Suerte:</b></Form.Label>
+                                        <Form.Select>
+                                            <option value="">Seleccione una opción</option>
+                                            {fields.sort((a, b) => {
+                                                if(a.name > b.name) {
+                                                    return 1
+                                                } else if(a.name < b.name) {
+                                                    return -1
+                                                } else {
+                                                    return 0
+                                                }
+                                            }).map((field, idx) => (
+                                                <option key={field.id} value={field.id}>{field.name}</option>
+                                            ))}
                                         </Form.Select>
                                     </Form.Group>
                                 </Col>

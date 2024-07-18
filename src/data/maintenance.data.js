@@ -5,6 +5,7 @@ export const maintenanceActivities = [
 		status: "Completado",
 		startDate: "2024-05-18",
 		endDate: "2024-06-14",
+		field: 5378495
 	},
 	{
 		id: 48695095,
@@ -12,6 +13,7 @@ export const maintenanceActivities = [
 		status: "En proceso",
 		startDate: "2024-06-30",
 		endDate: "2024-09-12",
+		field: 58374956
 	},
 	{
 		id: 49736750,
@@ -19,6 +21,7 @@ export const maintenanceActivities = [
 		status: "Completado",
 		startDate: "2024-05-23",
 		endDate: "2024-06-07",
+		field: 52537496
 	},
 	{
 		id: 45120462,
@@ -26,6 +29,7 @@ export const maintenanceActivities = [
 		status: "Completado",
 		startDate: "2024-02-21",
 		endDate: "2024-05-03",
+		field: 54695673
 	},
 	{
 		id: 46873078,
@@ -33,6 +37,7 @@ export const maintenanceActivities = [
 		status: "Completado",
 		startDate: "2024-04-30",
 		endDate: "2024-06-10",
+		field: 51127498
 	},
 	{
 		id: 47270233,
@@ -40,6 +45,7 @@ export const maintenanceActivities = [
 		status: "Completado",
 		startDate: "2024-04-03",
 		endDate: "2024-04-04",
+		field: 56847958
 	},
 	{
 		id: 49287763,
@@ -47,6 +53,7 @@ export const maintenanceActivities = [
 		status: "Completado",
 		startDate: "2024-06-03",
 		endDate: "2024-06-06",
+		field: 56484557
 	},
 	{
 		id: 47476031,
@@ -54,6 +61,7 @@ export const maintenanceActivities = [
 		status: "Completado",
 		startDate: "2024-06-15",
 		endDate: "2024-06-28",
+		field: 59763257
 	},
 	{
 		id: 44648879,
@@ -61,6 +69,7 @@ export const maintenanceActivities = [
 		status: "Completado",
 		startDate: "2024-04-12",
 		endDate: "2024-05-18",
+		field: 56964246
 	},
 	{
 		id: 48887564,
@@ -68,6 +77,7 @@ export const maintenanceActivities = [
 		status: "Completado",
 		startDate: "2024-05-31",
 		endDate: "2024-06-11",
+		field: 55127389
 	},
 	{
 		id: 45384567,
@@ -75,6 +85,7 @@ export const maintenanceActivities = [
 		status: "En aprobación",
 		startDate: "2024-11-18",
 		endDate: "2024-12-13",
+		field: 5378495
 	},
 	{
 		id: 49174856,
@@ -82,6 +93,7 @@ export const maintenanceActivities = [
 		status: "En aprobación",
 		startDate: "2024-09-09",
 		endDate: "2024-09-15",
+		field: 58374956
 	},
 	{
 		id: 44739567,
@@ -89,6 +101,7 @@ export const maintenanceActivities = [
 		status: "En aprobación",
 		startDate: "2024-09-10",
 		endDate: "2024-09-12",
+		field: 52537496
 	},
 	{
 		id: 48887564,
@@ -96,5 +109,6 @@ export const maintenanceActivities = [
 		status: "En aprobación",
 		startDate: "2024-09-12",
 		endDate: "2024-09-24",
+		field: 54695673
 	},
 ];
