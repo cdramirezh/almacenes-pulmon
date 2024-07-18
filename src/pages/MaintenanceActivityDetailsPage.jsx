@@ -6,7 +6,7 @@ import Form from "react-bootstrap/Form"
 import Loader from '../components/Loader'
 import Message from "../components/Message"
 import CustomModal from "../components/CustomModal"
-import { Accordion, Button, Card, FloatingLabel, Table } from "react-bootstrap"
+import { Accordion, Button, Card, Table } from "react-bootstrap"
 import './styles/MaintenanceActivityDetailsPage.scss'
 import Swal from "sweetalert2"
 
@@ -97,17 +97,13 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities }) =
                                 <Accordion.Body>
                                     <Row className="materials__new">
                                         <Col>
-                                            <FloatingLabel label="Código">
-                                                <Form.Control type="text" placeholder="Código" />
-                                            </FloatingLabel>
+                                            <Form.Control type="text" placeholder="Código" />
                                         </Col>
                                         <Col>
-                                            <FloatingLabel label="Cantidad">
-                                                <Form.Control type="number" placeholder="Cantidad" min={1} />
-                                            </FloatingLabel>
+                                            <Form.Control type="number" placeholder="Cantidad" min={1} />
                                         </Col>
                                         <Col xs="auto">
-                                            <Button size="lg">Agregar</Button>
+                                            <Button>Agregar</Button>
                                         </Col>
                                     </Row>
                                     <Table responsive className="materials__table">
@@ -338,7 +334,7 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities }) =
                     </Col>
                 </Row>
             </>}
-            <CustomModal show={modalCloseActivity} onHide={() => setModalCloseActivity(false)} onAction={() => Swal.fire('Actividad completada', 'Se ha completado la actividad con éxito', 'success').then(() => navigate('/'))} actionText="Completar" title="Mateiales sobrantes">
+            <CustomModal show={modalCloseActivity} onHide={() => setModalCloseActivity(false)} onAction={() => Swal.fire('Actividad completada', 'Se ha completado la actividad con éxito', 'success').then(() => navigate('/'))} actionText="Completar" title="Materiales sobrantes">
                 <p className="my-0">La siguiente lista de materiales no ha sido usada en el mantenimiento.</p>
                 <p>Seleccione los materiales que desea retornar al almacén y cargue las evidencias:</p>
                 <Row>
@@ -357,19 +353,19 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities }) =
                                     <td>10047009</td>
                                     <td>Cuchilla de Corte</td>
                                     <td>3</td>
-                                    <td><Button size="sm" onClick={() => loadEvidenceHandler()}>Cargar evidencia</Button></td>
+                                    <td><Button onClick={() => loadEvidenceHandler()} title="Cargar evidencia"><i class="fa-solid fa-upload"></i></Button></td>
                                 </tr>
                                 <tr>
                                     <td>10072783</td>
                                     <td>Rodamiento de Rodillos</td>
                                     <td>6</td>
-                                    <td><Button size="sm">Cargar evidencia</Button></td>
+                                    <td><Button onClick={() => loadEvidenceHandler()} title="Cargar evidencia"><i class="fa-solid fa-upload"></i></Button></td>
                                 </tr>
                                 <tr>
                                     <td>10088059</td>
                                     <td>Correa de Transmisión</td>
                                     <td>2</td>
-                                    <td><Button size="sm">Cargar evidencia</Button></td>
+                                    <td><Button onClick={() => loadEvidenceHandler()} title="Cargar evidencia"><i class="fa-solid fa-upload"></i></Button></td>
                                 </tr>
                             </tbody>
                         </Table> 
@@ -377,7 +373,7 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities }) =
                 </Row>
             </CustomModal>
             <CustomModal show={modalEvidence} onHide={() => setModalEvidence(false)} title="Cargar evidencia">
-                <Row className="p-5">
+                <Row className="modal__evidence">
                     <Col className="text-center">
                         <p><b>Cámara</b></p>
                         <div className="modal__camera" onClick={() => Swal.fire('Fotografía guardada', 'Su fotografía ha sido guardado con éxito', 'success').then(() => setModalEvidence(false))}>

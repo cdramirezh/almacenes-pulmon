@@ -72,83 +72,65 @@ const TransferPostingPage = ({ plants, storageLocations, materials, transferPost
                     </Col>
                 </Row>
                 <Row>
-                    <Row className="my-2">
-                        <Col sm={2} className="text">
-                            <Form.Label className="mb-0 align-middle"><b>Centro Emisor:</b></Form.Label>
-                        </Col>
-                        <Col>
-                            <Form.Control type="text" onClick={() => setModalSelectSourcePlant(true)} value={selectedSourcePlant} onChange={null} readOnly />
-                        </Col>
-                    </Row>
-                </Row>
-                <Row>
-                    <Row className="my-2">
-                        <Col sm={2} className="text">
-                            <Form.Label className="mb-0 align-middle"><b>Almacén Emisor:</b></Form.Label>
-                        </Col>
-                        <Col>
-                            <Form.Control type="text" onClick={() => setModalSelectSourceStorageLocation(true)} value={selectedSourceStorageLocation} onChange={null} readOnly />
-                        </Col>
-                    </Row>
-                </Row>
-                <Row>
-                    <Row className="my-2">
-                        <Col sm={2} className="text">
-                            <Form.Label className="mb-0 align-middle"><b>Centro Destino:</b></Form.Label>
-                        </Col>
-                        <Col>
-                            <Form.Control type="text" onClick={() => setModalSelectTargetPlant(true)} value={selectedTargetPlant} onChange={null} readOnly />
-                        </Col>
-                    </Row>
-                </Row>
-                <Row>
-                    <Row className="my-2">
-                        <Col sm={2} className="text">
-                            <Form.Label className="mb-0 align-middle"><b>Almacén Destino:</b></Form.Label>
-                        </Col>
-                        <Col>
-                            <Form.Control type="text" onClick={() => setModalSelectTargetStorageLocation(true)} value={selectedTargetStorageLocation} onChange={null} readOnly />
-                        </Col>
-                    </Row>
-                </Row>
-                <Row>
-                    <Row className="my-2">
-                        <Col sm={2} className="text">
-                            <Form.Label className="mb-0 align-middle"><b>Fecha de inicio:</b></Form.Label>
-                        </Col>
-                        <Col>
-                            <Form.Control type="date" />
-                        </Col>
-                    </Row>
-                </Row>
-                <Row>
-                    <Row className="my-2">
-                        <Col sm={2} className="text">
-                            <Form.Label className="mb-0 align-middle"><b>Fecha de fin:</b></Form.Label>
-                        </Col>
-                        <Col>
-                            <Form.Control type="date" />
-                        </Col>
-                    </Row>
-                </Row>
-                <Row>
-                    <Row className="my-2">
-                        <Col sm={2} className="text">
-                            <Form.Label className="mb-0 align-middle"><b>Estado:</b></Form.Label>
-                        </Col>
-                        <Col>
-                            <Form.Select>
-                                <option>Seleccione una opción</option>
-                                <option>Abierto</option>
-                                <option>Salida de materiales</option>
-                                <option>Pendiente de confirmación</option>
-                            </Form.Select>
-                        </Col>
-                    </Row>
-                </Row>
-                <Row className="text-center mb-4 mt-2">
                     <Col>
-                        <Button onClick={() => loadData()}>Buscar traslado</Button>
+                        <Form>
+                            <Row>
+                                <Col>
+                                    <Form.Group className="form-group">
+                                        <Form.Label><b>Centro Emisor:</b></Form.Label>
+                                        <Form.Control type="text" onClick={() => setModalSelectSourcePlant(true)} value={selectedSourcePlant} onChange={null} readOnly />
+                                    </Form.Group>
+                                </Col>
+                                <Col>
+                                    <Form.Group className="form-group">
+                                        <Form.Label><b>Almacén Emisor:</b></Form.Label>
+                                        <Form.Control type="text" onClick={() => setModalSelectSourceStorageLocation(true)} value={selectedSourceStorageLocation} onChange={null} readOnly />
+                                    </Form.Group>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <Form.Group className="form-group">
+                                        <Form.Label><b>Centro Destino:</b></Form.Label>
+                                        <Form.Control type="text" onClick={() => setModalSelectTargetPlant(true)} value={selectedTargetPlant} onChange={null} readOnly />
+                                    </Form.Group>
+                                </Col>
+                                <Col>
+                                    <Form.Group className="form-group">
+                                        <Form.Label><b>Almacén Destino:</b></Form.Label>
+                                        <Form.Control type="text" onClick={() => setModalSelectTargetStorageLocation(true)} value={selectedTargetStorageLocation} onChange={null} readOnly />
+                                    </Form.Group>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <Form.Group className="form-group">
+                                        <Form.Label><b>Fecha de inicio:</b></Form.Label>
+                                        <Form.Control type="date" />
+                                    </Form.Group>
+                                </Col>
+                                <Col>
+                                    <Form.Group className="form-group">
+                                        <Form.Label><b>Fecha de fin:</b></Form.Label>
+                                        <Form.Control type="date" />
+                                    </Form.Group>
+                                </Col>
+                            </Row>
+                            <Form.Group className="form-group">
+                                <Form.Label><b>Estado:</b></Form.Label>
+                                <Form.Select>
+                                    <option>Seleccione una opción</option>
+                                    <option>Abierto</option>
+                                    <option>Salida de materiales</option>
+                                    <option>Pendiente de confirmación</option>
+                                </Form.Select>
+                            </Form.Group>
+                            <Row className="text-center mb-4 mt-2">
+                                <Col>
+                                    <Button onClick={() => loadData()}>Buscar traslado</Button>
+                                </Col>
+                            </Row>
+                        </Form>
                     </Col>
                 </Row>
                 {data.length ? (
@@ -263,48 +245,40 @@ const TransferPostingPage = ({ plants, storageLocations, materials, transferPost
 
             <CustomModal show={modalNewTransfer} onHide={() => {clearData(); setModalNewTransfer(false)}} onAction={() => Swal.fire('Traslado creado', 'Se ha creado el traslado con éxito', 'success').then(() => navigate(`/transfer-postings/22112329`))} actionText="Crear" title="Nuevo traslado de materiales">
                 <Row>
-                    <Row className="my-2">
-                        <Col sm={2} className="text">
-                            <Form.Label className="mb-0 align-middle"><b>Centro Emisor:</b></Form.Label>
-                        </Col>
-                        <Col>
-                            <Form.Control type="text" onClick={() => setModalSelectSourcePlant(true)} value={selectedSourcePlant} onChange={null} readOnly />
-                        </Col>
-                    </Row>
-                </Row>
-                <Row>
-                    <Row className="my-2">
-                        <Col sm={2} className="text">
-                            <Form.Label className="mb-0 align-middle"><b>Almacén Emisor:</b></Form.Label>
-                        </Col>
-                        <Col>
-                            <Form.Control type="text" onClick={() => setModalSelectSourceStorageLocation(true)} value={selectedSourceStorageLocation} onChange={null} readOnly />
-                        </Col>
-                    </Row>
-                </Row>
-                <Row>
-                    <Row className="my-2">
-                        <Col sm={2} className="text">
-                            <Form.Label className="mb-0 align-middle"><b>Centro Destino:</b></Form.Label>
-                        </Col>
-                        <Col>
-                            <Form.Control type="text" onClick={() => setModalSelectTargetPlant(true)} value={selectedTargetPlant} onChange={null} readOnly />
-                        </Col>
-                    </Row>
-                </Row>
-                <Row>
-                    <Row className="my-2">
-                        <Col sm={2} className="text">
-                            <Form.Label className="mb-0 align-middle"><b>Almacén Destino:</b></Form.Label>
-                        </Col>
-                        <Col>
-                            <Form.Control type="text" onClick={() => setModalSelectTargetStorageLocation(true)} value={selectedTargetStorageLocation} onChange={null} readOnly />
-                        </Col>
-                    </Row>
+                    <Col>
+                        <Row>
+                            <Col>
+                                <Form.Group className="form-group">
+                                    <Form.Label className="mb-0 align-middle"><b>Centro Emisor:</b></Form.Label>
+                                    <Form.Control type="text" onClick={() => setModalSelectSourcePlant(true)} value={selectedSourcePlant} onChange={null} readOnly />
+                                </Form.Group>
+                            </Col>
+                            <Col>
+                                <Form.Group className="form-group">
+                                    <Form.Label className="mb-0 align-middle"><b>Almacén Emisor:</b></Form.Label>
+                                    <Form.Control type="text" onClick={() => setModalSelectSourceStorageLocation(true)} value={selectedSourceStorageLocation} onChange={null} readOnly />
+                                </Form.Group>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col>
+                                <Form.Group className="form-group">
+                                    <Form.Label className="mb-0 align-middle"><b>Centro Destino:</b></Form.Label>
+                                    <Form.Control type="text" onClick={() => setModalSelectTargetPlant(true)} value={selectedTargetPlant} onChange={null} readOnly />
+                                </Form.Group>
+                            </Col>
+                            <Col>
+                                <Form.Group className="form-group">
+                                    <Form.Label className="mb-0 align-middle"><b>Almacén Destino:</b></Form.Label>
+                                    <Form.Control type="text" onClick={() => setModalSelectTargetStorageLocation(true)} value={selectedTargetStorageLocation} onChange={null} readOnly />
+                                </Form.Group>
+                            </Col>
+                        </Row>
+                    </Col>
                 </Row>
                 <Row>
                     <Col>
-                        <Row className="text-center mt-4">
+                        <Row className="text-center mt-2">
                             <Col>
                                 <h4>Materiales</h4>
                             </Col>
@@ -332,7 +306,7 @@ const TransferPostingPage = ({ plants, storageLocations, materials, transferPost
                                                 <tr>
                                                     <th>ID</th>
                                                     <th>Material</th>
-                                                    <th>Cantidad</th>
+                                                    <th xs="auto">Cantidad</th>
                                                     <th>Acciones</th>
                                                 </tr>
                                             </thead>
@@ -341,7 +315,7 @@ const TransferPostingPage = ({ plants, storageLocations, materials, transferPost
                                                     <tr key={material.id}>
                                                         <td>{material.id}</td>
                                                         <td>{material.name}</td>
-                                                        <td>{Math.floor(Math.random() * (5 - 1)) + 1}</td>
+                                                        <td xs="auto">{Math.floor(Math.random() * (5 - 1)) + 1}</td>
                                                         <td className="actions">
                                                             <i className="icon fa-solid fa-pen-to-square"></i>
                                                             <i className="icon fa-solid fa-trash"></i>
