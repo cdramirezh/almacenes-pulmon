@@ -5,7 +5,26 @@ export const maintenanceActivities = [
 		status: "Completado",
 		startDate: "2024-05-18",
 		endDate: "2024-06-14",
-		field: 5378495
+		field: 5378495,
+		evidences: [
+			"/images/evidences/correaTransmision.jpg",
+			"/images/evidences/filtroAire.jpg",
+			"/images/evidences/sensorTeperatura.jpg"
+		],
+		signs: [
+			{
+				name: "Firma Mecánico",
+				src: "/images/signs/mechanicSign.jpg"
+			},
+			{
+				name: "Firma Controlador",
+				src: "/images/signs/controllerSign.jpg"
+			},
+			{
+				name: "Firma Seguridad",
+				src: "/images/signs/securitySign.jpg"
+			},
+		]
 	},
 	{
 		id: 48695095,
@@ -21,7 +40,26 @@ export const maintenanceActivities = [
 		status: "Completado",
 		startDate: "2024-05-23",
 		endDate: "2024-06-07",
-		field: 52537496
+		field: 52537496,
+		evidences: [
+			"/images/evidences/correaTransmision.jpg",
+			"/images/evidences/filtroAire.jpg",
+			"/images/evidences/sensorTeperatura.jpg"
+		],
+		signs: [
+			{
+				name: "Firma Mecánico",
+				src: "/images/signs/mechanicSign.jpg"
+			},
+			{
+				name: "Firma Controlador",
+				src: "/images/signs/controllerSign.jpg"
+			},
+			{
+				name: "Firma Seguridad",
+				src: "/images/signs/securitySign.jpg"
+			},
+		]
 	},
 	{
 		id: 45120462,
@@ -29,7 +67,26 @@ export const maintenanceActivities = [
 		status: "Completado",
 		startDate: "2024-02-21",
 		endDate: "2024-05-03",
-		field: 54695673
+		field: 54695673,
+		evidences: [
+			"/images/evidences/correaTransmision.jpg",
+			"/images/evidences/filtroAire.jpg",
+			"/images/evidences/sensorTeperatura.jpg"
+		],
+		signs: [
+			{
+				name: "Firma Mecánico",
+				src: "/images/signs/mechanicSign.jpg"
+			},
+			{
+				name: "Firma Controlador",
+				src: "/images/signs/controllerSign.jpg"
+			},
+			{
+				name: "Firma Seguridad",
+				src: "/images/signs/securitySign.jpg"
+			},
+		]
 	},
 	{
 		id: 46873078,
@@ -37,7 +94,26 @@ export const maintenanceActivities = [
 		status: "Completado",
 		startDate: "2024-04-30",
 		endDate: "2024-06-10",
-		field: 51127498
+		field: 51127498,
+		evidences: [
+			"/images/evidences/correaTransmision.jpg",
+			"/images/evidences/filtroAire.jpg",
+			"/images/evidences/sensorTeperatura.jpg"
+		],
+		signs: [
+			{
+				name: "Firma Mecánico",
+				src: "/images/signs/mechanicSign.jpg"
+			},
+			{
+				name: "Firma Controlador",
+				src: "/images/signs/controllerSign.jpg"
+			},
+			{
+				name: "Firma Seguridad",
+				src: "/images/signs/securitySign.jpg"
+			},
+		]
 	},
 	{
 		id: 47270233,
@@ -45,7 +121,26 @@ export const maintenanceActivities = [
 		status: "Completado",
 		startDate: "2024-04-03",
 		endDate: "2024-04-04",
-		field: 56847958
+		field: 56847958,
+		evidences: [
+			"/images/evidences/correaTransmision.jpg",
+			"/images/evidences/filtroAire.jpg",
+			"/images/evidences/sensorTeperatura.jpg"
+		],
+		signs: [
+			{
+				name: "Firma Mecánico",
+				src: "/images/signs/mechanicSign.jpg"
+			},
+			{
+				name: "Firma Controlador",
+				src: "/images/signs/controllerSign.jpg"
+			},
+			{
+				name: "Firma Seguridad",
+				src: "/images/signs/securitySign.jpg"
+			},
+		]
 	},
 	{
 		id: 49287763,
@@ -53,7 +148,26 @@ export const maintenanceActivities = [
 		status: "Completado",
 		startDate: "2024-06-03",
 		endDate: "2024-06-06",
-		field: 56484557
+		field: 56484557,
+		evidences: [
+			"/images/evidences/correaTransmision.jpg",
+			"/images/evidences/filtroAire.jpg",
+			"/images/evidences/sensorTeperatura.jpg"
+		],
+		signs: [
+			{
+				name: "Firma Mecánico",
+				src: "/images/signs/mechanicSign.jpg"
+			},
+			{
+				name: "Firma Controlador",
+				src: "/images/signs/controllerSign.jpg"
+			},
+			{
+				name: "Firma Seguridad",
+				src: "/images/signs/securitySign.jpg"
+			},
+		]
 	},
 	{
 		id: 47476031,
@@ -61,7 +175,26 @@ export const maintenanceActivities = [
 		status: "Completado",
 		startDate: "2024-06-15",
 		endDate: "2024-06-28",
-		field: 59763257
+		field: 59763257,
+		evidences: [
+			"/images/evidences/correaTransmision.jpg",
+			"/images/evidences/filtroAire.jpg",
+			"/images/evidences/sensorTeperatura.jpg"
+		],
+		signs: [
+			{
+				name: "Firma Mecánico",
+				src: "/images/signs/mechanicSign.jpg"
+			},
+			{
+				name: "Firma Controlador",
+				src: "/images/signs/controllerSign.jpg"
+			},
+			{
+				name: "Firma Seguridad",
+				src: "/images/signs/securitySign.jpg"
+			},
+		]
 	},
 	{
 		id: 44648879,
@@ -69,7 +202,26 @@ export const maintenanceActivities = [
 		status: "Completado",
 		startDate: "2024-04-12",
 		endDate: "2024-05-18",
-		field: 56964246
+		field: 56964246,
+		evidences: [
+			"/images/evidences/correaTransmision.jpg",
+			"/images/evidences/filtroAire.jpg",
+			"/images/evidences/sensorTeperatura.jpg"
+		],
+		signs: [
+			{
+				name: "Firma Mecánico",
+				src: "/images/signs/mechanicSign.jpg"
+			},
+			{
+				name: "Firma Controlador",
+				src: "/images/signs/controllerSign.jpg"
+			},
+			{
+				name: "Firma Seguridad",
+				src: "/images/signs/securitySign.jpg"
+			},
+		]
 	},
 	{
 		id: 48887564,
@@ -77,7 +229,26 @@ export const maintenanceActivities = [
 		status: "Completado",
 		startDate: "2024-05-31",
 		endDate: "2024-06-11",
-		field: 55127389
+		field: 55127389,
+		evidences: [
+			"/images/evidences/correaTransmision.jpg",
+			"/images/evidences/filtroAire.jpg",
+			"/images/evidences/sensorTeperatura.jpg"
+		],
+		signs: [
+			{
+				name: "Firma Mecánico",
+				src: "/images/signs/mechanicSign.jpg"
+			},
+			{
+				name: "Firma Controlador",
+				src: "/images/signs/controllerSign.jpg"
+			},
+			{
+				name: "Firma Seguridad",
+				src: "/images/signs/securitySign.jpg"
+			},
+		]
 	},
 	{
 		id: 45384567,

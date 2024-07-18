@@ -334,6 +334,35 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities, fie
                                     </Table>
                                 </Accordion.Body>
                             </Accordion.Item>
+                            {data.evidences && data.evidences.length &&
+                            <Accordion.Item eventKey="4">
+                                <Accordion.Header><b>Evidencias</b></Accordion.Header>
+                                <Accordion.Body className="accordion__evidences">
+                                    <Row>
+                                        <Col>
+                                            {data.evidences.map((evidence, idx) => (
+                                                <a key={idx} href={evidence} target="_blank" rel="noreferrer"><img src={evidence} alt={idx} /></a>
+                                            ))}
+                                        </Col>
+                                    </Row>
+                                </Accordion.Body>
+                            </Accordion.Item>}
+                            {data.signs && data.signs.length &&
+                            <Accordion.Item eventKey="5">
+                                <Accordion.Header><b>Firmas</b></Accordion.Header>
+                                <Accordion.Body className="accordion__signs">
+                                    <Row>
+                                        <Col>
+                                            {data.signs.map((sign, idx) => (
+                                                <a key={idx} href={sign.src} target="_blank" rel="noreferrer">
+                                                    <h6>{sign.name}</h6>
+                                                    <img src={sign.src} alt={sign.name} />
+                                                </a>
+                                            ))}
+                                        </Col>
+                                    </Row>
+                                </Accordion.Body>
+                            </Accordion.Item>}
                         </Accordion>
                     </Col>
                 </Row>
