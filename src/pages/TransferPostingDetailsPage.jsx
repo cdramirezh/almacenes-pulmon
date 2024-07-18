@@ -168,7 +168,7 @@ const TransferPostingDetailsPage = ({ storageLocations, transferPostings }) => {
                 </Card>
             </>}
             <CustomModal show={modalEvidence} onHide={() => setModalEvidence(false)} title="Cargar evidencias">
-                <Row className="p-5">
+                <Row className="modal__evidence">
                     <Col className="text-center">
                         <p><b>Cámara</b></p>
                         <div className="modal__camera" onClick={() => Swal.fire('Fotografía guardada', 'Su fotografía ha sido guardado con éxito', 'success').then(() => setModalEvidence(false)).then(() => setModalSign(true))}>
