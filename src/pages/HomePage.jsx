@@ -43,7 +43,7 @@ const HomePage = ({ setSupplierData, menuData }) => {
     useEffect(() => {
         if (!hasLoaded) {
             setHasLoaded(true)
-            navigate('/fields')
+            navigate('/home')
         }
         // if(!supplierData) {
             // navigate('/login')

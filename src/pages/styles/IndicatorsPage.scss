@@ -1,0 +1,48 @@
+.indicators-page {
+
+    .indicators__section {
+        margin-bottom: 2rem;
+
+        h3 {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #0a0a77;
+        }
+    }
+
+    .indicators {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(110px, max-content));
+        gap: 1rem;
+        justify-content: center;
+
+        a {
+            text-decoration: none;
+            color: currentColor;
+        }
+
+        .indicator {
+            border: 1px solid #0a0a77;
+            border-radius: 5px;
+            padding: .5rem 1rem;
+            max-width: 110px;
+
+            &__title {
+                display: block;
+                font-weight: bold;
+                font-size: .8rem;
+                text-align: center;
+                color: #0a0a77;
+            }
+
+            &__value {
+                display: block;
+                font-size: 2rem;
+                text-align: center;
+                font-weight: bold;
+                color: #BD202F;
+            }
+
+        }
+    }
+}
