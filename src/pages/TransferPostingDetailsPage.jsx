@@ -1,3 +1,5 @@
+import { LinkContainer } from "react-router-bootstrap";
+import { Breadcrumb } from "react-bootstrap";
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import Row from "react-bootstrap/Row"
@@ -36,6 +38,11 @@ const TransferPostingDetailsPage = ({ storageLocations, transferPostings }) => {
         <div className="transfer-posting-details-page">
             {pageLoading ? <Loader /> :
             <>
+						<Breadcrumb>
+							<LinkContainer to='/home'><Breadcrumb.Item>Home</Breadcrumb.Item></LinkContainer>
+							<LinkContainer to='/transfer-postings'><Breadcrumb.Item>Traslado de materiales</Breadcrumb.Item></LinkContainer>
+							<Breadcrumb.Item active>{data.id}</Breadcrumb.Item>
+						</Breadcrumb>
                 <Row>
                     <Col>
                         <h2>Traslado de materiales: {data.id}</h2>

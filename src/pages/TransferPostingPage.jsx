@@ -1,3 +1,5 @@
+import { LinkContainer } from "react-router-bootstrap";
+import { Breadcrumb } from "react-bootstrap";
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import Row from "react-bootstrap/Row"
@@ -61,6 +63,10 @@ const TransferPostingPage = ({ plants, storageLocations, materials, transferPost
         <div className="transfer-posting-page">
             {pageLoading ? <Loader /> :
             <>
+						<Breadcrumb>
+							<LinkContainer to='/home'><Breadcrumb.Item>Home</Breadcrumb.Item></LinkContainer>
+							<Breadcrumb.Item active>Traslado de materiales</Breadcrumb.Item>
+						</Breadcrumb>
                 <Row>
                     <Col>
                         <h2>Traslado de materiales</h2>

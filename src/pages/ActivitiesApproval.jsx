@@ -1,3 +1,5 @@
+import { LinkContainer } from "react-router-bootstrap";
+import { Breadcrumb } from "react-bootstrap";
 import { Link } from "react-router-dom"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
@@ -10,6 +12,10 @@ const ActivitiesApproval = ({ maintenanceActivities, equipments }) => {
     return (
         <div className="equipments-page">
             <>
+						<Breadcrumb>
+							<LinkContainer to='/home'><Breadcrumb.Item>Home</Breadcrumb.Item></LinkContainer>
+							<Breadcrumb.Item active>Aprobación de actividades</Breadcrumb.Item>
+						</Breadcrumb>
                 <Row>
                     <Col>
                         <h2>Aprobación de actividades</h2>
