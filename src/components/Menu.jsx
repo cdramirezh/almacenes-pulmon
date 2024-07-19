@@ -11,7 +11,7 @@ const MenuItem = ({ item }) => {
 	return hasSubItems ? (
 		<>
 			<Accordion.Header>
-				<i className={item.icon} />
+				{!!item.icon && <i className={item.icon} />}
 				<Link to={item.target}>{item.title}</Link>
 			</Accordion.Header>
 			{!!hasSubItems && (
@@ -22,7 +22,7 @@ const MenuItem = ({ item }) => {
 		</>
 	) : (
 		<div className="accordion-leaf">
-			<i className={item.icon} />
+			{!!item.icon && <i className={item.icon} />}
 			<Link to={item.target}>{item.title}</Link>
 		</div>
 	);

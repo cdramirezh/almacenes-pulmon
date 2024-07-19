@@ -2,6 +2,7 @@
 	padding-right: 0 !important;
 	padding-left: 10px !important;
 	padding-block: 0px !important;
+	border: 0px !important;
 	background-color: #BD202F;
 }
 
@@ -9,8 +10,9 @@
 .accordion-item,
 .accordion-header {
 	border-radius: 0px !important;
-	border-block: 0px !important;
-	border-inline-end: 0px !important;
+	// border-block: 0px !important;
+	// border-inline-end: 0px !important;
+	border: 0px !important;
 	background-color: #BD202F !important;
 }
 
@@ -21,16 +23,31 @@
 
 .accordion-button {
 	background-color: #BD202F !important;
+	border: 0px !important;
+	box-shadow: none;
+
+	&:focus {
+		outline: unset;
+		border: 0px;
+		box-shadow: none;
+	}
 }
 
 .menu-container {
 	background-color: #BD202F;
+
 	a {
 		color: whitesmoke;
 		text-decoration: none;
 		font-weight: bold;
+
+		&:hover {
+			color: lightcyan
+		}
 	}
+
 	i {
 		color: white;
+		margin-right: 1rem;
 	}
 }
