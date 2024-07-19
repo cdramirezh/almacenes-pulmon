@@ -16,7 +16,7 @@ const ReportMaintenanceDetailPage = () => {
             <SEO title="Decorceramica - Portal de colaboradores | Mis datos" description="Valida tus datos y comprueba que la información de la que la empresa dispone sea correcta" />
             <Row>
                 <Col>
-                    <h2><Link className="breadCrumbTitle" to="/MasterMaterials">Maestro de materiales</Link> &gt; Tornillos de 9mm</h2>
+                    <h2><Link className="breadCrumbTitle" to="/master-materials">Maestro de materiales</Link> &gt; Tornillos de 9mm</h2>
                 </Col>
             </Row>
             <Row className="sidewaysCard mt-4">

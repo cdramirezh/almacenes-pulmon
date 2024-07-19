@@ -1,262 +1,74 @@
 export const menuData2 = [
 	{
+		title: "Inicio",
+		target: "/",
+		icon: "fa-solid fa-house",
+	},
+	{
 		title: "Perfil",
 		target: "profile",
-		icon: "",
-	},
-	{
-		title: "Gestión de mantenimiento",
-		target: "/maintenance-management",
 		icon: "fa-solid fa-user",
+	},
+	{
+		title: "Mantenimiento",
+		target: "maintenance-activities",
+		icon: "fa-solid fa-screwdriver-wrench",
 		subItems: [
 			{
-				title: "Avisos",
-				target: "avisos",
+				title: "Actividades mantenimiento",
+				target: "maintenance-activities",
 				icon: "",
-				subItems: [
-					{
-						title: "Crear nuevo aviso",
-						target: "create-aviso",
-						icon: "",
-					},
-					{
-						title: "Lista de avisos",
-						target: "read-avisos",
-						icon: "",
-					},
-					{
-						title: "Detalle de aviso",
-						target: "read-aviso",
-						icon: "",
-					},
-				],
 			},
 			{
-				title: "Ordenes de Mantenimiento",
-				target: "/maintenance-order",
+				title: "Aprobación actividades",
+				target: "/activities-approval",
 				icon: "",
-				subItems: [
-					{
-						title: "Crear nueva orden de mantenimiento",
-						target: "/create-maintenance-order",
-						icon: "",
-					},
-					{
-						title: "Lista de órdenes de mantenimiento",
-						target: "/read-maintenance-orders",
-						icon: "",
-					},
-					{
-						title: "Detalle de orden de mantenimiento",
-						target: "/read-maintenance-order",
-						icon: "",
-						subItems: [
-							{
-								title: "Lista de materiales",
-								target: "/read-materials",
-								icon: "",
-							},
-							{
-								title: "Solicitud de retiro de material",
-								target: "/remove-material",
-								icon: "",
-							},
-							{
-								title: "Historial",
-								target: "/history",
-								icon: "",
-							},
-							{
-								title: "Mostrar materiales no utilizados para realizar devolución",
-								target: "/read-unused-materials",
-								icon: "",
-							},
-							{
-								title: "Lista de actividades",
-								target: "/read-activities",
-								icon: "",
-							},
-							{
-								title: "Lista Hojas de rutas",
-								target: "/read-hojas-rutas",
-								icon: "",
-							},
-							{
-								title: "Anexos",
-								target: "/attachments",
-								icon: "",
-							},
-							{
-								title: "Firmas",
-								target: "/signatures",
-								icon: "",
-							},
-						],
-					},
-				],
 			},
 		],
 	},
-
 	{
-		title: "Administración de equipos",
-		target: "",
-		icon: "",
-		subItems: [
-			{
-				title: "Lista de equipos",
-				target: "",
-				icon: "",
-			},
-			{
-				title: "Nuevo equipo",
-				target: "",
-				icon: "",
-			},
-			{
-				title: "Configuración de limitación",
-				target: "",
-				icon: "",
-			},
-			{
-				title: "Detalle de equipo",
-				target: "",
-				icon: "",
-				subItems: [
-					{
-						title: "Administración de actividades",
-						target: "",
-						icon: "",
-					},
-					{
-						title: "Inventario de materiales",
-						target: "",
-						icon: "",
-					},
-				],
-			},
-		],
+		title: "Equipos",
+		target: "/equipments",
+		icon: "fa-solid fa-tractor",
 	},
 
 	{
-		title: "Administración de suertes",
-		target: "",
-		icon: "",
-		subItems: [
-			{
-				title: "Lista de suertes",
-				target: "",
-				icon: "",
-			},
-			{
-				title: "Nueva suerte",
-				target: "",
-				icon: "",
-			},
-			{
-				title: "Detalle de suerte",
-				target: "",
-				icon: "",
-			},
-		],
+		title: "Suertes",
+		target: "/fields",
+		icon: "fa-solid fa-wheat-awn",
 	},
 
 	{
 		title: "Traslado de materiales",
-		target: "",
-		icon: "",
-		subItems: [
-			{
-				title: "Solicitud de movimiento de materiales",
-				target: "",
-				icon: "",
-			},
-			{
-				title: "Lista de Traslado de almacenes",
-				target: "",
-				icon: "",
-			},
-			{
-				title: "Detalle de materiales a trasladar",
-				target: "",
-				icon: "",
-			},
-			{
-				title: "Detalle",
-				target: "",
-				icon: "",
-			},
-			{
-				title: "Nueva solicitud de traslado",
-				target: "",
-				icon: "",
-			},
-		],
+		target: "/transfer-postings",
+		icon: "fa-solid fa-dolly",
 	},
 	{
 		title: "Maestro de materiales",
-		target: "",
-		icon: "",
-		subItems: [
-			{
-				title: "Detalle material",
-				target: "",
-				icon: "",
-				subItems: [
-					{
-						title: "Consulta de anexos y enlaces de documentación",
-						target: "",
-						icon: "",
-					},
-					{
-						title: "Stock",
-						target: "",
-						icon: "",
-					},
-					{
-						title: "Configuración de permanencias",
-						target: "",
-						icon: "",
-					},
-				],
-			},
-		],
+		target: "/master-materials",
+		icon: "fa-solid fa-toolbox",
 	},
 
 	{
 		title: "Reportes y monitoreo",
-		target: "",
-		icon: "",
-		subItems: [
-			{
-				title: "Historial de actividades",
-				target: "",
-				icon: "",
-			},
-		],
+		target: "/monitor",
+		icon: "fa-solid fa-chart-line",
 	},
 
 	{
 		title: "Configuración",
-		target: "",
-		icon: "",
+		target: "/configuration",
+		icon: "fa-solid fa-gear",
 		subItems: [
 			{
 				title: "Gestión de roles y perfiles",
-				target: "",
+				target: "/configuration-profiles",
 				icon: "",
 			},
 			{
 				title: "Offline",
-				target: "",
+				target: "configurationSync",
 				icon: "",
-				subItems: [
-					{
-						title: "Lista de objetos a sincronizar",
-						target: "",
-						icon: "",
-					},
-				],
 			},
 		],
 	},
@@ -308,13 +120,13 @@ export const menuData = [
 	// },
 	{
 		title: "Maestro de materiales",
-		target: "/MasterMaterials",
+		target: "/master-materials",
 		icon: "fa-solid fa-truck",
 	},
 	{
 		title: "Traslado de materiales",
 		target: "/transfer-postings",
-		icon: "fa-solid fa-dolly"
+		icon: "fa-solid fa-dolly",
 	},
 	{
 		title: "Reportes y Monitor",
@@ -335,5 +147,5 @@ export const menuData = [
 		title: "Cerrar sesión",
 		target: "/login",
 		icon: "fa-solid fa-right-from-bracket",
-	}
+	},
 ];

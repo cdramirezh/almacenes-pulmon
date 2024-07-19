@@ -32,7 +32,7 @@ const ReportMaintenancePage = () => {
             </Row>
             <Row>
                 <div className="configurationBoxGrid">
-                    <Link className="configurationLink" to="/MasterMaterialDetails">
+                    <Link className="configurationLink" to="/master-material-details">
                         <Card className="configurationBox">
                             <Card.Img variant="top" src="/images/products/NP04BE009.jpg"/>
                             <Card.Body>

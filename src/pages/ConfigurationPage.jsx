@@ -27,7 +27,7 @@ const ConfigurationPage = ({ supplierData }) => {
             </Row>
             <Row>
                 <div className="configurationBoxGrid">
-                    <Link className="configurationLink" to="/configurationProfiles">
+                    <Link className="configurationLink" to="/configuration-profiles">
                         <Card className="configurationBox">
                             <Card.Body>
                                 <span className="configurationBoxIcon fa-solid fa-gear"/>

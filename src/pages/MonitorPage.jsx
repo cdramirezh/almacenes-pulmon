@@ -167,7 +167,7 @@ const MonitorPage = () => {
                     </thead>
                     <tbody>
                         <tr>
-                            <td><Link to="/reportMaintenance">Ordenes de Mantenimiento</Link></td>
+                            <td><Link to="/report-maintenance">Ordenes de Mantenimiento</Link></td>
                             <td>3</td>
                             <td>{tenMinutesBefore}</td>
                         </tr>                        

@@ -7,9 +7,6 @@ import HomePage from './pages/HomePage';
 import RegisterPage from './pages/RegisterPage';
 import LoginPage from './pages/LoginPage';
 import ProfilePage from './pages/ProfilePage';
-import PendingInvoicesPage from './pages/PendingInvoicesPage';
-import PaymentsPage from './pages/PaymentsPage';
-import CertificatesPage from './pages/CertificatesPage';
 import ConfigurationPage from './pages/ConfigurationPage';
 import ConfigurationProfilesPage from './pages/ConfigurationProfilesPage';
 import ConfigurationSyncPage from './pages/ConfigurationSyncPage';
@@ -61,15 +58,12 @@ const App = () => {
             <Routes>
               <Route path='/' element={<HomePage supplierData={supplierData} setSupplierData={setSupplierData} menuData={menuData} />} >
                 <Route path='profile' element={<ProfilePage supplierData={supplierData} />} />
-                <Route path='pending-invoices' element={<PendingInvoicesPage supplierData={supplierData} />} />
-                <Route path='payments' element={<PaymentsPage supplierData={supplierData} />} />
-                <Route path='certificates' element={<CertificatesPage supplierData={supplierData} />} />
                 <Route path='monitor' element={<MonitorPage />} />
-                <Route path='reportMaintenance' element={<ReportMaintenancePage />} />
-                <Route path='MasterMaterials' element={<MaterialManagementPage />} />
-                <Route path='MasterMaterialDetails' element={<MaterialManagementDetailPage />} />
+                <Route path='report-maintenance' element={<ReportMaintenancePage />} />
+                <Route path='master-materials' element={<MaterialManagementPage />} />
+                <Route path='master-material-details' element={<MaterialManagementDetailPage />} />
                 <Route path='configuration' element={<ConfigurationPage supplierData={supplierData} />} />
-                <Route path='configurationProfiles' element={<ConfigurationProfilesPage />} />
+                <Route path='configuration-profiles' element={<ConfigurationProfilesPage />} />
                 <Route path='configurationSync' element={<ConfigurationSyncPage />} />
                 <Route path='equipments' element={<EquipmentsPage equipments={equipments} />} />
                 <Route path='equipments/:id' element={<EquipmentDetailsPage equipments={equipments} maintenanceActivities={maintenanceActivities} />} />
