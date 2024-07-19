@@ -1,7 +1,7 @@
 export const menuData2 = [
 	{
 		title: "Inicio",
-		target: "/",
+		target: "/home",
 		icon: "fa-solid fa-house",
 	},
 	{
@@ -84,7 +84,7 @@ export const menuData = [
 	{
 		title: "Test",
 		icon: "fa-solid fa-star",
-		target: "/",
+		target: "/home",
 		subItems: [
 			{
 				title: "Suertes",

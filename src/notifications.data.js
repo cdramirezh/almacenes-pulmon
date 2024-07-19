@@ -13,7 +13,7 @@ export const notifications = [
 		body: "Tienes una actividad de mantenimiento que revisar",
 		time: "Ayer",
 		img: "https://example.com/alert-image.jpg",
-		link: "/detalles-emergencia/456",
+		link: "/maintenance-activities/44739567",
 		read: true,
 	},
 	{
@@ -21,7 +21,7 @@ export const notifications = [
 		body: "Tienes una actividad de mantenimiento que revisar",
 		time: "El sábado",
 		img: "https://example.com/firmware-image.jpg",
-		link: "/actualizacion-firmware",
+		link: "/maintenance-activities/48887564",
 		read: false,
 	},
 	{
@@ -29,7 +29,7 @@ export const notifications = [
 		body: "Tienes una actividad de mantenimiento que revisar",
 		time: "Hace dos semanas",
 		img: "https://example.com/training-image.jpg",
-		link: "/horario-capacitacion",
+		link: "/maintenance-activities/45384567",
 		read: false,
 	},
 ];

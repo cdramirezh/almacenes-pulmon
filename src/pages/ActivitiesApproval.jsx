@@ -49,7 +49,7 @@ const ActivitiesApproval = ({ maintenanceActivities, equipments }) => {
                                                 <td>{activity.startDate}</td>
                                                 <td>{activity.endDate}</td>
                                                 <td>
-                                                    <Button size="sm">Apobar</Button>
+                                                    <Button size="sm">Aprobar</Button>
                                                 </td>
                                             </tr>    
                                             ))}

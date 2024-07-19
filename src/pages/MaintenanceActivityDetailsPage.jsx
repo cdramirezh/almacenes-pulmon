@@ -367,7 +367,7 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities, fie
                     </Col>
                 </Row>
             </>}
-            <CustomModal show={modalCloseActivity} onHide={() => setModalCloseActivity(false)} onAction={() => Swal.fire('Actividad completada', 'Se ha completado la actividad con éxito', 'success').then(() => navigate('/'))} actionText="Completar" title="Materiales sobrantes">
+            <CustomModal show={modalCloseActivity} onHide={() => setModalCloseActivity(false)} onAction={() => Swal.fire('Actividad completada', 'Se ha completado la actividad con éxito', 'success').then(() => navigate("/home"))} actionText="Completar" title="Materiales sobrantes">
                 <p className="my-0">La siguiente lista de materiales no ha sido usada en el mantenimiento.</p>
                 <p>Seleccione los materiales que desea retornar al almacén y cargue las evidencias:</p>
                 <Row>

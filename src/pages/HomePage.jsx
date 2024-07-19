@@ -11,7 +11,7 @@ const MenuItem = ({ menuItem }) => {
 
 	return (
 		<>
-			<Link to="/" onClick={(e) => {e.preventDefault(); toggleMenu();}}>
+			<Link to="/home" onClick={(e) => {e.preventDefault(); toggleMenu();}}>
                 <i className={menuItem.icon} /><span className={location.pathname === menuItem.target ? 'active subMenuHolder' : 'subMenuHolder'}><span>{menuItem.title}</span>{isOpen ? <span className="fa-solid fa-angle-up"></span> : <span className="fa-solid fa-angle-down"></span>}</span>
             </Link>
             {
@@ -41,16 +41,17 @@ const HomePage = ({ setSupplierData, menuData }) => {
     }
 
     useEffect(() => {
-        if (!hasLoaded) {
-            setHasLoaded(true)
-            navigate('/home')
-        }
+        // if (!hasLoaded) {
+        //     setHasLoaded(true)
+				if (location.pathname === '/') navigate('/home')
+        // }
         // if(!supplierData) {
             // navigate('/login')
         // }
         // else 
         
-    }, [hasLoaded, navigate])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
     return (
         <div className="home-page">
