@@ -1,6 +1,6 @@
 import Toast from "react-bootstrap/Toast";
 import { notifications } from "../notifications.data";
-// import ""
+import "./styles/NotificationsPage.scss";
 
 export const Notification = ({ notification }) => (
 	<Toast bg={notification.read ? "primary" : "light"}>
@@ -15,7 +15,7 @@ export const Notification = ({ notification }) => (
 
 export const NotificationsPage = () => {
 	return (
-		<div className="notifications-page d-flex flex-column align-items-center">
+		<div className="notifications-page">
 			{notifications.map((notification, idx) => (
 				<Notification notification={notification} key={idx} />
 			))}

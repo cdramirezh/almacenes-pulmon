@@ -1,0 +1,12 @@
+.notifications-page {
+	display: grid;
+	justify-content: space-around;
+	gap: 1rem;
+
+	margin-left: 6px;
+	padding-top: 1rem;
+
+	.toast.bg-primary {
+		color: whitesmoke;
+	}
+}
