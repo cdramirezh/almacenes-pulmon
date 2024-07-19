@@ -33,7 +33,7 @@ import { equipments } from './data/equipments.data';
 import { fields } from './data/fields.data';
 import { maintenanceActivities } from './data/maintenance.data';
 import { RioHeader } from './components/RioHeader';
-import { NotificationsPage } from './NotificationsPage';
+import { NotificationsPage } from './pages/NotificationsPage';
 
 import './App.scss'
 

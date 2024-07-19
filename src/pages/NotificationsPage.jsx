@@ -1,5 +1,6 @@
 import Toast from "react-bootstrap/Toast";
-import { notifications } from "./notifications.data";
+import { notifications } from "../notifications.data";
+// import ""
 
 export const Notification = ({ notification }) => (
 	<Toast bg={notification.read ? "primary" : "light"}>
