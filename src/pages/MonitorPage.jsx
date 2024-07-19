@@ -9,6 +9,8 @@ import SEO from "../components/SEO"
 import Firm from "../components/Firm"
 
 import './styles/ConfigurationProfilesPage.scss'
+import { Breadcrumb } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 
 //const CanvasJS = CanvasJSReact.CanvasJS;
 const CanvasJSChart = CanvasJSReact.CanvasJSChart;
@@ -136,6 +138,12 @@ const MonitorPage = () => {
     return (
         <div className="configurationProfiles-page">
             <SEO title="Decorceramica - Portal de colaboradores | Mis datos" description="Valida tus datos y comprueba que la información de la que la empresa dispone sea correcta" />
+						<Breadcrumb>
+						<LinkContainer to='/home'>
+							<Breadcrumb.Item>Home</Breadcrumb.Item>
+						</LinkContainer>
+							<Breadcrumb.Item active>Monitoreo</Breadcrumb.Item>
+						</Breadcrumb>
             <Row>
                 <Firm/>
             </Row>

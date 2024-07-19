@@ -1,3 +1,5 @@
+import { LinkContainer } from "react-router-bootstrap";
+import { Breadcrumb } from "react-bootstrap";
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import Row from "react-bootstrap/Row"
@@ -31,6 +33,10 @@ const MaintenanceActivitiesPage = ({ maintenanceActivities, fields }) => {
         <div className="maintenance-activities-page">
             {pageLoading ? <Loader /> :
             <>
+						<Breadcrumb>
+							<LinkContainer to='/home'><Breadcrumb.Item>Home</Breadcrumb.Item></LinkContainer>
+							<Breadcrumb.Item active>Actividades de mantenimiento</Breadcrumb.Item>
+						</Breadcrumb>
                 <Row>
                     <Col>
                         <h2>Actividades de mantenimiento</h2>

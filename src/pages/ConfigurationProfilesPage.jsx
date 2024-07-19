@@ -8,6 +8,8 @@ import Button from "react-bootstrap/Button"
 import SEO from "../components/SEO"
 
 import './styles/ConfigurationProfilesPage.scss'
+import { LinkContainer } from "react-router-bootstrap";
+import { Breadcrumb } from "react-bootstrap";
 
 const ConfigurationProfilesPage = () => {
     const rolHeaders = ['Nombre', 'Descripción', 'Usuarios Asignados', 'Administrar'];
@@ -33,11 +35,11 @@ const ConfigurationProfilesPage = () => {
     return (
         <div className="configurationProfiles-page">
             <SEO title="Decorceramica - Portal de colaboradores | Mis datos" description="Valida tus datos y comprueba que la información de la que la empresa dispone sea correcta" />
-            <Row>
-                <Col>
-                    <h2><Link className="breadCrumbTitle" to="/configuration">Configuración</Link> &gt; Roles y perfiles</h2>
-                </Col>
-            </Row>
+						<Breadcrumb>
+							<LinkContainer to='/home'><Breadcrumb.Item>Home</Breadcrumb.Item></LinkContainer>
+							<LinkContainer to='/configuration'><Breadcrumb.Item>Configuración</Breadcrumb.Item></LinkContainer>
+							<Breadcrumb.Item active>Roles y perfiles</Breadcrumb.Item>
+						</Breadcrumb>
             <Row>
                 <Tabs defaultActiveKey="profile" id="ProfileUsersTab" className="mb-3">
                     <Tab eventKey="profile" title="Roles">

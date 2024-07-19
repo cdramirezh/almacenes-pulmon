@@ -6,6 +6,8 @@ import Button from "react-bootstrap/Button"
 import SEO from "../components/SEO"
 
 import './styles/ConfigurationProfilesPage.scss'
+import { Breadcrumb } from "react-bootstrap"
+import { LinkContainer } from "react-router-bootstrap"
 
 const ReportMaintenancePage = () => {
     let fiveMinutesBefore = new Date();
@@ -22,11 +24,12 @@ const ReportMaintenancePage = () => {
     return (
         <div className="configurationProfiles-page">
             <SEO title="Decorceramica - Portal de colaboradores | Mis datos" description="Valida tus datos y comprueba que la información de la que la empresa dispone sea correcta" />
-            <Row>
-                <Col>
-                    <h2><Link className="breadCrumbTitle" to="/monitor">Reportes y monitoreo</Link> &gt; Ordenes de Mantenimiento</h2>
-                </Col>
-            </Row>
+						<Breadcrumb>
+						<LinkContainer to='/home'>
+							<Breadcrumb.Item>Home</Breadcrumb.Item>
+						</LinkContainer>
+							<Breadcrumb.Item active>Reportes y mantenimiento</Breadcrumb.Item>
+						</Breadcrumb>
             <Row>
                 <Col className="col-2 offset-10">
                     <Button variant="primary">Descargar <span className="fa-solid fa-download"></span></Button>

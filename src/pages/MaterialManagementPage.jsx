@@ -3,11 +3,12 @@ import { Link } from "react-router-dom"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import Form from "react-bootstrap/Form"
-import { Button, Table } from "react-bootstrap"
+import { Breadcrumb, Button, Table } from "react-bootstrap"
 import Loader from "../components/Loader"
 import Message from "../components/Message"
 
 import './styles/MaterialManagementPage.scss'
+import { LinkContainer } from "react-router-bootstrap"
 
 const ReportMaintenancePage = ({ materials }) => {
 
@@ -26,6 +27,12 @@ const ReportMaintenancePage = ({ materials }) => {
         <div className="MaterialManagement-page">
             {pageLoading ? <Loader /> :
             <>
+						<Breadcrumb>
+						<LinkContainer to="/home">
+							<Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+						</LinkContainer>
+							<Breadcrumb.Item active>Maestro de materiales</Breadcrumb.Item>
+						</Breadcrumb>
                 <Row>
                     <Col>
                         <h2>Maestro de materiales</h2>

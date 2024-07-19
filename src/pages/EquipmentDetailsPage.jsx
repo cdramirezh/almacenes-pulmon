@@ -1,3 +1,5 @@
+import { LinkContainer } from "react-router-bootstrap";
+import { Breadcrumb } from "react-bootstrap";
 import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
 import Row from "react-bootstrap/Row"
@@ -33,6 +35,11 @@ const EquipmentDetailsPage = ({ equipments, maintenanceActivities }) => {
                 </Row>
             :
             <>
+						<Breadcrumb>
+							<LinkContainer to='/home'><Breadcrumb.Item>Home</Breadcrumb.Item></LinkContainer>
+							<LinkContainer to='/equipments'><Breadcrumb.Item>Equipos</Breadcrumb.Item></LinkContainer>
+							<Breadcrumb.Item active>{`${data.brand} ${data.model}`}</Breadcrumb.Item>
+						</Breadcrumb>
                 <Row>
                     <Col>
                         <h2>{`${data.brand} ${data.model}`}</h2>

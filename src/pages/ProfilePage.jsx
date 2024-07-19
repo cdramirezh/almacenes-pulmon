@@ -2,9 +2,10 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
-import { Image } from "react-bootstrap";
+import { Breadcrumb, Image } from "react-bootstrap";
 
 import "./styles/ProfilePage.scss";
+import { LinkContainer } from "react-router-bootstrap";
 
 const ProfilePage = () => {
 	const supplierData = {
@@ -27,6 +28,12 @@ const ProfilePage = () => {
 
 	return (
 		<div className="profile-page">
+			<Breadcrumb>
+			<LinkContainer to='/home'>
+				<Breadcrumb.Item>Home</Breadcrumb.Item>
+			</LinkContainer>
+				<Breadcrumb.Item active>Perfil</Breadcrumb.Item>
+			</Breadcrumb>
 			<Row>
 				<Col>
 					<h2>Mis Datos</h2>

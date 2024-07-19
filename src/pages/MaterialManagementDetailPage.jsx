@@ -8,6 +8,8 @@ import Loader from "../components/Loader"
 import Message from "../components/Message"
 
 import './styles/MaterialManagementDetailPage.scss'
+import { Breadcrumb } from "react-bootstrap"
+import { LinkContainer } from "react-router-bootstrap"
 
 const ReportMaintenanceDetailPage = ({ materials }) => {
 
@@ -37,6 +39,11 @@ const ReportMaintenanceDetailPage = ({ materials }) => {
                 </Row>
             :
             <>
+						<Breadcrumb>
+							<LinkContainer to='/home'><Breadcrumb.Item>Home</Breadcrumb.Item></LinkContainer>
+							<LinkContainer to='/master-materials'><Breadcrumb.Item>Maestro de materiales</Breadcrumb.Item></LinkContainer>
+							<Breadcrumb.Item active>{params.id}</Breadcrumb.Item>
+						</Breadcrumb>
                 <Row>
                     <Col>
                         <figure>
