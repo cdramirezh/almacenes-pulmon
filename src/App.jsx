@@ -60,8 +60,8 @@ const App = () => {
                 <Route path='profile' element={<ProfilePage supplierData={supplierData} />} />
                 <Route path='monitor' element={<MonitorPage />} />
                 <Route path='report-maintenance' element={<ReportMaintenancePage />} />
-                <Route path='master-materials' element={<MaterialManagementPage />} />
-                <Route path='master-material-details' element={<MaterialManagementDetailPage />} />
+                <Route path='master-materials' element={<MaterialManagementPage materials={materials} />} />
+                <Route path='master-materials/:id' element={<MaterialManagementDetailPage materials={materials} />} />
                 <Route path='configuration' element={<ConfigurationPage supplierData={supplierData} />} />
                 <Route path='configuration-profiles' element={<ConfigurationProfilesPage />} />
                 <Route path='configurationSync' element={<ConfigurationSyncPage />} />
