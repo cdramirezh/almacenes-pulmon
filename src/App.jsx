@@ -34,6 +34,12 @@ import { fields } from './data/fields.data';
 import { maintenanceActivities } from './data/maintenance.data';
 import { RioHeader } from './components/RioHeader';
 import { NotificationsPage } from './pages/NotificationsPage';
+import { plants } from './data/plants.data'
+import { storageLocations } from './data/storageLocations.data'
+import { transferPostings } from './data/transferPostings.data'
+import { materials } from './data/materials.data'
+import TransferPostingPage from './pages/TransferPostingPage';
+import TransferPostingDetailsPage from './pages/TransferPostingDetailsPage';
 
 import './App.scss'
 
@@ -69,9 +75,11 @@ const App = () => {
                 <Route path='equipments/:id' element={<EquipmentDetailsPage equipments={equipments} maintenanceActivities={maintenanceActivities} />} />
                 <Route path='fields' element={<FieldsPage fields={fields} />} />
                 <Route path='fields/:id' element={<FieldDetailsPage fields={fields} />} />
-                <Route path='maintenance-activities' element={<MaintenanceActivitiesPage maintenanceActivities={maintenanceActivities} />} />
-                <Route path='maintenance-activities/:id' element={<MaintenanceActivityDetailsPage maintenanceActivities={maintenanceActivities} equipments={equipments} />} />
+                <Route path='maintenance-activities' element={<MaintenanceActivitiesPage maintenanceActivities={maintenanceActivities} fields={fields} />} />
+                <Route path='maintenance-activities/:id' element={<MaintenanceActivityDetailsPage maintenanceActivities={maintenanceActivities} equipments={equipments} fields={fields} />} />
                 <Route path='activities-approval' element={<ActivitiesApproval maintenanceActivities={maintenanceActivities} equipments={equipments} />} />
+                <Route path='transfer-postings' element={<TransferPostingPage plants={plants} storageLocations={storageLocations} transferPostings={transferPostings} materials={materials} />} />
+                <Route path='transfer-postings/:id' element={<TransferPostingDetailsPage plants={plants} storageLocations={storageLocations} transferPostings={transferPostings} materials={materials} />} />
                 {/* <Route path='equivalent-document' element={<EquivalentDocumentPage supplierData={supplierData} />} /> */}
               </Route>
 							<Route path='/notifications' element={<NotificationsPage/>} />

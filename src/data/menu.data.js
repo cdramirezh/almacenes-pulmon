@@ -312,6 +312,11 @@ export const menuData = [
 		icon: "fa-solid fa-truck",
 	},
 	{
+		title: "Traslado de materiales",
+		target: "/transfer-postings",
+		icon: "fa-solid fa-dolly"
+	},
+	{
 		title: "Reportes y Monitor",
 		target: "/monitor",
 		icon: "fa-solid fa-chart-line",
@@ -330,5 +335,5 @@ export const menuData = [
 		title: "Cerrar sesión",
 		target: "/login",
 		icon: "fa-solid fa-right-from-bracket",
-	},
+	}
 ];

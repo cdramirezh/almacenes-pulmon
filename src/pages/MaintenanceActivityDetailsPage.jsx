@@ -6,11 +6,11 @@ import Form from "react-bootstrap/Form"
 import Loader from '../components/Loader'
 import Message from "../components/Message"
 import CustomModal from "../components/CustomModal"
-import { Accordion, Button, Card, FloatingLabel, Table } from "react-bootstrap"
+import { Accordion, Button, Card, Table } from "react-bootstrap"
 import './styles/MaintenanceActivityDetailsPage.scss'
 import Swal from "sweetalert2"
 
-const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities }) => {
+const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities, fields }) => {
     const navigate = useNavigate()
     const params = useParams()
     const [pageLoading, setPageLoading] = useState(true)
@@ -73,6 +73,10 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities }) =
                                             <h5>Equipo</h5>
                                             <Link to={`/equipments/${equipment.id}`}>{`${equipment.id} - ${equipment.brand} ${equipment.model}`}</Link>
                                         </div>
+                                        <div className="card__characteistic">
+                                            <h5>Suerte</h5>
+                                            <Link to={`/fields/${data.field}`}>{fields.find(field => field.id === data.field).name}</Link>
+                                        </div>
                                         <Row>
                                             <Col>
                                                 <h5>Fecha de inicio</h5>
@@ -97,17 +101,13 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities }) =
                                 <Accordion.Body>
                                     <Row className="materials__new">
                                         <Col>
-                                            <FloatingLabel label="Código">
-                                                <Form.Control type="text" placeholder="Código" />
-                                            </FloatingLabel>
+                                            <Form.Control type="text" placeholder="Código" />
                                         </Col>
                                         <Col>
-                                            <FloatingLabel label="Cantidad">
-                                                <Form.Control type="number" placeholder="Cantidad" min={1} />
-                                            </FloatingLabel>
+                                            <Form.Control type="number" placeholder="Cantidad" min={1} />
                                         </Col>
                                         <Col xs="auto">
-                                            <Button size="lg">Agregar</Button>
+                                            <Button>Agregar</Button>
                                         </Col>
                                     </Row>
                                     <Table responsive className="materials__table">
@@ -334,11 +334,40 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities }) =
                                     </Table>
                                 </Accordion.Body>
                             </Accordion.Item>
+                            {data.evidences && data.evidences.length &&
+                            <Accordion.Item eventKey="4">
+                                <Accordion.Header><b>Evidencias</b></Accordion.Header>
+                                <Accordion.Body className="accordion__evidences">
+                                    <Row>
+                                        <Col>
+                                            {data.evidences.map((evidence, idx) => (
+                                                <a key={idx} href={evidence} target="_blank" rel="noreferrer"><img src={evidence} alt={idx} /></a>
+                                            ))}
+                                        </Col>
+                                    </Row>
+                                </Accordion.Body>
+                            </Accordion.Item>}
+                            {data.signs && data.signs.length &&
+                            <Accordion.Item eventKey="5">
+                                <Accordion.Header><b>Firmas</b></Accordion.Header>
+                                <Accordion.Body className="accordion__signs">
+                                    <Row>
+                                        <Col>
+                                            {data.signs.map((sign, idx) => (
+                                                <a key={idx} href={sign.src} target="_blank" rel="noreferrer">
+                                                    <h6>{sign.name}</h6>
+                                                    <img src={sign.src} alt={sign.name} />
+                                                </a>
+                                            ))}
+                                        </Col>
+                                    </Row>
+                                </Accordion.Body>
+                            </Accordion.Item>}
                         </Accordion>
                     </Col>
                 </Row>
             </>}
-            <CustomModal show={modalCloseActivity} onHide={() => setModalCloseActivity(false)} onAction={() => Swal.fire('Actividad completada', 'Se ha completado la actividad con éxito', 'success').then(() => navigate('/'))} actionText="Completar" title="Mateiales sobrantes">
+            <CustomModal show={modalCloseActivity} onHide={() => setModalCloseActivity(false)} onAction={() => Swal.fire('Actividad completada', 'Se ha completado la actividad con éxito', 'success').then(() => navigate('/'))} actionText="Completar" title="Materiales sobrantes">
                 <p className="my-0">La siguiente lista de materiales no ha sido usada en el mantenimiento.</p>
                 <p>Seleccione los materiales que desea retornar al almacén y cargue las evidencias:</p>
                 <Row>
@@ -357,19 +386,19 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities }) =
                                     <td>10047009</td>
                                     <td>Cuchilla de Corte</td>
                                     <td>3</td>
-                                    <td><Button size="sm" onClick={() => loadEvidenceHandler()}>Cargar evidencia</Button></td>
+                                    <td><Button onClick={() => loadEvidenceHandler()} title="Cargar evidencia"><i className="fa-solid fa-upload"></i></Button></td>
                                 </tr>
                                 <tr>
                                     <td>10072783</td>
                                     <td>Rodamiento de Rodillos</td>
                                     <td>6</td>
-                                    <td><Button size="sm">Cargar evidencia</Button></td>
+                                    <td><Button onClick={() => loadEvidenceHandler()} title="Cargar evidencia"><i className="fa-solid fa-upload"></i></Button></td>
                                 </tr>
                                 <tr>
                                     <td>10088059</td>
                                     <td>Correa de Transmisión</td>
                                     <td>2</td>
-                                    <td><Button size="sm">Cargar evidencia</Button></td>
+                                    <td><Button onClick={() => loadEvidenceHandler()} title="Cargar evidencia"><i className="fa-solid fa-upload"></i></Button></td>
                                 </tr>
                             </tbody>
                         </Table> 
@@ -377,17 +406,17 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities }) =
                 </Row>
             </CustomModal>
             <CustomModal show={modalEvidence} onHide={() => setModalEvidence(false)} title="Cargar evidencia">
-                <Row className="p-5">
+                <Row className="modal__evidence">
                     <Col className="text-center">
                         <p><b>Cámara</b></p>
                         <div className="modal__camera" onClick={() => Swal.fire('Fotografía guardada', 'Su fotografía ha sido guardado con éxito', 'success').then(() => setModalEvidence(false))}>
-                            <i class="fa-solid fa-camera"></i>
+                            <i className="fa-solid fa-camera"></i>
                         </div>
                     </Col>
                     <Col className="text-center">
                         <p><b>Archivo</b></p>
                         <div className="modal__file" onClick={() => Swal.fire('Archivo cargado', 'Su archivo ha sido cargado con éxito', 'success').then(() => setModalEvidence(false))}>
-                            <i class="fa-solid fa-file"></i>
+                            <i className="fa-solid fa-file"></i>
                         </div>
                     </Col>
                 </Row>

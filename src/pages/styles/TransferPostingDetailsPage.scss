@@ -1,0 +1,54 @@
+.transfer-posting-details-page {
+
+    .card {
+        padding: 1rem;
+
+        .form-group {
+            margin-bottom: 1rem;
+
+            h5 {
+                margin: 0;
+            }
+        }
+
+        .card__info {
+            margin-bottom: 1rem;
+        }
+
+        .card {
+            margin: 1rem 0;
+
+            .card__img {
+                text-align: center;
+
+                img {
+                    max-height: 300px;
+                    aspect-ratio: 4/3;
+                    object-fit: cover;
+                }
+            }
+
+            .card__title {
+                text-align: center;
+            }
+        }
+
+        .material-list {
+            margin-top: 1rem;
+
+            &__title {
+                text-align: center;
+            }
+
+            &__table {
+                text-align: center;
+            }
+        }
+    }
+}
+
+.modal__sign {
+    canvas {
+        border: 1px solid currentColor;
+    }
+}

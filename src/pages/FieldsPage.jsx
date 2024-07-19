@@ -7,6 +7,7 @@ import Button from "react-bootstrap/Button"
 import Form from "react-bootstrap/Form"
 import Loader from '../components/Loader'
 import Message from "../components/Message"
+import './styles/FieldsPage.scss'
 
 const FieldsPage = ({ fields }) => {
 
@@ -31,64 +32,39 @@ const FieldsPage = ({ fields }) => {
                     </Col>
                 </Row>
                 <Row>
-                    <Row className="my-2">
-                        <Col sm={2} className="text-end">
-                            <Form.Label className="mb-0 align-middle"><b>Código:</b></Form.Label>
-                        </Col>
-                        <Col>
-                            <Form.Control type="number" />
-                        </Col>
-                    </Row>
-                </Row>
-                <Row>
-                    <Row className="my-2">
-                        <Col sm={2} className="text-end">
-                            <Form.Label className="mb-0 align-middle"><b>Nombre:</b></Form.Label>
-                        </Col>
-                        <Col>
-                            <Form.Control type="text" />
-                        </Col>
-                    </Row>
-                </Row>
-                <Row>
-                    <Row className="my-2">
-                        <Col sm={2} className="text-end">
-                            <Form.Label className="mb-0 align-middle"><b>Tipo de suelo:</b></Form.Label>
-                        </Col>
-                        <Col>
-                            <Form.Select>
-                                <option value="">Seleccione una opción</option>
-                                {Array.from(new Set(fields.map(field => field.soil))).sort().map(((record, idx) => (
-                                    <option key={idx} value={idx}>{record}</option>
-                                )))}
-                            </Form.Select>
-                        </Col>
-                    </Row>
-                </Row>
-                <Row>
-                <Row className="my-2">
-                    <Col sm={2} className="text-end">
-                        <Form.Label className="mb-0 align-middle"><b>Fecha inicio de siembra:</b></Form.Label>
-                    </Col>
                     <Col>
-                        <Form.Control type="date" defaultValue={new Date().toISOString().substring(0, 10)} />
-                    </Col>
-                </Row>
-                </Row>
-                <Row>
-                    <Row className="my-2">
-                        <Col sm={2} className="text-end">
-                            <Form.Label className="mb-0 align-middle"><b>Fecha fin de siembra:</b></Form.Label>
-                        </Col>
-                        <Col>
-                            <Form.Control type="date" />
-                        </Col>
-                    </Row>
-                </Row>
-                
-                <Row className="text-center mb-5 mt-2">
-                    <Col>
-                        <Button onClick={() => loadData()}>Buscar suertes</Button>
+                        <Form className="form">
+                            <Form.Group className="form-group">
+                                <Form.Label><b>Código:</b></Form.Label>
+                                <Form.Control type="number" />
+                            </Form.Group>
+                            <Form.Group className="form-group">
+                                <Form.Label><b>Nombre:</b></Form.Label>
+                                <Form.Control type="text" />
+                            </Form.Group>
+                            <Form.Group className="form-group">
+                                <Form.Label><b>Tipo de suelo:</b></Form.Label>
+                                <Form.Select>
+                                    <option value="">Seleccione una opción</option>
+                                    {Array.from(new Set(fields.map(field => field.soil))).sort().map(((record, idx) => (
+                                        <option key={idx} value={idx}>{record}</option>
+                                    )))}
+                                </Form.Select>
+                            </Form.Group>
+                            <Form.Group className="form-group">
+                                <Form.Label><b>Fecha inicio de siembra:</b></Form.Label>
+                                <Form.Control type="date" defaultValue={new Date().toISOString().substring(0, 10)} />
+                            </Form.Group>
+                            <Form.Group className="form-group">
+                                <Form.Label><b>Fecha fin de siembra:</b></Form.Label>
+                                <Form.Control type="date" />
+                            </Form.Group>
+                            <Row className="text-center mb-5 mt-2">
+                                <Col>
+                                    <Button onClick={() => loadData()}>Buscar suertes</Button>
+                                </Col>
+                            </Row>
+                        </Form>
                     </Col>
                 </Row>
                 {data.length ? (

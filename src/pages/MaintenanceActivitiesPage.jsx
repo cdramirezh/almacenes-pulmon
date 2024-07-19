@@ -9,8 +9,9 @@ import Loader from '../components/Loader'
 import Message from "../components/Message"
 import CustomModal from "../components/CustomModal"
 import Swal from "sweetalert2"
+import './styles/MaintenanceActivitiesPage.scss'
 
-const MaintenanceActivitiesPage = ({ maintenanceActivities }) => {
+const MaintenanceActivitiesPage = ({ maintenanceActivities, fields }) => {
 
     const navigate = useNavigate()
 
@@ -41,66 +42,78 @@ const MaintenanceActivitiesPage = ({ maintenanceActivities }) => {
                     </Col>
                 </Row>
                 <Row>
-                    <Row className="my-2">
-                        <Col sm={2} className="text">
-                            <Form.Label className="mb-0 align-middle"><b>Código:</b></Form.Label>
-                        </Col>
-                        <Col>
-                            <Form.Control type="number" />
-                        </Col>
-                    </Row>
-                </Row>
-                <Row>
-                    <Row className="my-2">
-                        <Col sm={2} className="text">
-                            <Form.Label className="mb-0 align-middle"><b>Nombre:</b></Form.Label>
-                        </Col>
-                        <Col>
-                            <Form.Control type="text" />
-                        </Col>
-                    </Row>
-                </Row>
-                <Row>
-                    <Row className="my-2">
-                        <Col sm={2} className="text">
-                            <Form.Label className="mb-0 align-middle"><b>Estado:</b></Form.Label>
-                        </Col>
-                        <Col>
-                            <Form.Select>
-                                <option value="">Seleccione una opción</option>
-                                <option value="01">En Preparación</option>
-                                <option value="02">En Aprobacón</option>
-                                <option value="03">En Proceso</option>
-                                <option value="04">Completado</option>
-                            </Form.Select>
-                        </Col>
-                    </Row>
-                </Row>
-                <Row>
-                    <Row className="my-2">
-                        <Col sm={2} className="text">
-                            <Form.Label className="mb-0 align-middle"><b>Fecha de inicio:</b></Form.Label>
-                        </Col>
-                        <Col>
-                            <Form.Control type="date" defaultValue={new Date().toISOString().substring(0, 10)} />
-                        </Col>
-                    </Row>
-                </Row>
-                <Row>
-                    <Row className="my-2">
-                        <Col sm={2} className="text">
-                            <Form.Label className="mb-0 align-middle"><b>Fecha de fin:</b></Form.Label>
-                        </Col>
-                        <Col>
-                            <Form.Control type="date" />
-                        </Col>
-                    </Row>
-                </Row>
-                <Row className="text-center mb-4 mt-2">
                     <Col>
-                        <Button onClick={() => loadData()}>Buscar actividades</Button>
+                        <Form>
+                            <Row>
+                                <Col>
+                                    <Form.Group className="form-group">
+                                        <Form.Label><b>Código:</b></Form.Label>
+                                        <Form.Control type="number" />
+                                    </Form.Group>
+                                </Col>
+                                <Col>
+                                    <Form.Group className="form-group">
+                                        <Form.Label><b>Nombre:</b></Form.Label>
+                                        <Form.Control type="text" />
+                                    </Form.Group>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <Form.Group className="form-group">
+                                        <Form.Label><b>Estado:</b></Form.Label>
+                                        <Form.Select>
+                                            <option value="">Seleccione una opción</option>
+                                            <option value="01">En Preparación</option>
+                                            <option value="02">En Aprobacón</option>
+                                            <option value="03">En Proceso</option>
+                                            <option value="04">Completado</option>
+                                        </Form.Select>
+                                    </Form.Group>
+                                </Col>
+                                <Col>
+                                    <Form.Group className="form-group">
+                                        <Form.Label><b>Suerte:</b></Form.Label>
+                                        <Form.Select>
+                                            <option value="">Seleccione una opción</option>
+                                            {fields.sort((a, b) => {
+                                                if(a.name > b.name) {
+                                                    return 1
+                                                } else if(a.name < b.name) {
+                                                    return -1
+                                                } else {
+                                                    return 0
+                                                }
+                                            }).map((field, idx) => (
+                                                <option key={field.id} value={field.id}>{field.name}</option>
+                                            ))}
+                                        </Form.Select>
+                                    </Form.Group>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <Form.Group className="form-group">
+                                        <Form.Label><b>Fecha de inicio:</b></Form.Label>
+                                        <Form.Control type="date" defaultValue={new Date().toISOString().substring(0, 10)} />
+                                    </Form.Group>
+                                </Col>
+                                <Col>
+                                    <Form.Group className="form-group">
+                                        <Form.Label><b>Fecha de fin:</b></Form.Label>
+                                        <Form.Control type="date" />
+                                    </Form.Group>
+                                </Col>
+                            </Row>
+                            <Row className="text-center mb-4 mt-2">
+                                <Col>
+                                    <Button onClick={() => loadData()}>Buscar actividades</Button>
+                                </Col>
+                            </Row>
+                        </Form>
                     </Col>
                 </Row>
+                
                 {data.length ? (
                     <Row>
                         <Col>
