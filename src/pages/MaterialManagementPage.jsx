@@ -1,50 +1,78 @@
+import { useState } from "react"
 import { Link } from "react-router-dom"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
-import Card from "react-bootstrap/Card"
 import Form from "react-bootstrap/Form"
-import SEO from "../components/SEO"
+import { Button, Table } from "react-bootstrap"
+import Loader from "../components/Loader"
+import Message from "../components/Message"
 
 import './styles/MaterialManagementPage.scss'
 
-const ReportMaintenancePage = () => {
+const ReportMaintenancePage = ({ materials }) => {
 
-    const submitHandler = () => {}
+    const [pageLoading, setPageLoading] = useState(false)
+    const [data, setData] = useState([])
+
+    const loadData = () => {
+        setPageLoading(true)
+        setTimeout(() => {
+            setData(materials)
+            setPageLoading(false)
+        }, 1000)
+    }
 
     return (
         <div className="MaterialManagement-page">
-            <SEO title="Decorceramica - Portal de colaboradores | Mis datos" description="Valida tus datos y comprueba que la información de la que la empresa dispone sea correcta" />
-            <Row>
-                <Col>
-                    <h2>Maestro de materiales</h2>
-                </Col>
-            </Row>
-            <Row>
-                <Col className="col-3 offset-9">
-                    <Form onSubmit={submitHandler}>
-                        <Row>
-                            <Col>
-                                <Form.Control type="input" placeholder="Buscar Producto" />
-                            </Col>
-                        </Row>
-                    </Form>
-                </Col>
-            </Row>
-            <Row>
-                <div className="configurationBoxGrid">
-                    <Link className="configurationLink" to="/master-material-details">
-                        <Card className="configurationBox">
-                            <Card.Img variant="top" src="/images/products/NP04BE009.jpg"/>
-                            <Card.Body>
-                                <Card.Title>Tornillos 9mm</Card.Title>
-                                <Card.Text>
-                                    Tornillos de buena calida usados para maquinas de alto calibre.
-                                </Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </Link>
-                </div>
-            </Row>
+            {pageLoading ? <Loader /> :
+            <>
+                <Row>
+                    <Col>
+                        <h2>Maestro de materiales</h2>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <Form>
+                            <Form.Group className="form-group">
+                                <Form.Label><b>Código:</b></Form.Label>
+                                <Form.Control type="number" />
+                            </Form.Group>
+                            <Form.Group className="form-group">
+                                <Form.Label><b>Nombre:</b></Form.Label>
+                                <Form.Control type="text" />
+                            </Form.Group>
+                            <Row className="text-center mb-4 mt-2">
+                                <Col>
+                                    <Button onClick={() => loadData()}>Buscar materiales</Button>
+                                </Col>
+                            </Row>
+                        </Form>
+                    </Col>
+                </Row>
+                {data.length ? (
+                    <Row>
+                        <Col>
+                            <Table responsive>
+                                <thead>
+                                    <tr className="text-center">
+                                        <th>Código</th>
+                                        <th>Nombre</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="text-center">
+                                    {data.map((material, idx) => (
+                                    <tr key={idx}>
+                                        <td><Link to={`/master-materials/${material.id}`}>{material.id}</Link></td>
+                                        <td>{material.name}</td>
+                                    </tr>    
+                                    ))}
+                                </tbody>
+                            </Table>
+                        </Col>
+                    </Row>
+                ) : <Message>No hay datos para mostrar</Message>}
+            </>}
         </div>
     )
 }
