@@ -55,7 +55,7 @@ export const OffcanvasMenu = () => {
 					<Offcanvas.Header closeButton>
 						<Offcanvas.Title id={`offcanvasNavbarLabel-expand-false`}>Menu</Offcanvas.Title>
 					</Offcanvas.Header>
-					<Offcanvas.Body>
+					<Offcanvas.Body className="menu-container">
 						<Menu menuItems={menuData2} />
 					</Offcanvas.Body>
 				</Navbar.Offcanvas>
