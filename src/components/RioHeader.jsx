@@ -4,7 +4,7 @@ import "./styles/RioHeader.scss";
 
 export const RioHeader = () => (
 	<header>
-		<div>
+		<div className="alineate-al-centro">
 			<Link to="/notifications">
 				<i className="fa fa-bell"></i>
 			</Link>

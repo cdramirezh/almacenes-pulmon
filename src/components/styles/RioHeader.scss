@@ -11,6 +11,10 @@ header {
 
 	overflow: hidden;
 
+	.alineate-al-centro {
+		align-items: center;
+	}
+
 	div {
 		display: flex;
 		flex-direction: row;
