@@ -5,7 +5,7 @@ export const notifications = [
 		time: "Hace 11 min",
 		img: "https://example.com/maintenance-image.jpg",
 		link: "/detalles-mantenimiento/123",
-		read: false,
+		read: true,
 	},
 	{
 		title: "Alerta de Emergencia",
@@ -29,7 +29,7 @@ export const notifications = [
 		time: "Hace dos semanas",
 		img: "https://example.com/training-image.jpg",
 		link: "/horario-capacitacion",
-		read: true,
+		read: false,
 	},
 ];
 
