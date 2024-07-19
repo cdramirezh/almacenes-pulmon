@@ -54,7 +54,7 @@ const HomePage = ({ setSupplierData, menuData }) => {
 
     return (
         <div className="home-page">
-            <aside className="menu d-none d-lg-block" ref={$menu}>
+            {/* <aside className="menu d-none d-lg-block" ref={$menu}>
                 <nav>
                     <ul>
                         {menuData.map((menuItem,menuIndex) => (
@@ -77,7 +77,7 @@ const HomePage = ({ setSupplierData, menuData }) => {
                         </li>
                     </ul>
                 </nav>
-            </aside>
+            </aside> */}
             <Outlet />
         </div>
     )

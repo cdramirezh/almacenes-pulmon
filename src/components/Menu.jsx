@@ -45,7 +45,7 @@ export const Menu = ({ menuItems }) => {
 export const OffcanvasMenu = () => {
 	return (
 		<>
-			<Navbar expand={false} className="">
+			<Navbar expand={false}>
 				<Navbar.Toggle aria-controls={`offcanvasNavbar-expand-false`} />
 				<Navbar.Offcanvas
 					id={`offcanvasNavbar-expand-false`}
@@ -56,7 +56,7 @@ export const OffcanvasMenu = () => {
 						<Offcanvas.Title id={`offcanvasNavbarLabel-expand-false`}>Menu</Offcanvas.Title>
 					</Offcanvas.Header>
 					<Offcanvas.Body className="menu-container">
-						<Menu menuItems={menuData2} />
+						<Menu menuItems={menuData2} className="menu-con-mas-especificidad" />
 					</Offcanvas.Body>
 				</Navbar.Offcanvas>
 			</Navbar>
