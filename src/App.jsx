@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Container from 'react-bootstrap/Container';
-import Footer from './components/Footer';
+import {RioFooter} from './components/RioFooter';
 import HabeasDataNotification from './components/HabeasDataNotification';
 import HomePage from './pages/HomePage';
 import RegisterPage from './pages/RegisterPage';
@@ -83,7 +83,7 @@ const App = () => {
           </HelmetProvider>
         </Container>
       </main>
-      <Footer />
+      <RioFooter />
     </BrowserRouter>
   );
 }
