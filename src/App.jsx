@@ -79,9 +79,9 @@ const App = () => {
                 {/* <Route path='equivalent-document' element={<EquivalentDocumentPage supplierData={supplierData} />} /> */}
               </Route>
 							<Route path='/notifications' element={<NotificationsPage/>} />
-              <Route path='/register' element={<RegisterPage supplierData={supplierData} setSupplierData={setSupplierData} />} />
+              {/* <Route path='/register' element={<RegisterPage supplierData={supplierData} setSupplierData={setSupplierData} />} /> */}
               <Route path='/login' element={<LoginPage supplierData={supplierData} setSupplierData={setSupplierData} />} />
-              <Route path='/recover_session' element={<ForgotPasswordPage />} />
+              {/* <Route path='/recover_session' element={<ForgotPasswordPage />} /> */}
               <Route path='*' element={<NotFoundPage />} />
             </Routes>
           </HelmetProvider>
