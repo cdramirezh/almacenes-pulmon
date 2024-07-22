@@ -128,7 +128,9 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities, fie
                                         </thead>
                                         <tbody className="text-center">
                                             <tr>
-                                                <td>10097472</td>
+                                                <td>
+                                                    <Link to={`/master-materials/${10097472}`}>10097472</Link>
+                                                </td>
                                                 <td>Filtro de Aire</td>
                                                 <td>7</td>
                                                 <td className="actions">
@@ -137,7 +139,9 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities, fie
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>10080427</td>
+                                                <td>
+                                                    <Link to={`/master-materials/${10080427}`}>10080427</Link>
+                                                </td>
                                                 <td>Filtro de Combustible</td>
                                                 <td>5</td>
                                                 <td className="actions">
@@ -146,7 +150,9 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities, fie
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>10047009</td>
+                                                <td>
+                                                    <Link to={`/master-materials/${10047009}`}>10047009</Link>
+                                                </td>
                                                 <td>Cuchilla de Corte</td>
                                                 <td>2</td>
                                                 <td className="actions">
@@ -155,7 +161,9 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities, fie
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>10072783</td>
+                                                <td>
+                                                    <Link to={`/master-materials/${10072783}`}>10072783</Link>
+                                                </td>
                                                 <td>Rodamiento de Rodillos</td>
                                                 <td>8</td>
                                                 <td className="actions">
@@ -164,7 +172,9 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities, fie
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>10088059</td>
+                                                <td>
+                                                    <Link to={`/master-materials/${10088059}`}>10088059</Link>
+                                                </td>
                                                 <td>Correa de Transmisión</td>
                                                 <td>2</td>
                                                 <td className="actions">
@@ -173,7 +183,9 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities, fie
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>10073118</td>
+                                                <td>
+                                                    <Link to={`/master-materials/${10073118}`}>10073118</Link>
+                                                </td>
                                                 <td>Bujía de Encendido</td>
                                                 <td>5</td>
                                                 <td className="actions">
@@ -199,7 +211,9 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities, fie
                                         </thead>
                                         <tbody className="text-center">
                                             <tr>
-                                                <td>10097472</td>
+                                                <td>
+                                                    <Link to={`/master-materials/${10097472}`}>10097472</Link>
+                                                </td>
                                                 <td>Filtro de Aire</td>
                                                 <td>8</td>
                                                 <td className="actions__use">
@@ -208,7 +222,9 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities, fie
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>10080427</td>
+                                                <td>
+                                                    <Link to={`/master-materials/${10080427}`}>10080427</Link>
+                                                </td>
                                                 <td>Filtro de Combustible</td>
                                                 <td>3</td>
                                                 <td className="actions__use">
@@ -217,7 +233,9 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities, fie
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>10047009</td>
+                                                <td>
+                                                    <Link to={`/master-materials/${10047009}`}>10047009</Link>
+                                                </td>
                                                 <td>Cuchilla de Corte</td>
                                                 <td>3</td>
                                                 <td className="actions__use">
@@ -226,7 +244,9 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities, fie
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>10072783</td>
+                                                <td>
+                                                    <Link to={`/master-materials/${10072783}`}>10072783</Link>
+                                                </td>
                                                 <td>Rodamiento de Rodillos</td>
                                                 <td>2</td>
                                                 <td className="actions__use">
@@ -235,7 +255,9 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities, fie
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>10088059</td>
+                                                <td>
+                                                    <Link to={`/master-materials/${10088059}`}>10088059</Link>
+                                                </td>
                                                 <td>Correa de Transmisión</td>
                                                 <td>2</td>
                                                 <td className="actions__use">
@@ -244,7 +266,9 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities, fie
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>10073118</td>
+                                                <td>
+                                                    <Link to={`/master-materials/${10073118}`}>10073118</Link>
+                                                </td>
                                                 <td>Bujía de Encendido</td>
                                                 <td>3</td>
                                                 <td className="actions__use">
@@ -253,7 +277,9 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities, fie
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>10096271</td>
+                                                <td>
+                                                    <Link to={`/master-materials/${10096271}`}>10096271</Link>
+                                                </td>
                                                 <td>Sensor de Temperatura</td>
                                                 <td>3</td>
                                                 <td className="actions__use">
@@ -262,7 +288,9 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities, fie
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>10093592</td>
+                                                <td>
+                                                    <Link to={`/master-materials/${10093592}`}>10093592</Link>
+                                                </td>
                                                 <td>Motor Hidráulico</td>
                                                 <td>2</td>
                                                 <td className="actions__use">
@@ -271,7 +299,9 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities, fie
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>10093399</td>
+                                                <td>
+                                                    <Link to={`/master-materials/${10093399}`}>10093399</Link>
+                                                </td>
                                                 <td>Válvula de Control</td>
                                                 <td>5</td>
                                                 <td className="actions__use">
@@ -280,7 +310,9 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities, fie
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>10052032</td>
+                                                <td>
+                                                    <Link to={`/master-materials/${10052032}`}>10052032</Link>
+                                                </td>
                                                 <td>Aceite Hidráulico</td>
                                                 <td>10</td>
                                                 <td className="actions__use">
@@ -390,19 +422,25 @@ const MaintenanceActivityDetailsPage = ({ equipments, maintenanceActivities, fie
                             </thead>
                             <tbody className="text-center">
                                 <tr>
-                                    <td>10047009</td>
+                                    <td>
+                                        <Link to={`/master-materials/${10047009}`}>10047009</Link>
+                                    </td>
                                     <td>Cuchilla de Corte</td>
                                     <td>3</td>
                                     <td><Button onClick={() => loadEvidenceHandler()} title="Cargar evidencia"><i className="fa-solid fa-upload"></i></Button></td>
                                 </tr>
                                 <tr>
-                                    <td>10072783</td>
+                                    <td>
+                                        <Link to={`/master-materials/${10072783}`}>10072783</Link>
+                                    </td>
                                     <td>Rodamiento de Rodillos</td>
                                     <td>6</td>
                                     <td><Button onClick={() => loadEvidenceHandler()} title="Cargar evidencia"><i className="fa-solid fa-upload"></i></Button></td>
                                 </tr>
                                 <tr>
-                                    <td>10088059</td>
+                                    <td>
+                                        <Link to={`/master-materials/${10088059}`}>10088059</Link>
+                                    </td>
                                     <td>Correa de Transmisión</td>
                                     <td>2</td>
                                     <td><Button onClick={() => loadEvidenceHandler()} title="Cargar evidencia"><i className="fa-solid fa-upload"></i></Button></td>
