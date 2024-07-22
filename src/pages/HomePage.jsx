@@ -27,8 +27,6 @@ const MenuItem = ({ menuItem }) => {
 
 const HomePage = ({ setSupplierData, menuData }) => {
 
-    const [hasLoaded, setHasLoaded] = useState(false)
-
     const navigate = useNavigate()
     const location = useLocation()
 

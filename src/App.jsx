@@ -4,7 +4,6 @@ import Container from 'react-bootstrap/Container';
 import {RioFooter} from './components/RioFooter';
 import HabeasDataNotification from './components/HabeasDataNotification';
 import HomePage from './pages/HomePage';
-import RegisterPage from './pages/RegisterPage';
 import LoginPage from './pages/LoginPage';
 import ProfilePage from './pages/ProfilePage';
 import ConfigurationPage from './pages/ConfigurationPage';
@@ -22,7 +21,6 @@ import MaintenanceActivitiesPage from './pages/MaintenanceActivitiesPage';
 import MaintenanceActivityDetailsPage from './pages/MaintenanceActivityDetailsPage';
 import ActivitiesApproval from './pages/ActivitiesApproval';
 // import EquivalentDocumentPage from './pages/EquivalentDocumentPage';
-import ForgotPasswordPage from './pages/ForgotPasswordPage'
 import NotFoundPage from './pages/NotFoundPage';
 import { HelmetProvider } from 'react-helmet-async';
 import { menuData } from './data/menu.data';
@@ -79,9 +77,7 @@ const App = () => {
                 {/* <Route path='equivalent-document' element={<EquivalentDocumentPage supplierData={supplierData} />} /> */}
               </Route>
 							<Route path='/notifications' element={<NotificationsPage/>} />
-              {/* <Route path='/register' element={<RegisterPage supplierData={supplierData} setSupplierData={setSupplierData} />} /> */}
               <Route path='/login' element={<LoginPage supplierData={supplierData} setSupplierData={setSupplierData} />} />
-              {/* <Route path='/recover_session' element={<ForgotPasswordPage />} /> */}
               <Route path='*' element={<NotFoundPage />} />
             </Routes>
           </HelmetProvider>
