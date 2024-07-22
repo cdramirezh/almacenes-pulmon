@@ -6,6 +6,10 @@ import Loader from '../components/Loader'
 import Message from "../components/Message"
 import Card from "react-bootstrap/Card"
 import './styles/FieldDetailsPage.scss'
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import L from 'leaflet';
+
+const icon = L.icon({ iconUrl: "/images/leaflet-map/marker-icon.png", shadowUrl: "/images/leaflet-map/marker-shadow.png" });
 
 const FieldDetailsPage = ({ fields }) => {
     const params = useParams()
@@ -74,7 +78,15 @@ const FieldDetailsPage = ({ fields }) => {
                 </Row>
                 <Row className="field__map">
                     <Col>
-                        <iframe title="map" src={data.map} />
+                    <MapContainer style={{ width: "100%", height: "100vh" }} center={[data.location.lat, data.location.lon]} zoom={13} scrollWheelZoom={false}>
+                        <TileLayer
+                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                        />
+                        <Marker position={[data.location.lat, data.location.lon]} icon={icon}>
+                        <Popup>{data.name}</Popup>
+                        </Marker>
+                    </MapContainer>
                     </Col>
                 </Row>
             </>}
