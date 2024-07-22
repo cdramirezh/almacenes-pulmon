@@ -22,10 +22,10 @@ const ConfigurationPage = ({ supplierData }) => {
     return (
         <div className="configuration-page">
             <SEO title="Decorceramica - Portal de colaboradores | Mis datos" description="Valida tus datos y comprueba que la información de la que la empresa dispone sea correcta" />
-						<Breadcrumb>
-							<LinkContainer to='/home'><Breadcrumb.Item>Home</Breadcrumb.Item></LinkContainer>
-							<Breadcrumb.Item active>Configuración</Breadcrumb.Item>
-						</Breadcrumb>
+            <Breadcrumb>
+                <LinkContainer to='/home'><Breadcrumb.Item>Home</Breadcrumb.Item></LinkContainer>
+                <Breadcrumb.Item active>Configuración</Breadcrumb.Item>
+            </Breadcrumb>
             <Row>
                 <Col>
                     <h2>Configuración</h2>
@@ -49,7 +49,7 @@ const ConfigurationPage = ({ supplierData }) => {
                                 <span className="configurationBoxIcon fa-solid fa-history"/>
                             </Card.Body>
                             <Card.Body>
-                                <Card.Title>Sincronización</Card.Title>
+                                <Card.Title>Sincronización Offline</Card.Title>
                             </Card.Body>
                         </Card>
                     </Link>

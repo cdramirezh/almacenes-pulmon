@@ -31,16 +31,17 @@ const ConfigurationSyncPage = () => {
 						<Breadcrumb>
 							<LinkContainer to='/home'><Breadcrumb.Item>Home</Breadcrumb.Item></LinkContainer>
 							<LinkContainer to='/configuration'><Breadcrumb.Item>Configuración</Breadcrumb.Item></LinkContainer>
-							<Breadcrumb.Item active>Sincronización</Breadcrumb.Item>
+							<Breadcrumb.Item active>Sincronización Offline</Breadcrumb.Item>
 						</Breadcrumb>
             <Row>
                 <Col>
-                    <h2><Link className="breadCrumbTitle" to="/configuration">Configuración</Link> &gt; Sincronización</h2>
+                    <h2>Sincronización Offline</h2>
                 </Col>
             </Row>
-            <Row>
-                <Col className="col-7 offset-5">
-                    <FloatingLabel>Ultima Sincronización: {tenMinutesBefore} <Button variant="primary">Sincronizar <span className="fa-solid fa-history"></span></Button></FloatingLabel>
+            <Row className="mb-4">
+                <Col className="col-7 offset-5 text-end">
+                    <span>Ultima Sincronización: {tenMinutesBefore}</span>
+                    <Button variant="primary" className="my-2">Sincronizar <span className="fa-solid fa-history"></span></Button>
                 </Col>
             </Row>
             <Row>
