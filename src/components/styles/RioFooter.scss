@@ -1,12 +1,27 @@
 @import '../../colors';
 
-footer {
-	background-color: $riopaila-red;
+footer.footer-rio {
 	display: flex;
+	align-items: center;
 	justify-content: center;
+	gap: 0px 1rem;
 
 	padding: 10px;
 
+	background-color: $riopaila-red;
+
 	color: white;
 	font-weight: bold;
+
+	img {
+		width: 70px;
+	}
+
+	a {
+		text-decoration: none;
+
+		small {
+			color: white;
+		}
+	}
 }
