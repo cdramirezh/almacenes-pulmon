@@ -1,5 +1,18 @@
 .profile-page {
 
+    .image-container {
+        display: block;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .image-profile {
+        border: 8px solid #BD202F;
+        border-radius: 50%;
+        width: 100%;
+        max-width: 200px;
+    }
+
     .row:nth-child(2) {
         padding: 1rem 0;
 
