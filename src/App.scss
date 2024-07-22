@@ -1,6 +1,7 @@
 @import "~bootstrap/scss/bootstrap";
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css);
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import './colors';
 
 html, body, #root {
     height: 100%;
@@ -27,11 +28,11 @@ html, body, #root {
 }
 
 .btn-primary {
-	background-color: #BD202F !important;
-	border:1px solid #BD202F !important;
+	background-color: $riopaila-red !important;
+	border:1px solid $riopaila-red !important;
 }
 
 .btn-secondary {
-	background-color: #0a0a77 !important;
-	border:1px solid #0a0a77 !important;
+	background-color: $riopaila-red !important;
+	border:1px solid $riopaila-red !important;
 }
