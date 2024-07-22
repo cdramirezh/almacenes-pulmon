@@ -1,6 +1,6 @@
 export const menuData2 = [
 	{
-		title: "Inicio",
+		title: "Dashboard",
 		target: "/home",
 		icon: "fa-solid fa-house",
 	},
