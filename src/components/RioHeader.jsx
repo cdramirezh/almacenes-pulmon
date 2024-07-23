@@ -20,6 +20,7 @@ export const RioHeader = () => (
 		<img
 			src="https://www.riopaila-castilla.com/wp-content/uploads/2021/11/roseta-pequena.png"
 			alt="logo"
+			className="logo_rainbow"
 		/>
 	</header>
 );
