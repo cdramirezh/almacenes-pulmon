@@ -68,7 +68,7 @@ const TransferPostingDetailsPage = ({ storageLocations, transferPostings }) => {
                                 <Form.Control defaultValue={data.status} disabled />
                             </div>
                             <Row>
-                                <Col>
+                                <Col xs={12} md={6}>
                                     <Card>
                                         <h3 className="card__title">Datos de origen</h3>
                                         <figure className="card__img">
@@ -107,7 +107,7 @@ const TransferPostingDetailsPage = ({ storageLocations, transferPostings }) => {
                                         </Row>}
                                     </Card>
                                 </Col>
-                                <Col>
+                                <Col xs={12} md={6}>
                                     <Card>
                                         <h3 className="card__title">Datos destino</h3>
                                         <figure className="card__img">
