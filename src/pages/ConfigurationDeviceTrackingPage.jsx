@@ -7,18 +7,22 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import L from 'leaflet';
 import './styles/ConfigurationProfilesPage.scss'
 
-const icon = L.icon({ iconUrl: "/images/leaflet-map/marker-icon.png", shadowUrl: "/images/leaflet-map/marker-shadow.png" });
+const GreenIcon = L.icon({ iconUrl: "/images/leaflet-map/marker-icon-green.png", shadowUrl: "/images/leaflet-map/marker-shadow.png" });
+const RedIcon = L.icon({ iconUrl: "/images/leaflet-map/marker-icon-red.png", shadowUrl: "/images/leaflet-map/marker-shadow.png" });
 
 
 
 const ConfigurationDeviceTrackingPage = () => {
     const [userLocation, setUserLocation] = useState();
+    const yesterday = new Date();
+    yesterday.setDate(yesterday.getDate() - 1);
+
     const geoData = [
-        [ 3.4542, -76.5321],
-        [ 3.4543, -76.5322],
-        [ 3.4544, -76.5323],
-        [ 3.4545, -76.5324],
-        [ 3.4546, -76.5325],
+        {lat: 3.4542, lon: -76.5321, lastUpdate: yesterday},
+        {lat: 3.6543, lon: -76.5522, lastUpdate: yesterday},
+        {lat: 3.8544, lon: -76.5723, lastUpdate: yesterday},
+        {lat: 4.0545, lon: -76.5924, lastUpdate: new Date()},
+        {lat: 4.2546, lon: -76.6125, lastUpdate: new Date()},
     ];
 
     useEffect(() => {
@@ -31,6 +35,7 @@ const ConfigurationDeviceTrackingPage = () => {
               
             const success = (pos) => {
                 const crd = pos.coords;
+                crd.lastUpdate = new Date();
                 setUserLocation(crd);
             }
               
@@ -60,12 +65,12 @@ const ConfigurationDeviceTrackingPage = () => {
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         />
                         {
-                            geoData.map((pos, index) => (<Marker position={pos} icon={icon}>
-                            <Popup>Dispositivo: #{index+1}</Popup>
+                            geoData.map((pos, index) => (<Marker position={[pos.lat, pos.lon]} icon={(new Date() - pos.lastUpdate < 600000) ? GreenIcon : RedIcon}>
+                            <Popup>Dispositivo: #{index+1} <br /> Ultima actualización: {(new Date() - pos.lastUpdate < 600000) ? 'Ahora' : pos.lastUpdate.toLocaleString()}</Popup>
                             </Marker>))
                         }
                         {
-                            !!userLocation?.latitude && <Marker position={[userLocation.latitude, userLocation.longitude]} icon={icon}><Popup>Mi dispositivo</Popup></Marker>
+                            !!userLocation?.latitude && <Marker position={[userLocation.latitude, userLocation.longitude]} icon={(new Date() - userLocation.lastUpdate < 600000) ? GreenIcon : RedIcon}><Popup>Mi dispositivo <br /> Ultima actualización: {(new Date() - userLocation.lastUpdate < 600000) ? 'Ahora' : userLocation.lastUpdate.toLocaleString()}</Popup></Marker>
                         }
                     </MapContainer>
                 </Col>
