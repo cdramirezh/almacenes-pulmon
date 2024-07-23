@@ -49,23 +49,23 @@ const MonitorPage = () => {
             text: "Materiales más utilizados"
         },
         axisX: {
-            title: "Social Network",
+            title: "Material",
             reversed: true,
         },
         axisY: {
-            title: "Monthly Active Users",
+            title: "Cantidad",
             includeZero: true
         },
         data: [{
             type: "bar",
             dataPoints: [
-                { y:  2200000000, label: "Filtro de Aire" },
-                { y:  1800000000, label: "Filtro de Combustible" },
-                { y:  800000000, label: "Cuchilla de Corte" },
-                { y:  563000000, label: "Rodamiento de Rodillos" },
-                { y:  376000000, label: "Correa de Transmisión" },
-                { y:  336000000, label: "Bujía de Encendido" },
-                { y:  330000000, label: "Sensor de Temperatura" }
+                { y:  220, label: "Filtro de Aire" },
+                { y:  180, label: "Filtro de Combustible" },
+                { y:  800, label: "Cuchilla de Corte" },
+                { y:  563, label: "Rodamiento de Rodillos" },
+                { y:  376, label: "Correa de Transmisión" },
+                { y:  336, label: "Bujía de Encendido" },
+                { y:  330, label: "Sensor de Temperatura" }
             ]
         }]
     }
@@ -75,10 +75,10 @@ const MonitorPage = () => {
         exportEnabled: true,
         theme: "light2", // "light1", "dark1", "dark2"
         title:{
-            text: "Ordenes de mantenimiento por semana"
+            text: "Órdenes de mantenimiento por semana"
         },
         axisY: {
-            title: "# Ordenes mantenimiento",
+            title: "# Órdenes mantenimiento",
             suffix: "#"
         },
         axisX: {
@@ -164,17 +164,17 @@ const MonitorPage = () => {
             </Row>
             <Row className="mt-4">
                 <h4>Reportes</h4>
-                <Table responsive>
+                <Table responsive className="text-center">
                     <thead>
-                        <tr>
+                        <tr className="align-middle">
                             <th>Reporte</th>
                             <th>Registros</th>
-                            <th>Ultima Fecha de actualización</th>
+                            <th>Última Fecha actualización</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><Link to="/report-maintenance">Ordenes de Mantenimiento</Link></td>
+                            <td><Link to="/report-maintenance">Órdenes de Mantenimiento</Link></td>
                             <td>3</td>
                             <td>{tenMinutesBefore}</td>
                         </tr>                        

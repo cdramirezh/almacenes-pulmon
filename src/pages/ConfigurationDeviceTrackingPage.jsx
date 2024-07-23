@@ -57,7 +57,6 @@ const ConfigurationDeviceTrackingPage = () => {
                 <Col>
 									<Breadcrumb>
 										<LinkContainer to='/home'><Breadcrumb.Item>Home</Breadcrumb.Item></LinkContainer>
-										<LinkContainer to='/configuration'><Breadcrumb.Item>Configuración</Breadcrumb.Item></LinkContainer>
 										<Breadcrumb.Item active>Ubicación y dispositivos</Breadcrumb.Item>
 									</Breadcrumb>
                 </Col>

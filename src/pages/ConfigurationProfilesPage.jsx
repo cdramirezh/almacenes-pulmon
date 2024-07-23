@@ -21,7 +21,7 @@ const ConfigurationProfilesPage = () => {
         ['Analísta', 'Este rol es para usuarios analistas', '1']
     ];
 
-    const userHeaders = ['Nombres', 'Apellidos', 'Correo', 'rol', 'Administrar'];
+    const userHeaders = ['Nombres', 'Apellidos', 'Correo', 'Rol', 'Administrar'];
     const userBody = [
         ['John','Doe','John@riopaila.com','Administrador'],
         ['Jane','Doe','Jane@riopaila.com','Supervisor'],
@@ -43,14 +43,14 @@ const ConfigurationProfilesPage = () => {
                 <Tabs defaultActiveKey="profile" id="ProfileUsersTab" className="mb-3">
                     <Tab eventKey="profile" title="Roles">
                         <Row>
-                            <Col className="col-2 offset-10">
+                            <Col className="text-end">
                                 <Button variant="primary">Crear Roles</Button>
                             </Col>
                         </Row>
                         <Row>
-                            <Table responsive>
+                            <Table responsive className="text-center">
                                 <thead>
-                                    <tr>
+                                    <tr className="align-middle">
                                         {rolHeaders.map((header,hIndex) => (<th key={hIndex}>{header}</th>))}
                                     </tr>
                                 </thead>
