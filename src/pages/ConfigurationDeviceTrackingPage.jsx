@@ -23,7 +23,7 @@ const ConfigurationDeviceTrackingPage = () => {
         {lat: 5.6543, lon: -76.5522, lastUpdate: yesterday},
         {lat: 10.8544, lon: -75.5723, lastUpdate: yesterday},
         {lat: 4.0545, lon: -76.5924, lastUpdate: new Date()},
-        {lat: 4.2546, lon: -76.6125, lastUpdate: new Date()},
+        {lat: 2.2546, lon: -74.6125, lastUpdate: new Date()},
     ];
 
     useEffect(() => {
