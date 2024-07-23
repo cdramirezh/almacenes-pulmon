@@ -38,7 +38,7 @@ const EquipmentsPage = ({ equipments }) => {
                 </Row>
                 <Row>
                     <Row className="my-2">
-                        <Col sm={2} className="text-end">
+                        <Col sm={2}>
                             <Form.Label className="mb-0 align-middle"><b>Código:</b></Form.Label>
                         </Col>
                         <Col>
@@ -48,7 +48,7 @@ const EquipmentsPage = ({ equipments }) => {
                 </Row>
                 <Row>
                     <Row className="my-2">
-                        <Col sm={2} className="text-end">
+                        <Col sm={2}>
                             <Form.Label className="mb-0 align-middle"><b>Nombre:</b></Form.Label>
                         </Col>
                         <Col>
@@ -58,7 +58,7 @@ const EquipmentsPage = ({ equipments }) => {
                 </Row>
                 <Row>
                     <Row className="my-2">
-                        <Col sm={2} className="text-end">
+                        <Col sm={2}>
                             <Form.Label className="mb-0 align-middle"><b>Clase:</b></Form.Label>
                         </Col>
                         <Col>
@@ -73,7 +73,7 @@ const EquipmentsPage = ({ equipments }) => {
                 </Row>
                 <Row>
                     <Row className="my-2">
-                        <Col sm={2} className="text-end">
+                        <Col sm={2}>
                             <Form.Label className="mb-0 align-middle"><b>Serial:</b></Form.Label>
                         </Col>
                         <Col>
@@ -83,7 +83,7 @@ const EquipmentsPage = ({ equipments }) => {
                 </Row>
                 <Row>
                     <Row className="my-2">
-                        <Col sm={2} className="text-end">
+                        <Col sm={2}>
                             <Form.Label className="mb-0 align-middle"><b>Fabricante:</b></Form.Label>
                         </Col>
                         <Col>

@@ -5,7 +5,6 @@ export const notifications = [
 		time: "Hace 11 min",
 		img: "https://example.com/maintenance-image.jpg",
 		link: "/maintenance-activities/49174856",
-		// link: "/activities-approval",
 		read: true,
 	},
 	{

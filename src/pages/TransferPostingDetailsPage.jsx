@@ -1,7 +1,7 @@
 import { LinkContainer } from "react-router-bootstrap";
 import { Breadcrumb } from "react-bootstrap";
 import { useEffect, useState } from "react"
-import { useNavigate, useParams } from "react-router-dom"
+import { Link, useNavigate, useParams } from "react-router-dom"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import Table from "react-bootstrap/Table"
@@ -163,7 +163,9 @@ const TransferPostingDetailsPage = ({ storageLocations, transferPostings }) => {
                                 <tbody>
                                     {data.materials.map((material, idx) => (
                                         <tr key={idx}>
-                                            <td>{material.id}</td>
+                                            <td>
+                                                <Link to={`/master-materials/${material.id}`}>{material.id}</Link>
+                                            </td>
                                             <td>{material.name}</td>
                                             <td>{material.quantity}</td>
                                         </tr>
