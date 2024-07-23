@@ -1,5 +1,6 @@
+import { LinkContainer } from "react-router-bootstrap";
+import { Breadcrumb } from "react-bootstrap";
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import SEO from "../components/SEO"
@@ -49,7 +50,11 @@ const ConfigurationDeviceTrackingPage = () => {
             <SEO title="Decorceramica - Portal de colaboradores | Mis datos" description="Valida tus datos y comprueba que la información de la que la empresa dispone sea correcta" />
             <Row>
                 <Col>
-                    <h2><Link className="breadCrumbTitle" to="/configuration">Configuración</Link> &gt; Ubicación dispositivos</h2>
+									<Breadcrumb>
+										<LinkContainer to='/home'><Breadcrumb.Item>Home</Breadcrumb.Item></LinkContainer>
+										<LinkContainer to='/configuration'><Breadcrumb.Item>Configuración</Breadcrumb.Item></LinkContainer>
+										<Breadcrumb.Item active>Ubicación y dispositivos</Breadcrumb.Item>
+									</Breadcrumb>
                 </Col>
             </Row>
             <Row>
