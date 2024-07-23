@@ -14,7 +14,7 @@ const MenuItem = ({ item, setNavbarExpand }) => {
 		<>
 			<Accordion.Header>
 				{!!item.icon && <i className={item.icon} />}
-				<Link to={item.target} onClick={() => setNavbarExpand(false)}>
+				<Link to={item.target} onClick={() => setNavbarExpand && setNavbarExpand(false)}>
 					{item.title}
 				</Link>
 			</Accordion.Header>
@@ -27,7 +27,7 @@ const MenuItem = ({ item, setNavbarExpand }) => {
 	) : (
 		<div className="accordion-leaf">
 			{!!item.icon && <i className={item.icon} />}
-			<Link to={item.target} onClick={() => setNavbarExpand(false)}>
+			<Link to={item.target} onClick={e => { setNavbarExpand && setNavbarExpand(false)}}>
 				{item.title}
 			</Link>
 		</div>

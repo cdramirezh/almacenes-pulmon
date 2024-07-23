@@ -2,7 +2,7 @@ import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import Alert from "react-bootstrap/Alert"
 
-const Message = ({ variant, children }) => (
+const Message = ({ variant = 'info', children }) => (
     <Row>
         <Col>
             <Alert variant={variant}>
@@ -11,9 +11,5 @@ const Message = ({ variant, children }) => (
         </Col>
     </Row>
 )
-
-Message.defaultProps = {
-    variant: 'info'
-}
 
 export default Message
