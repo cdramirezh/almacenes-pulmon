@@ -46,7 +46,7 @@ const ProfilePage = () => {
 							<Figure className="image-container">
 								<Image className="image-profile" src="/images/profile.png" />
 							</Figure>
-							<Form.Group className="form-group">
+							<Form.Group>
 								<Row>
 									<Col md={6}>
 										<Form.Group className="form-group">
