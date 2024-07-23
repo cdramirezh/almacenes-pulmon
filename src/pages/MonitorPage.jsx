@@ -23,7 +23,7 @@ const MonitorPage = () => {
         exportEnabled: true,
         animationEnabled: true,
         title: {
-            text: "Website Traffic Sources"
+            text: "Caña por suerte"
         },
         data: [{
             type: "pie",
@@ -34,11 +34,11 @@ const MonitorPage = () => {
             indexLabelFontSize: 16,
             indexLabel: "{label} - {y}%",
             dataPoints: [
-                { y: 18, label: "Direct" },
-                { y: 49, label: "Organic Search" },
-                { y: 9, label: "Paid Search" },
-                { y: 5, label: "Referral" },
-                { y: 19, label: "Social" }
+                { y: 18, label: "El Paraíso" },
+                { y: 49, label: "La Esperanza" },
+                { y: 9, label: "Las Flores" },
+                { y: 5, label: "San Joaquín" },
+                { y: 19, label: "Los Naranjos" }
             ]
         }]
     }
@@ -47,7 +47,7 @@ const MonitorPage = () => {
         animationEnabled: true,
         theme: "light2",
         title:{
-            text: "Most Popular Social Networking Sites"
+            text: "Materiales más utilizados"
         },
         axisX: {
             title: "Social Network",
@@ -60,13 +60,13 @@ const MonitorPage = () => {
         data: [{
             type: "bar",
             dataPoints: [
-                { y:  2200000000, label: "Facebook" },
-                { y:  1800000000, label: "YouTube" },
-                { y:  800000000, label: "Instagram" },
-                { y:  563000000, label: "Qzone" },
-                { y:  376000000, label: "Weibo" },
-                { y:  336000000, label: "Twitter" },
-                { y:  330000000, label: "Reddit" }
+                { y:  2200000000, label: "Filtro de Aire" },
+                { y:  1800000000, label: "Filtro de Combustible" },
+                { y:  800000000, label: "Cuchilla de Corte" },
+                { y:  563000000, label: "Rodamiento de Rodillos" },
+                { y:  376000000, label: "Correa de Transmisión" },
+                { y:  336000000, label: "Bujía de Encendido" },
+                { y:  330000000, label: "Sensor de Temperatura" }
             ]
         }]
     }
@@ -118,18 +118,18 @@ const MonitorPage = () => {
         }]
     })
 
-    useEffect(() => {
-        setInterval(() => {
-            const tempOptions = JSON.parse(JSON.stringify(options))
-            const tempData = tempOptions.data[0].dataPoints;
-            const lastRow = tempData.pop();
-            const newLastRow = {x: lastRow.x + 1, y: Math.floor((Math.random()*20 + 50))}
-            tempData.push(lastRow);
-            tempData.push(newLastRow);
-            tempOptions.data[0].dataPoints = tempData;
-            setOptions(tempOptions);
-        }, 10000);
-    }, [options]);
+    // useEffect(() => {
+    //     setInterval(() => {
+    //         const tempOptions = JSON.parse(JSON.stringify(options))
+    //         const tempData = tempOptions.data[0].dataPoints;
+    //         const lastRow = tempData.pop();
+    //         const newLastRow = {x: lastRow.x + 1, y: Math.floor((Math.random()*20 + 50))}
+    //         tempData.push(lastRow);
+    //         tempData.push(newLastRow);
+    //         tempOptions.data[0].dataPoints = tempData;
+    //         setOptions(tempOptions);
+    //     }, 10000);
+    // }, [options]);
 
     let tenMinutesBefore = new Date();
     tenMinutesBefore.setMinutes(tenMinutesBefore.getMinutes() - 10);
