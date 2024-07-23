@@ -53,6 +53,16 @@ const ConfigurationPage = ({ supplierData }) => {
                             </Card.Body>
                         </Card>
                     </Link>
+                    <Link className="configurationLink" to="/configuration-tracking">
+                        <Card className="configurationBox">
+                            <Card.Body>
+                                <span className="configurationBoxIcon fa-solid fa-map"/>
+                            </Card.Body>
+                            <Card.Body>
+                                <Card.Title>Ubicación dispositivos</Card.Title>
+                            </Card.Body>
+                        </Card>
+                    </Link>
                 </div>
             </Row>
         </div>

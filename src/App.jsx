@@ -20,6 +20,7 @@ import FieldDetailsPage from './pages/FieldDetailsPage';
 import MaintenanceActivitiesPage from './pages/MaintenanceActivitiesPage';
 import MaintenanceActivityDetailsPage from './pages/MaintenanceActivityDetailsPage';
 import ActivitiesApproval from './pages/ActivitiesApproval';
+import ConfigurationDeviceTrackingPage from './pages/ConfigurationDeviceTrackingPage';
 // import EquivalentDocumentPage from './pages/EquivalentDocumentPage';
 import NotFoundPage from './pages/NotFoundPage';
 import { HelmetProvider } from 'react-helmet-async';
@@ -65,6 +66,7 @@ const App = () => {
                 <Route path='configuration' element={<ConfigurationPage supplierData={supplierData} />} />
                 <Route path='configuration-profiles' element={<ConfigurationProfilesPage />} />
                 <Route path='configurationSync' element={<ConfigurationSyncPage />} />
+                <Route path='configuration-tracking' element={<ConfigurationDeviceTrackingPage />} />
                 <Route path='equipments' element={<EquipmentsPage equipments={equipments} />} />
                 <Route path='equipments/:id' element={<EquipmentDetailsPage equipments={equipments} maintenanceActivities={maintenanceActivities} />} />
                 <Route path='fields' element={<FieldsPage fields={fields} />} />
