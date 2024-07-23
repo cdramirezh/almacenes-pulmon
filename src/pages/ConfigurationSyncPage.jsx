@@ -39,8 +39,8 @@ const ConfigurationSyncPage = () => {
                 </Col>
             </Row>
             <Row className="mb-4">
-                <Col className="col-7 offset-5 text-end">
-                    <span>Ultima Sincronización: {tenMinutesBefore}</span>
+                <Col className="text-end">
+                    <span className="d-block">Ultima Sincronización: {tenMinutesBefore}</span>
                     <Button variant="primary" className="my-2">Sincronizar <span className="fa-solid fa-history"></span></Button>
                 </Col>
             </Row>

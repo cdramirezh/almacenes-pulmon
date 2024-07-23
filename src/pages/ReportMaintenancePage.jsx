@@ -30,7 +30,7 @@ const ReportMaintenancePage = () => {
 							<Breadcrumb.Item active>Reportes y mantenimiento</Breadcrumb.Item>
 						</Breadcrumb>
             <Row>
-                <Col className="col-2 offset-10">
+                <Col className="text-end">
                     <Button variant="primary">Descargar <span className="fa-solid fa-download"></span></Button>
                 </Col>
             </Row>
