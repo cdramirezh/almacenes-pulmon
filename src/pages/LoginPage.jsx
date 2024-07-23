@@ -8,7 +8,7 @@ import Loader from "../components/Loader";
 import FormCenterContainer from "../components/FormCenterContainer";
 import Message from "../components/Message";
 import MyButton from "../components/MyButton";
-import { forgotPasswordSendEmail, login } from "../actions/userActions";
+import { forgotPasswordSendEmail } from "../actions/userActions";
 import Swal from "sweetalert2";
 
 import "./styles/LoginPage.scss";
@@ -62,15 +62,7 @@ const LoginPage = ({ setSupplierData }) => {
 		setLoading(true);
 
 		if (isOk()) {
-			login(idType, idNumber, password)
-				.then(res => {
-					setSupplierData(res);
-					navigate("/profile");
-				})
-				.catch(error => {
-					setLoading(false);
-					setMessage(error);
-				});
+			navigate('/profile')
 		} else {
 			setLoading(false);
 		}
