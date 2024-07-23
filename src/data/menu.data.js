@@ -72,7 +72,11 @@ export const menuData2 = [
 			},
 		],
 	},
-
+	{
+		title: "Ubicación dispositivos",
+		target: "configuration-tracking",
+		icon: "fa-solid fa-map",
+	},
 	{
 		title: "Cerrar sesión",
 		target: "/login",
