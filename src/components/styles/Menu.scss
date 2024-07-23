@@ -1,4 +1,22 @@
-.offcanvas {
+.menu-container {
+
+	background-color: #BD202F;
+
+	a {
+		color: whitesmoke;
+		text-decoration: none;
+		font-weight: bold;
+
+		&:hover {
+			color: lightcyan
+		}
+	}
+
+	i {
+		color: white;
+		margin-right: 0.5rem;
+	}
+
 	.accordion-body {
 		padding-right: 0 !important;
 		padding-left: 10px !important;
@@ -31,25 +49,6 @@
 			outline: unset;
 			border: 0px;
 			box-shadow: none;
-		}
-	}
-
-	.menu-container {
-		background-color: #BD202F;
-
-		a {
-			color: whitesmoke;
-			text-decoration: none;
-			font-weight: bold;
-
-			&:hover {
-				color: lightcyan
-			}
-		}
-
-		i {
-			color: white;
-			margin-right: 0.5rem;
 		}
 	}
 }

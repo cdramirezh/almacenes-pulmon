@@ -37,6 +37,7 @@ import { materials } from './data/materials.data'
 import TransferPostingPage from './pages/TransferPostingPage';
 import TransferPostingDetailsPage from './pages/TransferPostingDetailsPage';
 import IndicatorPage from './pages/IndicatorsPage';
+import { HomeMenu } from './components/Menu';
 
 import './App.scss'
 
@@ -57,7 +58,8 @@ const App = () => {
           <HelmetProvider>
             <Routes>
               <Route path='/' element={<HomePage supplierData={supplierData} setSupplierData={setSupplierData} menuData={menuData} />} >
-                <Route path='home' element={<IndicatorPage />} />
+								<Route path='home' element={<HomeMenu />} />
+                <Route path='dashboard' element={<IndicatorPage />} />
                 <Route path='profile' element={<ProfilePage supplierData={supplierData} />} />
                 <Route path='monitor' element={<MonitorPage />} />
                 <Route path='report-maintenance' element={<ReportMaintenancePage />} />

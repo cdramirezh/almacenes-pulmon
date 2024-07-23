@@ -5,6 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { menuData2 } from "../data/menu.data";
 import "./styles/Menu.scss";
+import "./styles/HomeMenu.scss";
 
 const MenuItem = ({ item, setNavbarExpand }) => {
 	const hasSubItems = !!item.subItems;
@@ -13,18 +14,22 @@ const MenuItem = ({ item, setNavbarExpand }) => {
 		<>
 			<Accordion.Header>
 				{!!item.icon && <i className={item.icon} />}
-				<Link to={item.target} onClick={() => setNavbarExpand(false)}>{item.title}</Link>
+				<Link to={item.target} onClick={() => setNavbarExpand(false)}>
+					{item.title}
+				</Link>
 			</Accordion.Header>
 			{!!hasSubItems && (
 				<Accordion.Body>
-					<Menu menuItems={item.subItems} setNavbarExpand={setNavbarExpand}/>
+					<Menu menuItems={item.subItems} setNavbarExpand={setNavbarExpand} />
 				</Accordion.Body>
 			)}
 		</>
 	) : (
 		<div className="accordion-leaf">
 			{!!item.icon && <i className={item.icon} />}
-			<Link to={item.target} onClick={() => setNavbarExpand(false)}>{item.title}</Link>
+			<Link to={item.target} onClick={() => setNavbarExpand(false)}>
+				{item.title}
+			</Link>
 		</div>
 	);
 };
@@ -48,7 +53,10 @@ export const OffcanvasMenu = () => {
 	return (
 		<>
 			<Navbar expand={false}>
-				<Navbar.Toggle aria-controls={`offcanvasNavbar-expand-false`} onClick={() => setNavbarExpand(!navbarExpanded)}				/>
+				<Navbar.Toggle
+					aria-controls={`offcanvasNavbar-expand-false`}
+					onClick={() => setNavbarExpand(!navbarExpanded)}
+				/>
 				<Navbar.Offcanvas
 					id={`offcanvasNavbar-expand-false`}
 					aria-labelledby={`offcanvasNavbarLabel-expand-false`}
@@ -60,10 +68,18 @@ export const OffcanvasMenu = () => {
 						<Offcanvas.Title id={`offcanvasNavbarLabel-expand-false`}>Menu</Offcanvas.Title>
 					</Offcanvas.Header>
 					<Offcanvas.Body className="menu-container">
-						<Menu menuItems={menuData2} setNavbarExpand={setNavbarExpand} className="menu-con-mas-especificidad" />
+						<Menu menuItems={menuData2} setNavbarExpand={setNavbarExpand} />
 					</Offcanvas.Body>
 				</Navbar.Offcanvas>
 			</Navbar>
 		</>
+	);
+};
+
+export const HomeMenu = () => {
+	return (
+		<div className="menu-container home-menu">
+			<Menu menuItems={menuData2} />
+		</div>
 	);
 };

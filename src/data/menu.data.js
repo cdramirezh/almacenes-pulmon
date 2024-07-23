@@ -1,22 +1,22 @@
 export const menuData2 = [
 	{
 		title: "Dashboard",
-		target: "/home",
+		target: "/dashboard",
 		icon: "fa-solid fa-house",
 	},
 	{
 		title: "Perfil",
-		target: "profile",
+		target: "/profile",
 		icon: "fa-solid fa-user",
 	},
 	{
 		title: "Mantenimiento",
-		target: "maintenance-activities",
+		target: "/maintenance-activities",
 		icon: "fa-solid fa-screwdriver-wrench",
 		subItems: [
 			{
 				title: "Actividades mantenimiento",
-				target: "maintenance-activities",
+				target: "/maintenance-activities",
 				icon: "",
 			},
 			{
@@ -67,14 +67,14 @@ export const menuData2 = [
 			},
 			{
 				title: "Offline",
-				target: "configurationSync",
+				target: "/configurationSync",
 				icon: "",
 			},
 		],
 	},
 	{
 		title: "Ubicación dispositivos",
-		target: "configuration-tracking",
+		target: "/configuration-tracking",
 		icon: "fa-solid fa-map",
 	},
 	{
