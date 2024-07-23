@@ -4,7 +4,7 @@ export const fields = [
 		name: "Cultivo El Paraíso",
 		size: 120,
 
-		image: "https://www.invesa.com/wp-content/uploads/2020/10/Cana-de-azucar.jpg",
+		image: "/images/fields/field1.jpg",
 		location: {
 			lat: 3.4542,
 			lon: -76.5321,
@@ -19,8 +19,7 @@ export const fields = [
 		id: 58374956,
 		name: "Cultivo La Esperanza",
 		size: 90,
-		image:
-			"https://www.shutterstock.com/image-photo/sugarcane-field-full-grown-crop-600nw-2191190429.jpg",
+		image: "/images/fields/field2.png",
 		location: {
 			lat: 3.4625,
 			lon: -76.5204,
@@ -35,7 +34,7 @@ export const fields = [
 		id: 52537496,
 		name: "Cultivo Las Flores",
 		size: 110,
-		image: "https://a.storyblok.com/f/160385/38ec5da4e7/cana-azucar.jpg/m/?w=256&q=100",
+		image: "/images/fields/field3.png",
 		location: {
 			lat: 3.471,
 			lon: -76.5113,
@@ -50,7 +49,7 @@ export const fields = [
 		id: 54695673,
 		name: "Cultivo San Joaquín",
 		size: 150,
-		image: "https://eos.com/wp-content/uploads/2022/11/high-plants-of-sugar-cane.jpg.webp",
+		image: "/images/fields/field4.png",
 		location: {
 			lat: 3.4503,
 			lon: -76.5402,
@@ -65,7 +64,7 @@ export const fields = [
 		id: 51127498,
 		name: "Cultivo Los Naranjos",
 		size: 95,
-		image: "https://procana.org/site/wp-content/uploads/2022/10/cana-cultivo.jpeg",
+		image: "/images/fields/field5.jpeg",
 		location: {
 			lat: 3.4678,
 			lon: -76.5307,
@@ -80,7 +79,7 @@ export const fields = [
 		id: 56847958,
 		name: "Cultivo La Fortuna",
 		size: 130,
-		image: "https://agrotendencia.tv/wp-content/uploads/2019/04/imagen15.gif",
+		image: "/images/fields/field6.gif",
 		location: {
 			lat: 3.4596,
 			lon: -76.5159,
@@ -95,8 +94,7 @@ export const fields = [
 		id: 56484557,
 		name: "Cultivo Santa María",
 		size: 100,
-		image:
-			"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgqQ_q2675BMLjabon-69ntxF7tQ81GIJkJw&s",
+		image: "/images/fields/field7.jpg",
 		location: {
 			lat: 3.452,
 			lon: -76.5264,
@@ -111,7 +109,7 @@ export const fields = [
 		id: 59763257,
 		name: "Cultivo El Progreso",
 		size: 85,
-		image: "https://encolombia.com/wp-content/uploads/2013/06/cana-azucar.jpg",
+		image: "/images/fields/field8.png",
 		location: {
 			lat: 3.4612,
 			lon: -76.5188,
@@ -126,7 +124,7 @@ export const fields = [
 		id: 56964246,
 		name: "Cultivo Las Palmas",
 		size: 115,
-		image: "https://cropaia.com/wp-content/uploads/Sugarcane-field.jpg",
+		image: "/images/fields/field9.jpg",
 		location: {
 			lat: 3.4556,
 			lon: -76.5095,
@@ -141,8 +139,7 @@ export const fields = [
 		id: 55127389,
 		name: "Cultivo San Antonio",
 		size: 140,
-		image:
-			"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSMTAv2FXDPl91QwRbJh3rBYDSZJxNl4DEPg&s",
+		image: "/images/fields/field10.jpg",
 		location: {
 			lat: 3.4694,
 			lon: -76.5345,
