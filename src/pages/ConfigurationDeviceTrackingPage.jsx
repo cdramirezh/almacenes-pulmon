@@ -15,10 +15,10 @@ const ConfigurationDeviceTrackingPage = () => {
     const [userLocation, setUserLocation] = useState();
     const geoData = [
         [ 3.4542, -76.5321],
-        [ 3.4543, -76.5322],
-        [ 3.4544, -76.5323],
-        [ 3.4545, -76.5324],
-        [ 3.4546, -76.5325],
+        [ 3.4553, -76.5332],
+        [ 3.4564, -76.5343],
+        [ 3.4575, -76.5354],
+        [ 3.4586, -76.5365],
     ];
 
     useEffect(() => {
@@ -60,7 +60,7 @@ const ConfigurationDeviceTrackingPage = () => {
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         />
                         {
-                            geoData.map((pos, index) => (<Marker position={pos} icon={icon}>
+                            geoData.map((pos, index) => (<Marker position={pos} icon={icon} key={index}>
                             <Popup>Dispositivo: #{index+1}</Popup>
                             </Marker>))
                         }
