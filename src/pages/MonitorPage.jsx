@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom"
-import { useEffect, useState } from 'react';
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import Table from "react-bootstrap/Table"
@@ -71,7 +70,7 @@ const MonitorPage = () => {
         }]
     }
 
-    const [options, setOptions] = useState({
+    const options = {
         animationEnabled: true,
         exportEnabled: true,
         theme: "light2", // "light1", "dark1", "dark2"
@@ -116,7 +115,7 @@ const MonitorPage = () => {
                 { x: 23, y: 59 }
             ]
         }]
-    })
+    }
 
     // useEffect(() => {
     //     setInterval(() => {

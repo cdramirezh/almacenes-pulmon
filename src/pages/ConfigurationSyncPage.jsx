@@ -1,11 +1,9 @@
 import { LinkContainer } from "react-router-bootstrap";
 import { Breadcrumb } from "react-bootstrap";
-import { Link } from "react-router-dom"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import Table from "react-bootstrap/Table"
 import Button from "react-bootstrap/Button"
-import FloatingLabel from "react-bootstrap/FloatingLabel"
 import SEO from "../components/SEO"
 
 import './styles/ConfigurationProfilesPage.scss'
