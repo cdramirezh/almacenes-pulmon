@@ -13,7 +13,7 @@ const CustomModal = ({ show, onAction, onHide, title, children, actionText }) =>
         </Modal.Body>
         <Modal.Footer>
             {(actionText && onAction) && <MyButton onClick={onAction}>{actionText}</MyButton>}
-            <MyButton type="submit" onClick={onHide} variant="danger">Cancelar</MyButton>
+            <MyButton type="submit" onClick={onHide} variant="outline-danger">Cancelar</MyButton>
         </Modal.Footer>
     </Modal>
 )
