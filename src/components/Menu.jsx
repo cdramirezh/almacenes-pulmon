@@ -6,6 +6,7 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import { menuData2 } from "../data/menu.data";
 import "./styles/Menu.scss";
 import "./styles/HomeMenu.scss";
+import MultilevelMenu from "./MultilevelMenu";
 
 const MenuItem = ({ item, setNavbarExpand }) => {
 	const hasSubItems = !!item.subItems;
@@ -68,7 +69,8 @@ export const OffcanvasMenu = () => {
 						<Offcanvas.Title id={`offcanvasNavbarLabel-expand-false`}>Menu</Offcanvas.Title>
 					</Offcanvas.Header>
 					<Offcanvas.Body className="menu-container">
-						<Menu menuItems={menuData2} setNavbarExpand={setNavbarExpand} />
+						{/* <Menu menuItems={menuData2} setNavbarExpand={setNavbarExpand} /> */}
+						<MultilevelMenu data={menuData2} setNavbarExpand={setNavbarExpand} />
 					</Offcanvas.Body>
 				</Navbar.Offcanvas>
 			</Navbar>
@@ -79,7 +81,8 @@ export const OffcanvasMenu = () => {
 export const HomeMenu = () => {
 	return (
 		<div className="menu-container home-menu">
-			<Menu menuItems={menuData2} />
+			{/* <Menu menuItems={menuData2} /> */}
+			<MultilevelMenu data={menuData2} />
 		</div>
 	);
 };

@@ -61,6 +61,11 @@ export const menuData2 = [
 		icon: "fa-solid fa-gear",
 		subItems: [
 			{
+				title: "Administrar configuración",
+				target: "/configuration",
+				icon: "",
+			},
+			{
 				title: "Gestión de roles y perfiles",
 				target: "/configuration-profiles",
 				icon: "",

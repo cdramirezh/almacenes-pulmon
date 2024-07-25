@@ -1,0 +1,42 @@
+.multilevel-menu {
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            &.active {
+
+                > ul {
+                    display: block;
+                }
+
+                .fa-chevron-down {
+                    transform: rotate(-180deg);
+                }
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                text-decoration: none;
+                
+                .icon {
+                    margin-right: 1rem;
+                }
+
+                .fa-chevron-down {
+                    margin-left: auto;
+                    transition: 200ms;
+                }
+            }
+        }
+
+        ul {
+            display: none;
+            margin-left: 3rem;
+        }
+    }
+}
