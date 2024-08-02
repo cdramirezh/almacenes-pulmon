@@ -13,7 +13,8 @@ import { LinkContainer } from "react-router-bootstrap"
 const ReportMaintenancePage = ({ materials }) => {
 
     const [pageLoading, setPageLoading] = useState(false)
-    const [data, setData] = useState([])
+    // const [data, setData] = useState([])
+    const [data, setData] = useState(materials)
 
     const loadData = () => {
         setPageLoading(true)

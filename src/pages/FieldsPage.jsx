@@ -14,7 +14,8 @@ import './styles/FieldsPage.scss'
 const FieldsPage = ({ fields }) => {
 
     const [pageLoading, setPageLoading] = useState(false)
-    const [data, setData] = useState([])
+    // const [data, setData] = useState([])
+    const [data, setData] = useState(fields)
 
     const loadData = () => {
         setPageLoading(true)

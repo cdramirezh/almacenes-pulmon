@@ -13,7 +13,8 @@ import Message from "../components/Message"
 const EquipmentsPage = ({ equipments }) => {
 
     const [pageLoading, setPageLoading] = useState(false)
-    const [data, setData] = useState([])
+    // const [data, setData] = useState([])
+    const [data, setData] = useState(equipments)
 
     const loadData = () => {
         setPageLoading(true)

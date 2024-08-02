@@ -18,7 +18,8 @@ const MaintenanceActivitiesPage = ({ maintenanceActivities, fields }) => {
     const navigate = useNavigate()
 
     const [pageLoading, setPageLoading] = useState(false)
-    const [data, setData] = useState([])
+    // const [data, setData] = useState([])
+    const [data, setData] = useState(maintenanceActivities)
     const [modalNewActivity, setModalNewActivity] = useState(false)
 
     const loadData = () => {

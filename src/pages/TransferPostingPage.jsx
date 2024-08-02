@@ -18,7 +18,8 @@ const TransferPostingPage = ({ plants, storageLocations, materials, transferPost
     const navigate = useNavigate()
 
     const [pageLoading, setPageLoading] = useState(false)
-    const [data, setData] = useState([])
+    // const [data, setData] = useState([])
+    const [data, setData] = useState(transferPostings)
     const [modalNewTransfer, setModalNewTransfer] = useState(false)
     const [modalSelectSourcePlant, setModalSelectSourcePlant] = useState(false)
     const [selectedSourcePlant, setSelectedSourcePlant] = useState("")
