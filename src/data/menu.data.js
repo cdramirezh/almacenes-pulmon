@@ -1,8 +1,13 @@
 export const menuData2 = [
 	{
+		title: "Inicio",
+		target: "/home",
+		icon: "fa-solid fa-house",
+	},
+	{
 		title: "Dashboard",
 		target: "/dashboard",
-		icon: "fa-solid fa-house",
+		icon: "fa-solid fa-list-ol",
 	},
 	{
 		title: "Perfil",
